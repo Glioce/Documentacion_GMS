@@ -1,0 +1,31 @@
+<div id="name">array_length_1d</div>
+<div id="content">
+	<div id="description">Devuelve la cantidad de elementos de un <em>array</em> unidimensional.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">array_length_1d(arr);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>arr</td><td>El <em>array</em> a revisar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función es posible obtener el largor (número de elementos) de un <em>array</em> unidimensional. Para <em>arrays</em> bidimensionales es recomendable el uso de las funciones <code>array_height_2d()</code> y <code>array_length_2d()</code>.<br /><br /><strong>NOTA:</strong> Si el <em>array</em> tiene más de 32000 elementos, esta función devolverá resultados erróneos, y no deberá ser usada (en tal caso es más recomendable considerar el uso de listas).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">array[0] = 3;
+array[1] = 5;
+array[2] = 2.2;
+array[3] = 3.2;
+
+len = array_length_1d(array); //Devuelve 4.</pre></div>
+</div>

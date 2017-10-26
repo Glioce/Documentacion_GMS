@@ -1,0 +1,49 @@
+<div id="name">
+array_length_2d</div>
+<div id="content">
+<div id="description">
+Obtiene el número de elementos de una segunda dimensión de un array bidimensional.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">array_length_2d(val, n);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>val</td><td>El <i>array</i> a revisar.</td>
+ </tr>
+<tr>
+ <td>n</td><td>El índice de la primera dimensión a revisar.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Un <i>array</i> bidimensional posee una sola primera dimensión (altura), y una segunda dimensión por cada índice de la primera. Además, las segundas dimensiones del <i>array</i> son independientes entre sí, y pueden tener diferentes tamaños, como se muestra en esta imagen:
+<br />
+<br />
+<img src="https://lh3.googleusercontent.com/-7kMHioInb78/WcMqwZttZjI/AAAAAAAAAbg/8lBI563Wp60n0mfbJeaSzK25sNFnwVTPACLcBGAs/2d_array_2.png" />
+
+<br />
+<br />
+Es por ello que, para obtener el número de elementos de una segunda dimensión del <i>array</i>, es necesario conocer el índice de la primera en donde se encuentra. Por ejemplo, en la imagen anterior, el número de elementos que tiene la segunda dimensión del índice 0 de la primera es de 4.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número entero.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">a[0, 0] = 1; a[0, 1] = 2; a[0, 2] = 3; a[0, 3] = 4;
+a[1, 0] = 1; a[1, 1] = 2; a[1, 2] = 3;
+a[2, 0] = 1; a[2, 1] = 2; a[2, 2] = 3; a[2, 3] = 4; a[2, 4] = 5;
+
+h1 = array_length_2d(a, 0); //Devuelve 4.
+h2 = array_length_2d(a, 1); //Devuelve 3.
+h3 = array_length_2d(a, 2); //Devuelve 5.</pre>
+Se crea un array bidimensional que posee tres elementos en la primera dimensión, y el número de elementos de las segundas dimensiones es, respectivamente, 4, 3 y 5. Posteriormente se obtienen estos números utilizando la función <code>array_length_2d()</code>.</div>
+</div>

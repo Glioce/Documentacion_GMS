@@ -1,0 +1,22 @@
+<div id="name">alarm</div>
+<div id="content">
+	<div id="description">Activa una alarma de la instancia.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">alarm[0 ... 11];</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Este array unidimensional es usado para activar los eventos de alarma en una instancia. Hay 12 alarmas integradas en cada instancia de un objeto, y cada alarma tiene su proio evento, el cual se ejecutará cuando la misma llegue a 0. Cabe mencionar que la alarma en realidad no se detiene al llegar a 0, sino en el siguiente <em>step</em>, cuando llega a -1. Por ello, si se desea deterner la alarma por alguna razón, debe asignarse el valor de -1, y no 0.<br /><br />Las alarmas son calculadas en <em>steps</em> de juego, por lo que, por ejemplo, asignar el valor de 30 a una alarma la ejecutará dentro de 30 <em>steps</em>.<br /><br /><strong>NOTA:</strong> Un evento de alarma sin acciones no se ejecutará.<br /><br />También es posible activar una alarma utilizando la función <code>alarm_set()</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Numero real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">instance_create(x, y, bullet);
+alarm[0] = room_speed;</pre>Se crea una instancia del objeto <code>bullet</code>, e inmediatamente se activa la alarma 0, que se ejecutará en un segundo.</div>
+</div>

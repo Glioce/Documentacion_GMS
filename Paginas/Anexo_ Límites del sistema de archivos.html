@@ -1,0 +1,57 @@
+<div class="main-text">
+<h2>
+Anexo: Límites del sistema de archivos</h2>
+Antes de utilizar las funciones de sistemas de archivos incluídas en <i>GameMaker: Studio</i>, es de vital importancia saber exactamente cómo funcionan y lo que está sucediendo <i>detrás de escena</i>. Con ese fin, esta sección está escrita para explicar y aclarar exactamente cómo y dónde los archivos son almacenados, y los límites que presentan estos sistemas.<br />
+<ol>
+<li>
+<h2>
+Sandbox</h2>
+Lo primero (y más importante) que hay que aclarar es que las funciones de archivos están limitadas (en general) a una <i>sandbox</i>. Esto significa que <i>GameMaker: Studio</i> no puede guardar o cargar archivos que no hagan parte del directorio local o <i>paquete </i>del juego sin la intervención explícita del usuario, la cual está limitada únicamente a las plataformas <b>Windows </b>y <b>Mac</b>.<br /><br />
+Paraentender la sandbox, es necesario entender que hay dos áreas de archivos distintas:<br /><br /><ul>
+<li><b>El paquete del juego:</b> (<i>Game bundle</i>) Ésta es la ubicación en donde se encuentra almacenado el ejecutable del juego, incluyendo los archivos añadidos en la lista de recursos <i>Incluided Files</i> en el IDE.</li>
+<li><b>El área de guardado:</b> (Almacenamiento local) Ésta es un área del alamcenamiendo del dispositivo en donde los archivos pueden escribirse y leerse por el juego de forma garantizada y segura.</li>
+</ul>
+<br />El siguiente esquema explica la forma en la que la lectura y escritura de archivos funciona en cada una de las áreas anteriormente mencionadas:<br /><br />
+
+<img src="https://3.bp.blogspot.com/-1XN82e79ki0/WcbY4MofHfI/AAAAAAAAAfM/UUrRTbfkGN8GKVNE6tEiYGoc6BWpx5FmQCPcBGAYYCw/s1600/l%25C3%25ADmite%2Bsistema%2Bde%2Barchivos.png" style="height: auto; max-width: 100%;" /><br /><br /><i><b>NOTA:</b> No es posible escribir en el paquete del juego.</i><br />
+</li>
+<li>
+<h2>
+Usando las funciones de archivos</h2>
+Las dos áreas de archivos (<i>game bundle</i> y almacenamiento local) están disponibles en todas las plataformas, pero en cada una funcionan ligeramente diferente. Sin embargo 
+<i>GameMaker: Studio</i> ha abstraído la esencia principal de lo que se puede y
+ no se puede hacer, por lo que es más fácil adaptar los juegos a las diferentes plataformas.<br /><br />
+Primeramente, es necesario entender lo que significa la variable <code>working_directory</code>. Ésta es un sinónimo de las dos ubicaciones mencionadas anteriormente. Cuando este directorio es utilizado, se tomará alguno de las dos áreas dependiendo de si se va a escribir o leer, y si el archivo ha sido modificado o no. <br /><br />
+<ul>
+<li><b>Operaciones de lectura:</b> <code>working_directory</code> revisará primero el área de guardado (almacenamiento local) para comprobar si el archivo examinado está ahí; y si lo está, tomará éste área como directorio. Si, por el contrario, el archivo examinado no está en el almacenamiento local, se revisará el game bundle y si el archivo está ahí (o añadido en <i>Incluided Files</i>), se tomará este área como directorio.</li>
+<li><b>Operaciones de escritura:</b> Esto sólo puede suceder en el área de guardado.</li>
+</ul>
+<br />
+Con estas dos reglas, se tiene la siguiente información:<br /><br />
+<ul>
+<li>Todas las funciones de directorios (ej: <code>directory_create()</code>) funcionan únicamente en el almacenamiento local.</li>
+<li>Las funciones del sistema de archivos pueden leer archivos tanto del game bundle como del almacenamiento local, pero sólo pueden escribirlos en éste último.</li>
+<li>Las funciones de escritura de archivos (texto, binarios o INI) crearán un nuevo archivo en el almacenamiento local si éste no existe, copiando toda la información del archivo original en <i>Incluided Files</i> si éste existe.</li>
+</ul>
+<br />
+<b>NOTA:</b> En la plataforma <b>Windows</b>, existe una única manera de guardar y cargar archivos por fuera de la <i>sandbox </i>(de forma nativa), y es usando las funciones <code>get_open_filename()</code> y <code>get_save_filename()</code>, que permiten abrir un cuadro de diálogo en donde el usuario podrá escoger manualmente el archivo que se desee abrir o guardar. <br />
+</li>
+<li>
+<h2>
+Ubicación en cada plataforma
+</h2>
+Dependiendo del sistema operativo en el que se esté ejecutando el juego, las rutas del almacenamianto local y el<i> game bundle </i>pueden variar según la siguiente lista: <br /><br /><ul>
+<li><b>En Windows:</b> <i>%localappdata%/&lt;Nombre del juego&gt;</i>, o bien <i>%appdata%/&lt;Nombre del juego&gt; dependiendo de la configuración en </i>Global Game Settings.</li>
+<li><b>Ubuntu (Linux): </b><i>Home/.config/&lt;Nombre del juego&gt;</i>.</li>
+<li><b>HTML5 / Windows 8 (JS):</b> Todo el almacenamiento se realiza a través de <i>LocalStorage</i> (JS).</li>
+<li><b>iOS:</b> El almacenamiento es la ubicación estándar.</li>
+<li><b>Android:</b> <i>data/data/&lt;paquete del juego&gt;</i> (esta ubicación sólo es visible si el dispositivo está <i>rooteado</i>).</li>
+<li><b>Tizen:</b> El almacenamiento es la ubicación estándar.</li>
+<li><b>Windows phone:</b> La ubicación es la misma de la aplicación.&nbsp;</li>
+</ul>
+<br />
+Mientras que en algunas plataformas es posible acceder a un archivo mediante simplemente la ruta relativa del mismo, en algunos dispositivos (Android, iOS y Windows Phone) es necesario utilizar como prefijo la variable <code>working_directory</code> para acceder a los archivos.<br /><br />Cabe mencionar que en las plataformas HTML5 y Windows 8, el almacenamiento tiene un límite de entre 1MB y 5MB.<br />
+
+</li>
+</ol>
+</div>
