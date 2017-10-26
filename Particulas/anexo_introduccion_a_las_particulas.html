@@ -1,0 +1,139 @@
+<div class="main-text">
+	<h1>Anexo: Introducción a las partículas</h1>
+	<!--Aquí eres libre de escribir lo que quieras-->
+    
+    <h2>¿Qué son las partículas?</h2><!-- *************************************** -->
+    <p>
+        Las partículas son recursos gráficos que tienen ciertas propiedades definidas 
+        dentro de un sistema de partículas. Esas propiedades no se pueden manipular 
+        directamente en partículas individuales, sino que se manejan a través del código 
+        usado para definir el tipo de partícula y el sistema al que pertenece. Son muy 
+        útiles para crear  efectos hermosos y llamativos (o sutiles y discretos si se desea) 
+        como explosiones, huellas, lluvia, nieve, campos de estrellas y escombros 
+        sin una carga excesiva a la CPU.
+    </p>
+    <p>
+        La preparación básica de un sistema de partículas se hace en tres pasos, 
+        siendo el tercer paso opcional:
+    </p>
+    <ul>
+        <li> <b>Crear un sistema de partículas:</b>
+            El sistema de partículas es como un contenedor para nuestros diferentes tipos 
+            de partículas. Se usa código para definir una serie de aspectos visuales y de 
+            comportamiento para las partículas, y entonces se colocan en el "contenedor" 
+            de forma que podemos tomarlas y usarlas en donde las necesitemos después.
+        </li><br>
+        <li> <b>Crear tipos de partículas:</b>
+            Se pueden definir diferentes tipos, cada uno con su propio rango de colores, 
+            opacidad, tamaños y movimientos, pero es importante resaltar que no se puede 
+            tener control sobre partículas individuales. Se define una serie de parámetros 
+            y las partículas serán creadas con valores al azar dentro del rango de parámetros.
+        </li><br>
+        <li> <b>Crear emisores:</b>
+            Los emisores se pueden usar para crear un estallido de partículas o un 
+            flujo constante de partículas dentro de un área claramente definida. 
+            Son opcionales porque las partículas también se pueden crear con las funciones 
+            <code>part_particles_create</code> y <code>part_particles_create_colour</code>, 
+            pero no son adecuadas para todas las situaciones.
+        </li>
+    </ul>
+    
+    <h2>Limitaciones</h2><!-- *************************************************** -->
+    <p>
+        Aunque las partículas son una excelente herramienta para crear efectos visuales, 
+        tienen ciertas restricciones y se deben seguir ciertas prácticas para evitar 
+        ralentizar el juego y llegar al punto en que deje de funcionar:
+    </p>
+    <ul>
+        <li>Los sistemas de partículas, los emisores y las partículas ocupan memoria, 
+            y es fácil causar una fuga de memoria que ralentizará y finalmente cerrará
+            el juego. Una manera de enfrentar esto es tener un sistema global con todo 
+            definido al principio del juego y removerlo al final, pero si se desea un 
+            sistema "dinámico" entonces cada partícula y emisor deben ser destruidos 
+            en el momento en que ya no son necesarios.
+        </li><br>
+        <li>Las partículas son rápidas y ligeras para la CPU, pero aun así requieren algo de 
+            procesamiento y por lo tanto no se deberían tener 40000 de ellas generándose a cada 
+            momento. Intente limitarlas a las mínimas necesarias para crear un efecto.
+        </li><br>
+        <li>Si define una partícula con sprite personalizado, el sprite debe ser
+            lo más pequeño posible para lograr el efecto deseado.
+        </li><br>
+        <li>Las partículas no interactúan con objetos ni con otras partículas. 
+            Si se requiere algún tipo de interacción se deben usar instancias. 
+            En GM8 hay funciones para simular la interacción, pero fueron eliminadas 
+            porque incrementan demasiado la carga del procesador.
+        </li><br>
+        <li>No existe un límite técnico para el número de sistemas, emisores y 
+            partículas que se pueden crear en un juego, pero se debe usar lo 
+            mínimo para usar la menor cantidad de memoria posible.
+        </li><br>
+        <li>En dispositivos móviles, dibujar partículas puede ser lento si cubren un área grande
+            de la pantalla, esta es una de las principales causas de ralentización.
+        </li><br>
+        <li>En HTML5, para usar “mezcla aditiva” (additive blending) se debe activar WebGL, 
+            sin embargo, no se puede usar “mezcla de color” (colour blending).
+        </li>
+    </ul>
+    
+    <h2>Herramientas</h2><!-- *************************************************** -->
+    <p>
+        Para diseñar efectos con partículas en tiempo real, y para estudiar esta sección 
+        del manual, es conveniente utilizar un programa “diseñador de partículas”. 
+        A continuación se muestra una lista de programas, algunos son gratis y otros no. 
+        El primero es muy bueno porque tiene una versión que se puede ejecutar en el navegador:
+    </p>
+    <ul>
+        <li><a href="https://marketplace.yoyogames.com/assets/3976/pixelcandy">
+            PixelCandy (ZiNGOT)</a></li>
+        <li><a href="http://alertgames.net/old/?page=s/pd2">
+            Particle Designer 2.5 (Alert Games)</a></li>
+        <li><a href="http://www.comunidadgm.org/index.php?page=JuegosOnline&accion=ver&id=87">
+            Simple Particle Designer (Posva)</a></li>
+        <li><a href="http://www.steampanic.com/geonfx/">
+            Geon FX (Steam Panic)</a></li>
+        <li><a href="http://themojocollective.com/Main/TMC%20Apps%20pages/TMC_Particle_Lab.htm">
+            TMC Particle Lab (The Mojo Collective)</a></li>
+    </ul>
+</div>
+
+<!--
+	Información sobre las etiquetas HTML:
+	Para negrilla, escribir <b>texto</b>
+	para cursiva, escribir <i>texto</i>
+	para enlace, escribir <a href="enlace">texto</a>
+	para imagen, escribir <img src="enlace.png"/> (éstas deben ser locales)
+	para títulos escribir <h2>título</h2>
+	para listas numéricas, escribir:
+		<ol>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			...
+		</ol>
+
+	Para listas sin números, escribir:
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+			...
+		</ul>
+
+	Para tablas, escribir:
+		<table>
+			<tr><th>Título columna 1</th><th>Título columna 2</th></tr>
+			<tr>
+				<td>Texto</td><td>Texto</td>
+			</tr>
+			...
+		</table>
+
+	Para resaltar una línea PEQUEÑA de código gml, escribir:
+	<code>show_message("código gml")</code>
+
+	Para resaltar piezas grandes de código gml, escribir:
+
+	<pre class="gml-syntax">
+	//Mi código GML
+	return "bla bla bla";
+	</pre>
+-->
