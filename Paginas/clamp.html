@@ -1,0 +1,35 @@
+<div id="name">
+clamp</div>
+<div id="content">
+<div id="description">
+Mantiene un número real dentro del rango dado.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">clamp(val, minv, maxv);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>val</td><td>El valor a restringir.</td></tr>
+<tr><td>minv</td><td>El valor mínimo que podrá tener <tt>val</tt>.</td></tr>
+<tr><td>maxv</td><td>El valor máximo que podrá tener <tt>val</tt>.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite restringir un número real dentro de un rango de números determinado. Básicamente, si el número <tt>val</tt> es menor que <tt>minv</tt>, la función devolverá <tt>minv</tt>, y si <tt>val</tt> es mayor que <tt>maxv</tt>, la función devolverá <tt>maxv</tt>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">clamp(5, 1, 10); //devuelve 5
+clamp(5, 6, 10); //devuelve 6
+clamp(-5, 1, 10); //devuelve 1
+clamp(7, 1, 4); //devuelve 4</pre>
+</div>
+</div>

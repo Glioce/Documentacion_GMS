@@ -1,0 +1,27 @@
+<div id="name">choose</div>
+<div id="content">
+	<div id="description">Devuelve aleatoriamente uno de los valores dados.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">choose(val1, ..., val16);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>val1, ..., val16</td><td>La serie de valores a escoger. Puede ser cualquier tipo de dato (cadena, real, constante, array, etc.)</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">En ocaciones puede llegar a ser necesario obtener aleatoriamente valores diferentes a números, u obtener números que no se encuentran dentro del orden real o algún rango. En estos casos, la función <code>choose()</code> es una mejor alternativa para generar un resultado aleatorio.<br /><br /><strong>NOTA:</strong> Esta función generará los mismos resultados (en el mismo orden) cada vez que se ejecuta el juego. Esto gracias a que Game Maker Studio genera la misma semilla aleatoria inicial. Para evitar esto, usar <code>randomize()</code> al inicio del juego para generar una nueva semilla aleatoria.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Uno de los argumentos dados.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a[3] = 0;
+b = choose("Una cadena", 32, c_white, a);</pre>Se le asignará a la variable <code>b</code> un valor aleatoriamente. Puede generarse una cadena, un número real, una constante (aunque en realidad también es un número real) o un <em>array</em>.</div>
+</div>
