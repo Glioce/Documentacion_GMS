@@ -1,0 +1,44 @@
+<div id="name">
+draw_text_ext_transformed_colour</div>
+<div id="content">
+<div id="description">
+Dibuja un texto con espaciado, color, opacidad, escala y ángulo personalizados.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_text_ext_transformed_colour(x, y, str, sep, w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x</td><td>La posición horizontal donde dibujar el texto.</td></tr>
+<tr><td>y</td><td>La posición vertical donde dibujar el texto.</td></tr>
+<tr><td>str</td><td>La cadena de texto a dibujar.</td></tr>
+<tr><td>sep</td><td>La separación vertical entre líneas.</td></tr>
+<tr><td>w</td><td>El anchor máximo del texto.</td></tr>
+<tr><td>xscale</td><td>La escala horizontal del texto (1 es tamaño original).</td></tr>
+<tr><td>yscale</td><td>La escala vertical del texto (1 es tamaño original).</td></tr>
+<tr><td>angle</td><td>El ángulo del texto, en grados.</td></tr>
+<tr><td>c1</td><td>El color de la ezquina superior izquierda del texto.</td></tr>
+<tr><td>c2</td><td>El color de la ezquina superior derecha del texto.</td></tr>
+<tr><td>c3</td><td>El color de la ezquina inferior derecha del texto.</td></tr>
+<tr><td>c4</td><td>El color de la ezquina inferior izquierda del texto.</td></tr>
+<tr><td>alpha</td><td>La opacidad del texto (1 es original).</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función es una mezcla entre <code>draw_text_ext()</code>, <code>draw_text_colour()</code> y <code>draw_text_transformed()</code></div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_text_ext_transformed_colour(200, 200, "Mi nombre es " + global.nombre +".", 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy, c_navy, 1);</pre>
+</div>
+</div>

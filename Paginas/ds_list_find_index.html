@@ -1,0 +1,29 @@
+<div id="name">ds_list_find_index</div>
+<div id="content">
+	<div id="description">Busca la posición del valor dado dentro de la lista.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_find_index(id, val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a usar.</td>
+	</tr>
+	<tr>
+	<td>val</td><td>El valor a buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede comprobar la lista dada, que devolverá la posición del valor dado dentro de dicha lista. Tenga en cuenta que si hay más de una entrada con el mismo valor, la posición de cualquiera de los dos puede ser devuelta, y si el valor no existe devolverá <code>-1</code>.<br /><br /><em><strong>Nota:</strong> Si el índice que deseas buscar en la lista es un arreglo (array), esta función devolverá <code>-1</code></em>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">pos = ds_list_find_index(list, "Player1");</pre>El código anterior buscará dentro la lista indexada en la variable &quot;list&quot; la posición del valor &quot;Player1&quot; y lo almacenará dentro de la variable &quot;pos&quot;.</div>
+</div>

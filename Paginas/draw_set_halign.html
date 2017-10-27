@@ -1,0 +1,52 @@
+<div id="name">
+draw_set_halign</div>
+<div id="content">
+<div id="description">
+Establece la alineación horizontal del texto.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_set_halign(halign);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>halign</td><td>La alineación horizontal del texto.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función se utiliza para establecer la forma en la que el texto se alinea horizontalmente. Las siguientes constantes son aceptadas:<br />
+<br />
+<div style="text-align: center;">
+<table style="width: 50%;">
+<tbody>
+<tr>
+<th>Constante</th><th>Alineación</th><th>Valor numérico</th>
+</tr>
+<tr>
+<td><tt>fa_left</tt></td><td><img src="https://1.bp.blogspot.com/-gXgCHq1pzEk/Wd5HJZR-OtI/AAAAAAAAAlM/UziRq6PNxdgHuabofs6nCl9DB2czrY0AgCLcBGAs/s1600/fa_left.png" /></td><td>0</td>
+</tr>
+<tr>
+<td><tt>fa_center</tt></td><td><img src="https://4.bp.blogspot.com/-pNPzsX_lyTs/Wd5I__hLDjI/AAAAAAAAAlY/enV75tXlPL45gGIwxPWUydMAFJVR3AB9ACLcBGAs/s1600/fa_center.png" /></td><td>1</td>
+</tr>
+<tr>
+<td><tt>fa_right</tt></td><td><img src="https://4.bp.blogspot.com/-qoMbIC7OZAc/Wd5J1kmtfOI/AAAAAAAAAlc/Q-KXwkOfCkAkkhc5Mex6h5CIWPT-osp-ACLcBGAs/s1600/fa_right.png" /></td><td>2</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_set_colour(c_blue);
+draw_set_halign(fa_center);
+draw_set_font(fn_Texto);
+draw_text(x, y - 64, "¡Hola a todos!");</pre>
+Se establece el color azul y la fuente <code>fn_Texto</code>, y luego se dibuja un texto centrado horizontalmente con estas propiedades.</div>
+</div>

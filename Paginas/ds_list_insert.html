@@ -1,0 +1,32 @@
+<div id="name">ds_list_insert</div>
+<div id="content">
+	<div id="description">Inserta el valor dado en cualquier posición dentro de la lista.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_insert(id, pos, val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista en que se añadirá.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición del valor a agregar, donde 0 corresponde al comienzo de la lista y el final sería ds_list_size(id)-1.</td>
+	</tr>
+	<tr>
+	<td>val</td><td>EL valor a agregar a la lista.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función agregará el valor dado en la lista en la posición dada. Si la lista contiene valores después de la posición dada, se desplazarán todos los valores para hacer espacio al nuevo valor, por lo que la lista aumentará su tamaño en 1.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ds_list_insert(list, 9, score);</pre>El código anterior agregara el valor almacenado dentro de la variable &quot;score&quot; dentro de la posición 10 de la lista indexada en la variable &quot;list&quot; (las listas empiezan a contabilizarse desde el 0, una lista de 10 valores esta numerada desde el 0 hasta el 9).</div>
+</div>

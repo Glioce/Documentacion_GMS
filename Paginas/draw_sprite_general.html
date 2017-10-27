@@ -1,0 +1,47 @@
+<div id="name">
+draw_sprite_general</div>
+<div id="content">
+<div id="description">
+Dibuja una parte de un sprite con propiedades de color, escala y rotación modificables.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_sprite_general(sprite, subimg, left, top, width, height, x, y, xscale, yscale, rot, c1, c2, c3, c4, alpha);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>sprite</td><td>El índice del sprite a dibujar .</td></tr>
+<tr><td>subimg</td><td>El número de subimagen a dibujar (0 es la primera subimagen del sprite).</td></tr>
+<tr><td>left</td><td>La posición horizontal (ezquina superior izquierda) desde donde dibujar el sprite</td></tr>
+<tr><td>top</td><td>La posición vertical (ezquina superior izquierda) desde donde dibujar el sprite</td></tr>
+<tr><td>width</td><td>El tamaño (horizontal) del área del sprite a dibujar</td></tr>
+<tr><td>height</td><td>El tamaño (vertical) del área del sprite a dibujar</td></tr>
+<tr><td>x</td><td>La posición horizontal en donde dibujar el sprite.</td></tr>
+<tr><td>y</td><td>La posición vertical en donde dibujar el sprite.</td></tr>
+<tr><td>xscale</td><td>La escala horizontal del sprite (1 es tamaño original).</td></tr>
+<tr><td>yscale</td><td>La escala vertical del sprite (1 es tamaño original).</td></tr>
+<tr><td>rot</td><td>El ángulo de rotación del sprite en grados.</td></tr>
+<tr><td>c1</td><td>El color con el cual mezclar el área superior izquierda del sprite.</td></tr>
+<tr><td>c2</td><td>El color con el cual mezclar el área superior derecha del sprite.</td></tr>
+<tr><td>c3</td><td>El color con el cual mezclar el área inferior derecha del sprite.</td></tr>
+<tr><td>c4</td><td>El color con el cual mezclar el área inferior izquierda del sprite.</td></tr>
+<tr><td>alpha</td><td>La opacidad del sprite (1 es opacidad original).</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función combina las funciones <code>draw_sprite_ext()</code> y <code>draw_sprite_part()</code>, añadiendo algunas opciones de mezcla de color adicionales a cada ezquina del sprite.<br />
+<br />
+<b>&nbsp;NOTA: </b>La mezcla de colores en la plataforma HTML5 es recomendada sólo cuando WebGL es activado, aunque de no estárlo, dicha mezcla seguirá funcionando normalmente. Sin embargo, sin WebGL todas las mezclas de color crean un sprite duplicado que se almacenará en la caché para usarse cuando sea neceesario. Esto está lejos de ser óptimo, y si se usan muchos cambios de color podría producirse una ralentización y bajón de rendimiento en el juego hasta que se active WebGL. Si usted no desea usar WebGL, también puede intentar modificar el tamaño del caché de sprites usando <code>sprite_set_cache_size()</code> e intentar limitarlo para mejorar el rendimiento.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_sprite_general(sprite_index, image_index, 8, 8, sprite_width-16, sprite_height-16, x, y, 2, 0.5, 180, c_white, c_white, c_black, c_black, 1);</pre>
+El anterior código dibujará la subimagen actual del sprite asignado a la instancia, omitiendo un margen de 8px en el sprite. Además, tendrá el doble del tamaño horizontal original y la mitad del vertical, así como también una rotación de 180 grados. Por último, el sprite se dibujará con un degradado desde el color original hasta una silueta negra.</div>
+</div>

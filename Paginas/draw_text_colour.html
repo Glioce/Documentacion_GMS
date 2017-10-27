@@ -1,0 +1,41 @@
+<div id="name">
+draw_text_colour</div>
+<div id="content">
+<div id="description">
+Dibuja un texto en la posición dada con una gradiente de color personalizada.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_text_colour(x, y, str, c1, c2, c3, c4, alpha);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x</td><td>La posición horizontal en donde dibujar el texto.</td></tr>
+<tr><td>y</td><td>La posición vertical en donde dibujar el texto.</td></tr>
+<tr><td>str</td><td>La cadena de texto a dibujar.</td></tr>
+<tr><td>c1</td><td>El color de la ezquina superior izquierda del texto.</td></tr>
+<tr><td>c2</td><td>El color de la ezquina superior derecha del texto.</td></tr>
+<tr><td>c3</td><td>El color de la ezquina inferior derecha del texto.</td></tr>
+<tr><td>c4</td><td>El color de la ezquina inferior izquierda del texto.</td></tr>
+<tr><td>alpha</td><td>La opacidad del texto (1 es original).</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+&nbsp;Esta función es muy similar a <code>draw_text()</code>, con la diferencia de que es posible escoger manualmente cuatro colores distintos y una opacidad para el texto. Los colores  y opacidad dados como parámetros tienen prioridad sobre el color y opacidad definidos con <code>draw_set_alpha()</code> y <code>draw_set_colour()</code>.<br />
+<br />
+<b>NOTA:</b> La mezcla de colores degradados no está disponible en la plataforma HTML5 a menos de que WebGL esté activado, aunque aún se podrán mezclar la opacidad y el primero de los colores dados si no lo está. Sin embargo, todas las mezclas de color que se realicen sin WebGL crearán una copia de la fuente que se almacenará en caché; esto podría ralentizar el rendimiento de tu juego si se utiliza sin control.  Es posible también definir límite de almacenamiento en caché de las fuentes utilizando <code>font_set_cache_size()</code>. </div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_set_colour(c_white);
+draw_text(100, 100, "Puntos: ");
+draw_text_colour(100, 200, string(score), c_lime, c_lime, c_green, c_green, 1);</pre>
+</div>
+</div>

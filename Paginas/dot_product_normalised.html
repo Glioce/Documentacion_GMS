@@ -1,0 +1,65 @@
+<div id="name">
+dot_product_normalised</div>
+<div id="content">
+<div id="description">
+Devuelve el producto punto de dos vectores</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">dot_product_normalised(x1, y1, x2, y2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>El componente horizontal del primer vector.</td></tr>
+<tr><td>y1</td><td>El componente vertical del primer vector.</td></tr>
+<tr><td>x2</td><td>El componente horizontal del segundo vector.</td></tr>
+<tr><td>y2</td><td>El componente vertical del segundo vector.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función es exactamente igual a <code>dot_product()</code>, con la única diferencia de que el valor que devuelve es ajustado para estar entre -1 y 1.
+<br />
+<br />
+Como esta función puede devolver números con muchas cifras decimales (cifras que son importantes), debe tenerse en cuenta la precisión de los números que se está utilizando (<code>math_get_epsilon()</code>).
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+Veamos una aplicación del producto punto en un videojuego. Observemos la siguiente imagen animada:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://lh3.googleusercontent.com/-NtTNufbgOak/WdudBUpfDDI/AAAAAAAAAk8/1UlDNKXu4JwsDCto22IUq_GD2un8mDYgACLcBGAs/h1600/dot_product_normalised_ejemplo.gif" style="max-width: 80%;" /></div>
+<br />
+La línea roja representa el ángulo del enemigo, la línea verde representa el vector entre el jugador y el enemigo, y la línea azul representa el área de visibilidad del enemigo (perpendicular al ángulo de éste).<br />
+<br />
+Para calcular si el jugador se encuentra dentro del área de visibilidad del enemigo, podemos usar el siguiente código:
+<br />
+<pre class="gml-syntax">//Obtenemos el vector entre el jugador y el enemigo
+var x1 = oPlayer.x - x;
+var y1 = oPlayer.y - y;
+
+//Obtenemos el vector normal de la dirección del enemigo.
+var x2 = lengthdir_x(1, image_angle);
+var y2 = lengthdir_y(1, image_angle);
+
+var dot = dot_product_normalised(x1, y1, x2, y2); //Calculamos el producto punto
+
+/*
+El producto será mayor que 0 (positivo) si el ángulo que
+forma el vector entre el jugador y el enemigo, y el vector
+normal del ángulo del enemigo es menor de 90°. De lo contrario,
+devolverá negativo o 0 en caso de ser perpendiculares.
+*/
+if(dot &gt; 0)
+{
+    //El enemigo puede ver al jugador
+    draw_text(x, y - 64, "¡Puedo verte!");
+}
+</pre>
+</div>

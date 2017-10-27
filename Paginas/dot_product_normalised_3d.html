@@ -1,0 +1,55 @@
+<div id="name">
+dot_product_normalised_3d</div>
+<div id="content">
+<div id="description">
+Devuelve el producto punto de dos vectores</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">dot_product_normalised_3d(x1, y1, z1, x2, y2, z2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>El componente horizontal del primer vector.</td></tr>
+<tr><td>y1</td><td>El componente vertical del primer vector.</td></tr>
+<tr><td>z1</td><td>El componente z (profundiad) del primer vector.</td></tr>
+<tr><td>x2</td><td>El componente horizontal del segundo vector.</td></tr>
+<tr><td>y2</td><td>El componente vertical del segundo vector.</td></tr>
+<tr><td>z2</td><td>El componente z (profundiad) del segundo vector.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función es muy similar a <code>dot_product_normalised()</code>, con la diferencia de que realiza el cálculo con tres dimensiones:
+<br />
+<pre>A · B = (A<sub>x</sub> * B<sub>x</sub>) + (A<sub>y</sub> * B<sub>y</sub>) + (A<sub>z</sub> * B<sub>z</sub>)
+</pre>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var x1, y1, x2, y2;
+//Las coordenadas 3d del primer vector
+x1 = 0;
+y1 = 1;
+z1 = 0;
+
+//Las coordenadas 3d del segundo vector.
+x2 = o_Player.x - x;
+y2 = o_Player.y - y;
+z2 = o_Player.z - z;
+
+var dot = dot_product_normalised_3d(x1, y1, z1, x2, y2, z2);
+if(dot &gt; 0)
+    above = true;
+else
+    above = false;
+</pre>
+En el código anterior, se obtiene el producto punto de los vectores formados por (x1, y1, z1) y (x2, y2, z2). Luego, se comprueba si este valor es mayor a 0, y si es así, establece la variable <tt>above</tt> a <code>true</code>, de lo contrario, le da el valor de <code>false</code>.</div>
+</div>

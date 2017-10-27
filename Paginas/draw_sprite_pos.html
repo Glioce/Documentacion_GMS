@@ -1,0 +1,50 @@
+<div id="name">
+draw_sprite_pos</div>
+<div id="content">
+<div id="description">
+Dibuja un sprite deformado mediante los cuatro puntos y la opacidad dados.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_sprite_pos(sprite, subimg, x1, y1, x2, y2, x3, y3, x4, y4, alpha);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>sprite</td><td>El índice del sprite a dibujar.</td></tr>
+<tr><td>subimg</td><td>El número de la subimagen del sprite a dibujar (0 es la primera).</td></tr>
+<tr><td>x1</td><td>Componente horizontal del primer punto.</td></tr>
+<tr><td>y1</td><td>Componente vertical del primer punto.</td></tr>
+<tr><td>x2</td><td>Componente horizontal del segundo punto.</td></tr>
+<tr><td>y2</td><td>Componente vertical del segundo punto.</td></tr>
+<tr><td>x3</td><td>Componente horizontal del tercer punto.</td></tr>
+<tr><td>y3</td><td>Componente vertical del tercer punto.</td></tr>
+<tr><td>x4</td><td>Componente horizontal del cuarto punto.</td></tr>
+<tr><td>y4</td><td>Componente vertical del cuarto punto.</td></tr>
+<tr><td>alpha</td><td>La opacidad del sprite.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite dibujar un sprite distorcionado dentro del área definida por los cuatro puntos dado. Los dos primeros argumentos son el índice del sprite y subimagen (de la misma forma que <code>draw_sprite()</code>), pero los siguientes 8 son las coordenadas que definirán los puntos que formarán el área del sprite. Estos puntos son en orden de las manecillas del reloj, ergo el primer par de coordenadas (X1,Y1) corresponden a la ezquina superior izquierda, el siguiente a la superior derecha, el siguiente a la inferior derecha y el último (X4, Y4) corresponde a la ezquina inferior izquierda. Además, es posible definir la opacidad del sprite. La siguiente imagen ilustra el comportamiento de esta función:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://3.bp.blogspot.com/-H8EO5hYGS0c/WdesOG9e8wI/AAAAAAAAAjQ/yOzuO4BjXREAHDN1zqivQTHzbnb1g4dfwCLcBGAs/s1600/spr_pos.png" style="max-width: 80%;" /></div>
+<br />
+<br />
+<b>ALERTA: </b>La imagen anterior es sólo con propósitos ilustrativos, y de usarse, es posible obtener resultados distintos debido a las propiedades de la textura.<br />
+<br />
+<b>&nbsp;NOTA:</b> Esta función sólo trabaja con sprites de mapa de bits. Los sprites vectoriales o de Spine no son admitidos.
+</div>
+<br />
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_sprite_pos(sprite_index, image_index, x - 100, y - 50, x - 50, y +150, x + 100, y + 200, x + 100, y, 1);</pre>
+</div>
+</div>

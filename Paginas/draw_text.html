@@ -1,0 +1,42 @@
+<div id="name">
+draw_text</div>
+<div id="content">
+<div id="description">
+Dibuja un texto en la posición dada.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_text(x, y, str);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x</td><td>La posición horizontal en donde dibujar el texto.</td></tr>
+<tr><td>y</td><td>La posición vertical en donde dibujar el texto.</td></tr>
+<tr><td>str</td><td>La cadena de texto a dibujar.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite dibujar cualquier cadena de texto en una posición determinada de la sala. Esta función <b>sólo admite</b> como parámetro <tt>str</tt> cadenas de texto; si se necesita dibujar en pantalla un número real, debe utilizarse la función <code>string()</code> o <code>string_format()</code> para convertir dicho número a cadena de texto.<br />
+<br />
+Es posible también añadir un signo de almohadilla (<code>"#"</code>) para incluír un salto de línea en el texto. Si, por el contrario, se necesita dibujar este caracter en pantalla y no utilizarlo como salto de línea, debe precederse por una barra inclinada inversa, de esta forma: <code>"Éste es un \# sin salto de línea."</code>.<br />
+<br />
+El color, opcidad y fuente del texto son las definidas por las funciones <code>draw_set_colour()</code>, <code>draw_set_alpha()</code> y <code>draw_set_font()</code>.
+
+<b>&nbsp;</b><br />
+<br />
+<b>NOTA:</b> La posición del texto puede verse influenciada por la alineación del mismo, definida por las funciones <code>draw_set_halign()</code> y <code>draw_set_valign()</code>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var usuario = "Player1";
+var email  = "player1@correo.com";
+draw_text(x, y, "Tu nombre de usuario es: " + usuario + "#Tu correo electrónico es: " + email);</pre>
+</div>
+</div>

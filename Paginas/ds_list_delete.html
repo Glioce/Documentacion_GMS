@@ -1,0 +1,33 @@
+<div id="name">ds_list_delete</div>
+<div id="content">
+	<div id="description">Elimina el valor de la posición dada de la lista.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_delete(id, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a modificar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>Posición donde está el valor a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede eliminar el valor almacenado en una posición en especifico dentro de la lista.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if ds_list_size(sc_list) > 10{
+     while (ds_list_size(sc_list) > 10){
+          ds_list_delete(sc_list, 0);
+     }
+}</pre>El código anterior comprueba el tamaño de la lista, si es mayor a diez, entra en un bucle que remueve consecutivamente el valor de la posición 0 hasta que la lista tenga solo 10 valores.</div>
+</div>

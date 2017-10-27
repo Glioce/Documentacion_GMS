@@ -1,0 +1,44 @@
+<div id="name">draw_ellipse_colour</div>
+<div id="content">
+	<div id="description">Dibuja una elipse con un degradado circular de dos colores.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">draw_ellipse_colour(x1, y1, x2, y2, col1, col2, outline);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>x1</td><td>La coordenada en x del lado izquierdo de la elipse.</td>
+	</tr>
+	<tr>
+	<td>y1</td><td>La coordenada en y del lado superior de la elipse.</td>
+	</tr>
+	<tr>
+	<td>x2</td><td>La coordenada en x del lado derecho de la elipse.</td>
+	</tr>
+	<tr>
+	<td>y2</td><td>La coordenada en y del lado inferior de la elipse.</td>
+	</tr>
+	<tr>
+	<td>col1</td><td>El color del centro de la elipse.</td>
+	</tr>
+	<tr>
+	<td>col2</td><td>El color del borde de la elipse.</td>
+	</tr>
+	<tr>
+	<td>outline</td><td>Indica si dibuja el contorno de una elipse (true) o si es una elipse rellena (false).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función se puede dibujar el contorno de una elipse o una elipse rellena, definida dentro de un área rectangular dada. Si la elipse es rellena puede definir un color para el interior y otro para el borde. Si los colores no son iguales, se obtendra un efecto de degradado circular (los colores indicados reemplazan el color base indicado por la función <code>draw_set_colour()</code>). Puedes definir la precisión de la elipse con la función <code>draw_set_circle_precision()</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">draw_ellipse_colour(50, 50, 200, 100, c_black, c_white, false);</pre>Con el código anterior se dibuja una elipse alargada horizontalmente, con un degradado desde el color negro(centro) y el color blanco(borde).</div>
+</div>

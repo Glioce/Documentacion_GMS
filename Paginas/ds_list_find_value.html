@@ -1,0 +1,29 @@
+<div id="name">ds_list_find_value</div>
+<div id="content">
+	<div id="description">Busca el valor de la posición dada dentro de la lista.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_find_value(id, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a usar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición a comprobar, donde 0 corresponde al inicio de la lista y la posición final sería ds_list_size(id)-1.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede comprobar dentro de la lista la posición dada y obtener su valor almacenado.<br /><br /><em><strong>Nota:</strong> Si da una posición fuera del tamaño de la lista (ejemplo, la posición 11 en una lista de 10 valores), la función devolverá &lt;Indefinido(undefined)&gt;. Siempre se debe comprobar lo obtenido con la función <code>is_undefined()</code></em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real, Cadena de texto o Indefinido.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">val = ds_list_find_value(list, ds_list_size(list) - 1);</pre>El código anterior comprobará en la lista indexada en la variable &quot;list&quot;, la ultima posición y almacenará el valor devuelto dentro de la variable &quot;val&quot;.</div>
+</div>

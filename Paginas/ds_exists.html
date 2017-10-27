@@ -1,0 +1,46 @@
+<div id="name">
+ds_exists</div>
+<div id="content">
+<div id="description">
+Comprueba si existe una estructura de datos con el tipo dado.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">ds_exists(ind, type);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>ind</td><td>La variable con el indice a comprobar.</td></tr>
+<tr><td>type</td><td>El tipo de estructura de datos a comprobar (mire la lista de constante debajo).</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Con esta función puede comprobar si existe una estructura de datos que coincida con el tipo indicado. Usted debe dar el valor "índice" (guardado en una variable) y el "tipo", puede comprobar los tipos en la lista de abajo, la función devuelve <code>true</code> si la estructura de datos existe y <code>false</code> en caso contrario.<br />
+<br />
+<div style="margin:0 10%">
+<table style="width: 100%;"><tbody>
+<tr><th>Constante</th><th>Descripción</th></tr>
+<tr><td>ds_type_map</td><td>Una estructura de tipo mapa.</td></tr>
+<tr><td>ds_type_list</td><td>Una estructura de tipo lista.</td></tr>
+<tr><td>ds_type_stack</td><td>Una estructura de tipo pila.</td></tr>
+<tr><td>ds_type_grid</td><td>Una estructura de tipo rejilla.</td></tr>
+<tr><td>ds_type_queue</td><td>Una estructura de tipo cola.</td></tr>
+<tr><td>ds_type_priority</td><td>Una estructura de tipo prioridad.</td></tr>
+</tbody></table>
+</div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Booleano</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if !ds_exists(ai_grid, ds_type_grid){
+     ai_grid = ds_grid_create(room_width / 32, room_height / 32);
+}</pre>
+El código anterior comprueba la variable (previamente iniciada) "ai_grid" para comprobar si tiene indexada una rejilla(ds_grid), si no es así, entonces crea una y almacena su índice en la variable.</div>
+</div>

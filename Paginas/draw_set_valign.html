@@ -1,0 +1,52 @@
+<div id="name">
+draw_set_valign</div>
+<div id="content">
+<div id="description">
+Establece la alineación vertical del texto.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_set_valign(valign);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>valign</td><td>La alineación vertical del texto.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función se utiliza para establecer la forma en la que el texto se alinea verticalmente. Las siguientes constantes son aceptadas:<br />
+<br />
+<div style="text-align: center;">
+<table style="width: 50%;">
+<tbody>
+<tr>
+<th>Constante</th><th>Alineación</th><th>Valor numérico</th>
+</tr>
+<tr>
+<td><tt>fa_top</tt></td><td><img src="https://1.bp.blogspot.com/-gcj4fVmdOaM/Wd-XoqNvuYI/AAAAAAAAAmQ/_C5AV4QwCos-En9JYHj76_1xtkXx6VKIwCLcBGAs/s1600/fa_top.png" /></td><td>0</td>
+</tr>
+<tr>
+<td><tt>fa_middle</tt></td><td><img src="https://2.bp.blogspot.com/-n_R6nF6br4w/Wd-XoS28zQI/AAAAAAAAAmM/OFDiY1CZx0MarIZuoG8fyH58E33YbwoNwCLcBGAs/s1600/fa_middle.png" /></td><td>1</td>
+</tr>
+<tr>
+<td><tt>fa_bottom</tt></td><td><img src="https://3.bp.blogspot.com/-Dj40mo0hNdY/Wd-XoYVP-0I/AAAAAAAAAmI/l1dxtxSExk4Xjc02hTcTOfBB6Dyp7i5BwCLcBGAs/s1600/fa_bottom.png" /></td><td>2</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_set_colour(c_blue);
+draw_set_valign(fa_middle);
+draw_set_font(fn_Texto);
+draw_text(x, y - 64, "¡Hola a todos!");</pre>
+Se establece el color azul y la fuente <code>fn_Texto</code>, y luego se dibuja un texto centrado verticalmente con estas propiedades.</div>
+</div>

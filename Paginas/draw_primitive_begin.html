@@ -1,0 +1,49 @@
+<div id="name">draw_primitive_begin</div>
+<div id="content">
+ <div id="description">Inicia una primitiva con la clase dada.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">draw_primitive_begin(kind);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>kind</td><td>La clase de primitiva a dibujar.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función debe ser llamada antes de poder definir cualquier figura primitiva. Existen 6 tipos de primitivas que se pueden seleccionar con las siguientes constantes:
+<br /><ul>
+<li><span style="font-family:courier">pr_pointlist</span></li>
+<li><span style="font-family:courier">pr_linelist</span></li>
+<li><span style="font-family:courier">pr_linestrip</span></li>
+<li><span style="font-family:courier">pr_trianglelist</span></li>
+<li><span style="font-family:courier">pr_trianglestrip</span></li>
+<li><span style="font-family:courier">pr_trianglefan</span> (Esta constante no se encuentra disponible en la plataforma HTML5, y puede no trabajar correctamente en algunos dispositivos de otras plataformas)</li>
+</ul>
+<br />
+<br />La siguiente imagen muestra la disposición de los vértices del dibujo de primitivas, dependiendo del tipo de primitiva escogido:
+<br />
+<br /><img src="https://4.bp.blogspot.com/-XCjsJtcKG40/WcH83I4quDI/AAAAAAAAAa8/Yybnwc1PolkydH_6dWJ3dgqRqBVOgZ9NgCLcBGAs/s1600/pr_types.png"/>
+</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Nada.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">lados = 6;
+dir = 360 / lados;
+
+draw_primitive_begin(pr_linestrip);
+for(i = 0; i <= lados; i++) {
+    lx = lengthdir_x(48, dir*i);
+    ly = lengthdir_y(48, dir*i);
+    draw_vertex(64+lx, 64+ly);
+}
+draw_primitive_end();</pre>El anterior código permite dibujar el borde de un polígono regular de seis lados, como se muestra en la figura a continuación:
+<br /><img src="https://2.bp.blogspot.com/-FZhJG__8lZI/WcH7wVYjHPI/AAAAAAAAAa0/9iTXRCtsd6MJ7MJGbtmT_H5VGwblzhJ9wCLcBGAs/s1600/6sides_polygon.PNG"/></div>
+</div>

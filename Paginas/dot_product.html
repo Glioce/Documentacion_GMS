@@ -1,0 +1,91 @@
+<div id="name">
+dot_product</div>
+<div id="content">
+<div id="description">
+Devuelve el producto punto de dos vectores</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">dot_product(x1, y1, x2, y2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>El componente horizontal del primer vector.</td></tr>
+<tr><td>y1</td><td>El componente vertical del primer vector.</td></tr>
+<tr><td>x2</td><td>El componente horizontal del segundo vector.</td></tr>
+<tr><td>y2</td><td>El componente vertical del segundo vector.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+El producto punto es un valor que expresa la relación angular entre dos vectores. Es llamado así por el símbolo que lo representa, el punto medio. Es decir, el producto punto entre A y B se escribe como:  A · B.<br />
+<br />
+Matemáticamente, la fórmula del producto punto se escribe así:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://1.bp.blogspot.com/-BD9uuBJbBYc/WduFuDym8rI/AAAAAAAAAkc/mzKF8Fw4Y-Yk8cWdft37pIlMGNKTl_BxACLcBGAs/s1600/dot_product_formula.png" /></div>
+<br />
+Donde <tt>n</tt> es el número de dimensiones que poseen los vectores, e <tt>i</tt> representa cada componente en las dimensiones de éstos.
+<br />
+<br />
+Teniendo en cuenta lo anterior, en un plano 2D el producto punto se calcula así:
+<br />
+<pre style="font-family: Times New Roman;">A · B = (A<sub>x</sub> *  B<sub>x</sub>) + (A<sub>y</sub> *  B<sub>y</sub>)
+</pre>
+Sin embargo, hay algo curioso con el producto punto, y es que también puede expresarse de esta manera:
+<br />
+<pre style="font-family: Times New Roman;">A · B = (tamaño de A) * (tamaño de B) * cos(α)
+</pre>
+Donde α representa el ángulo que se forma entre los vectores A y B, como se muestra en la siguiente imagen:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://2.bp.blogspot.com/-UNti4zTaosY/WduFKOxauRI/AAAAAAAAAkU/dBHVc9j0UU8510sSr_VE2-zvV1p2Yw-1QCLcBGAs/s1600/dot_product.png" style="max-width: 80%;" /></div>
+<br />
+Algo importante a mencionar, es que el producto punto de dos vectores posee ciertas características de gran utilidad:
+<br />
+<ol>
+<li>Si A y B son perpendiculares (es decir, forman un ángulo de 90°), el producto punto será 0, pues cos(90°) = 0.</li>
+<li>Si α es menor a 90°, el producto punto será positivo, al igual que cos(α).</li>
+<li>Si α es mayor a 90°, el producto punto será negativo, al igual que cos(α).</li>
+</ol>
+<ol>
+</ol>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+Veamos una aplicación del producto punto en un videojuego. Observemos la siguiente imagen animada:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://2.bp.blogspot.com/-U8W6l178QCs/WduU5msdCKI/AAAAAAAAAks/EjaxqlhgZJ8B07h9Q0WHFeGJHtoU3zyygCLcBGAs/s1600/dot_product_ejemplo.gif" style="max-width: 80%;" /></div>
+<br />
+La línea roja representa el ángulo del enemigo, la línea verde representa el vector entre el jugador y el enemigo, y la línea azul representa el área de visibilidad del enemigo (perpendicular al ángulo de éste). Para calcular si el jugador se encuentra dentro del área de visibilidad del enemigo, podemos usar el siguiente código:
+<br />
+<pre class="gml-syntax">//Obtenemos el vector entre el jugador y el enemigo
+var x1 = oPlayer.x - x;
+var y1 = oPlayer.y - y;
+
+//Obtenemos el vector normal de la dirección del enemigo.
+var x2 = lengthdir_x(1, image_angle);
+var y2 = lengthdir_y(1, image_angle);
+
+var dot = dot_product(x1, y1, x2, y2); //Calculamos el producto punto
+
+/*
+El producto será mayor que 0 (positivo) si el ángulo que
+forma el vector entre el jugador y el enemigo, y el vector
+normal del ángulo del enemigo es menor de 90°. De lo contrario,
+devolverá negativo o 0 en caso de ser perpendiculares.
+*/
+if(dot &gt; 0)
+{
+    //El enemigo puede ver al jugador
+    draw_text(x, y - 64, "¡Puedo verte!");
+}
+</pre>
+</div>

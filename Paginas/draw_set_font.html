@@ -1,0 +1,34 @@
+<div id="name">
+draw_set_font</div>
+<div id="content">
+<div id="description">
+Establece la fuente que se usará para dibujar el texto.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_set_font(font);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>font</td><td>El índice de la fuente a establecer.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función establece la fuente que se usará para dibujar el texto. El parámetro <tt>font</tt> debe ser una constante que represente un recurso de fuente incluído en el proyecto, o bien un identificador de fuente externa devuelto por <code>font_add()</code> y/o <code>font_add_sprite()</code>. También es posible utilizar -1 como parámetro para establecer la fuente por defecto: Arial de 12pt.<br />
+<br />
+<b>NOTA: </b>Hasta que no se cambie nuevamente, todos los textos en el juego se dibujarán con la fuente que esta función establezca. Es decir, es de uso global.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_set_colour(c_blue);
+draw_set_font(fn_Texto);
+draw_text(x, y - 64, "¡Hola a todos!");</pre>
+Se establece el color azul y la fuente <code>fn_Texto</code>, y luego se dibuja un texto con estas propiedades.</div>
+</div>

@@ -1,0 +1,33 @@
+<div id="name">
+ds_stack_push</div>
+<div id="content">
+<div id="description">
+Añade el valor (o valores dados) arriba de la pila.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">ds_stack_push(ds, val [, val2, ... val15]);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>ds</td><td>El id de la pila de la que se tomará.</td></tr>
+<tr><td>val</td><td>El valor a añadir en la pila.</td></tr>
+<tr><td>[val2, ..., val13]</td><td>Valores opcionales a añadir a la pila.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite <i>apilar</i> (añadir) un valor, el cual puede ser un número real o una cadena de texto a la pila indicada. Esta función puede tomar hasta 14 argumentos opcionales, permitiendo apilar múltiples valores al mismo tiempo en una pila.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">move_stack = ds_stack_create();
+ds_stack_push(move_stack, x, y, x, y + 200, x + 200, y + 200, x +200, y);</pre>
+El código anterior crea una nueva pila(ds_stack) y almacena su indice en la variable "move_stack". Entonces añade valores a la pila, que serán usados en un futuro.</div>
+</div>

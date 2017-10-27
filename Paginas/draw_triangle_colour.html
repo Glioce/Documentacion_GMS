@@ -1,0 +1,39 @@
+<div id="name">
+draw_triangle_colour</div>
+<div id="content">
+<div id="description">
+Dibuja un triángulo mediante tres puntos dados con un color personalizado.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_triangle_colour(x1, y1, x2, y2, x3, y3, col1, col2, col3, outline);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>La posición horizontal del primer punto del triángulo</td></tr>
+<tr><td>y1</td><td>La posición vertical del primer punto del triángulo</td></tr>
+<tr><td>x2</td><td>La posición horizontal del segundo punto del triángulo</td></tr>
+<tr><td>y2</td><td>La posición vertical del segundo punto del triángulo</td></tr>
+<tr><td>x3</td><td>La posición horizontal del tercer punto del triángulo</td></tr>
+<tr><td>y3</td><td>La posición verticaldel tercer punto del triángulo</td></tr>
+<tr><td>col1</td><td>El color de la primera ezquina del triángulo.</td></tr>
+<tr><td>col2</td><td>El color de la segunda ezquina del triángulo.</td></tr>
+<tr><td>col3</td><td>El color de la tercera ezquina del triángulo.</td></tr>
+<tr><td>outline</td><td>¿Dibujar sólo el borde del triángulo (<tt>true<tt>), o el triángulo relleno (<tt>false</tt>)?</tt></tt></td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite dibujar un triángulo definido por los tres puntos (x1, y1), (x2, y2) y (x3, y3) con los tres colores dados que se mezclan en una gradiente. Los colores definidos como parámetro se sobreponen al color definido por <code>draw_set_colour()</code>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_triangle_colour(200, 200, 300, 200, 200, 300, c_red, c_green, c_blue, false);</pre>
+</div>
+</div>

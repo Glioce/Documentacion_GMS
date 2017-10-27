@@ -1,0 +1,30 @@
+<div id="name">ds_list_clear</div>
+<div id="content">
+	<div id="description">Limpia todos los datos de la lista dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_clear(id);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a limpiar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede limpiar todos os datos de la lista dada. Esto <strong>NO</strong> destruye la estructura de datos (para ello debe usar <code>ds_list_destroy()</code>) solamente limpiara toda la información y regresa una lista vacía.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if count == 15 && !ds_list_empty(command_list){
+     ds_list_clear(command_list);
+     alarm[0] = room_speed;
+     ai_count = 0;
+}</pre>El código anterior comprueba si una variable a alcanzado un valor específico, y si lo tiene limpia la ds_list indexada en la variable &quot;command_list&quot; establece una alarma y restablece otra variable a 0.</div>
+</div>

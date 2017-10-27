@@ -1,0 +1,40 @@
+<div id="name">
+draw_roundrect_colour_ext</div>
+<div id="content">
+<div id="description">
+Dibuja un rectángulo con un color y radio personalizados.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_roundrect_colour_ext(x1, y1, x2, y2, xrad, yrad, col1, col2, outline);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>La posición horizontal del primer punto del rectángulo.</td></tr>
+<tr><td>y1</td><td>La posición vertical del primer punto del rectángulo.</td></tr>
+<tr><td>x2</td><td>La posición horizontal del segundo punto del rectángulo.</td></tr>
+<tr><td>y2</td><td>La posición vertical del segundo punto del rectángulo.</td></tr>
+<tr><td>xrad</td><td>El radio horizontal de los bordes.</td></tr>
+<tr><td>yrad</td><td>El radio vertical de los bordes.</td></tr>
+<tr><td>col1</td><td>El color del centro del rectángulo.</td></tr>
+<tr><td>col2</td><td>El color del margen del rectángulo.</td></tr>
+<tr><td>outline</td><td>¿Dibujar sólo el borde del rectángulo (<tt>true</tt>), o el rectángulo relleno (<tt>false</tt>)?</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función es una mezcla entre <code>draw_roundrect_ext()</code> y <code>draw_roundrect_colour()</code>.<br />
+<br />
+Para modificar la precisión de los bordes, use <code>draw_set_circle_precision()</code>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_roundrect_colour_ext(x - 50, y - 50, x + 50, y + 50, 8, 8, c_red, c_white, 0);</pre>
+</div>
+</div>

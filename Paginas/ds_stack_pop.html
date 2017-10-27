@@ -1,0 +1,35 @@
+<div id="name">
+ds_stack_pop</div>
+<div id="content">
+<div id="description">
+Toma el valor que se encuentra arriba de la Pila.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">ds_stack_pop(ds);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>ds</td><td>El id de la Pila de la que se tomará.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite <i>tomar</i> el primer valor de la pila, removiéndolo de ésta y regresando dicho valor para ser almacenado en una variable.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real o cadena de texto.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if !ds_stack_empty(move_stack){
+     var xx, yy;
+     xx = ds_stack_pop(move_stack);
+     yy = ds_stack_pop(move_stack);
+     move_towards_point(xx, yy, 4);
+}</pre>
+El código anterior comprueba si la pila indexada en la variable "move_stack" no esta vacía. Si no lo está, entonces toma dos valores de la pila y los usa para establecer su dirección de movimiento.</div>
+</div>

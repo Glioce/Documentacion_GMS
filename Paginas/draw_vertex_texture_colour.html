@@ -1,0 +1,68 @@
+<div id="name">
+draw_vertex_texture_colour</div>
+<div id="content">
+<div id="description">
+Define un vértice para una primitiva texturizada con el color y opacidad dados.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">draw_vertex_texture_colour(x, y, xtex, ytex, col, alpha);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>x</td><td>La posición horizontal en donde definir el vértice.</td>
+ </tr>
+<tr>
+ <td>y</td><td>La posición vertical en donde definir el vértice.</td>
+ </tr>
+<tr>
+ <td>xtex</td><td>La posición horizontal del punto de la textura a utilizar.</td>
+ </tr>
+<tr>
+ <td>ytex</td><td>La posición vertical del punto de la textura a utilizar.</td>
+ </tr>
+<tr>
+ <td>col</td><td>El color con el cual dibujar el vértice.</td>
+ </tr>
+<tr>
+ <td>alpha</td><td>La opacidad del vértice.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite definir la posición de un vértice en una primitiva texturizada, utilizando un color y opacidad propios. La apariencia final de la primitiva depende del tipo de primitiva escogido (ver <a href="http://docs-gamemaker-es.blogspot.com.co/p/drawprimitivebegin.html" target="_blank"><code>draw_primitive_begin()</code></a> para más información), el orden en el cual se añaden los vértices, el punto de la textura a utilizar y el color y opacidad que se han definido (ver <a href="http://docs-gamemaker-es.blogspot.com/p/drawvertextexture.html" target="_blank"><code>draw_vertex_texture()</code></a> para más información). Para mantener el color original de la textura, utilizar como color el valor de -1 o la constante <code>c_white</code>. Para finalizar el proceso y dibujar la primitiva, es necesario utilizar la función <code>draw_primitive_end()</code>.
+<br />
+<br />
+<b>NOTA:</b> Para que una textura pueda repetirse, su tamaño debe ser una potencia de dos, por ejemplo: 32x32, 128x128, etc.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">tex = background_get_texture(bck_textura);
+len = 64;
+
+draw_set_colour(c_white);
+draw_primitive_begin_texture(pr_trianglefan, tex);
+draw_vertex_texture_colour(len*2, len, 0, 0, c_white, 1);
+draw_vertex_texture_colour(len*3, len*2, 1, 0, c_blue, 1)
+draw_vertex_texture_colour(len*2, len*3, 1, 1, c_green, 1);
+draw_vertex_texture_colour(len, len*2, 0, 1, c_red, 1);
+draw_primitive_end();</pre>
+Imaginando que el background <span style="font-family: &quot;courier&quot;;">bck_textura</span> existe, y posee la siguiente imagen (de 32x32):
+<br />
+<img src="https://3.bp.blogspot.com/-mDeal9H6GrA/WcH2Cgr1AGI/AAAAAAAAAaQ/jvRIajTbnJ4DxwQGyHIc49VmCKUfsXG8ACLcBGAs/s1600/draw_primitive_begin_texture2.png" />
+<br />
+El código anterior dibujaría una primitiva cuadrilátera con el siguiente aspecto (con un tamaño total de 128x128):
+<br />
+<br />
+<img src="https://1.bp.blogspot.com/-taQP8ba9IM0/WcH2KFAvxkI/AAAAAAAAAaU/26TDYoFMiCk8SHDolyQTgRLbu44CgkarQCLcBGAs/s1600/draw_vertex_texcol.png" />
+</div>
+</div>

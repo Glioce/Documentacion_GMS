@@ -1,0 +1,45 @@
+<div id="name">draw_vertex_colour</div>
+<div id="content">
+ <div id="description">Define un vértice con color y opacidad para una primitiva.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">draw_vertex_colour(x, y, colour, alpha);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>x</td><td>La posición horizontal en donde definir el vértice.</td>
+ </tr>
+ <tr>
+ <td>y</td><td>La posición vertical en donde definir el vértice.</td>
+ </tr>
+ <tr>
+ <td>colour</td><td>El color con el cual dibujar el vértice.</td>
+ </tr>
+ <tr>
+ <td>alpha</td><td>La opacidad del vértice.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función permite definir la posición de un vértice para una primitiva, con su propia configuración de color y opacidad. La apariencia final de la primitiva depende del tipo de primitiva escogido, el orden en el cual se añaden los vértices (ver <a target="_blank" href="http://docs-gamemaker-es.blogspot.com.co/p/drawprimitivebegin.html"><code>draw_primitive_begin()</code></a> para más información) y el color y opacidad de los diferentes vértices, los cuales se mezclarán de forma suavizada, de uno al otro. Para finalizar el proceso y dibujar la primitiva, es necesario utilizar la función <code>draw_primitive_end()</code>.</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Nada.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">len = 64;
+
+draw_primitive_begin(pr_trianglefan);
+draw_vertex_colour(len*2, len, c_red, 1);
+draw_vertex_colour(len*3, len*2, c_green, 1)
+draw_vertex_colour(len*2, len*3, c_blue, 1);
+draw_vertex_colour(len, len*2, c_yellow, 1);
+draw_primitive_end();</pre>El anterior código permite dibujar una primitiva cuadrilátera con 4 colores, como se muestra en la siguiente imagen:
+<br />
+<br /><img src="https://1.bp.blogspot.com/-5xZITOIa11s/WcH6MeB4OTI/AAAAAAAAAak/5PHguPlAhxo236obGT1s-DUQb4XtxRiCwCLcBGAs/s1600/draw_vertex_colour.png"/>
+</div>
+</div>

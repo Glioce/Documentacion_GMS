@@ -1,0 +1,38 @@
+<div id="name">
+draw_roundrect_ext</div>
+<div id="content">
+<div id="description">
+Dibuja un rectángulo con bordes redondeados de un radio personalizado.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_roundrect_ext(x1, y1, x2, y2, xrad, yrad, outline);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x1</td><td>La posición horizontal del primer punto del rectángulo.</td></tr>
+<tr><td>y1</td><td>La posición vertical del primer punto del rectángulo.</td></tr>
+<tr><td>x2</td><td>La posición horizontal del segundo punto del rectángulo.</td></tr>
+<tr><td>y2</td><td>La posición vertical del segundo punto del rectángulo.</td></tr>
+<tr><td>xrad</td><td>El radio horizontal de los bordes.</td></tr>
+<tr><td>yrad</td><td>El radio vertical de los bordes.</td></tr>
+<tr><td>outline</td><td>¿Dibujar sólo el borde del rectángulo (<tt>true</tt>), o el rectángulo relleno (<tt>false</tt>)?</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite dibujar un rectángulo con los bordes redondeados desde la ezquina superior izquierda (x1, y1) hasta la ezquina inferior derecha (x2, y2).  Es posible establecer el radio de los bordes de este rectángulo.<br />
+<br />
+Para modificar la precisión de los bordes, use <code>draw_set_circle_precision()</code>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_roundrect_ext(x - 50, y - 50, x + 50, y + 50, 8, 8, false);</pre>
+</div>
+</div>

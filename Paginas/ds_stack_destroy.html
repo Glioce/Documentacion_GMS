@@ -1,0 +1,33 @@
+<div id="name">
+ds_stack_destroy</div>
+<div id="content">
+<div id="description">
+Elimina la pila dada y libera la memoria usada.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">ds_stack_destroy(ds);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>ds</td><td>El id de la estructura de datos a eliminar.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite remover la pila de la memoria, liberando los recursos usados y eliminando todos los valores que contiene. Esta función debe ser usada cuando se ha terminado de utilizar la pila para prevenir fugas de memoria que reduzcan el rendimiento del juego o provoquen fallos.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if lives = 0{
+     ds_stack_destroy(AI_stack);
+     room_goto(rm_Menu);
+}</pre>
+El código anterior comprueba el valor de la variable global reservada "lives" y si ésta es 0, elimina la pila (ds_stack) indexada en la variable "AI_stack" y luego cambia de habitación.</div>
+</div>

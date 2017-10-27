@@ -1,0 +1,38 @@
+<div id="name">
+ds_list_sort</div>
+<div id="content">
+<div id="description">
+Ordena los valores de una lista según el tamaño, de forma ascendente o descendente.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">ds_list_sort(id, ascend);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>id</td><td>El id de la lista a ordenar.</td>
+ </tr>
+<tr>
+ <td>ascend</td><td>Si los valores serán ordenados de forma ascendente (true) o descendente (false).</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Con esta función puede ordenar todos los valores dentro de una lista, en orden ascendente o descendente. Si la lista contiene cadenas de texto, entonces se ordenarán alfabéticamente, basados en las 26 letras del alfabeto inglés.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if newgame{
+     ds_list_sort(name_list, true);
+}</pre>
+El código anterior ordena la lista indexada en la variable "name_list" si la variable "newgame" está marcada como <code>true</code>.</div>
+</div>

@@ -1,0 +1,33 @@
+<div id="name">ds_list_copy</div>
+<div id="content">
+	<div id="description">Copia una lista dentro de otra.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_copy(id, source);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista en la que se copiará.</td>
+	</tr>
+	<tr>
+	<td>source</td><td>El id de la lista que será copiada.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede copiar el contenido de una lista dentro de otra. Las listas deben de ser creadas anteriormente y si la lista en la que se copiará contiene información, esa información será eliminada primero. El resultado son dos listas independientes que contienen la misma información.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if !ds_list_empty(main_list){
+     old_list = ds_list_create();
+     ds_list_copy(old_list, main_list);
+     ds_list_clear(main_list);
+}</pre>El código anterior comprueba una lista para saber si está vacía. Si no está vacía, se copia su información en otra lista (se se creo anteriormente) y por último se limpia la lista original.</div>
+</div>

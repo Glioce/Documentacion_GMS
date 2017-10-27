@@ -1,0 +1,54 @@
+<div id="name">draw_vertex_texture</div>
+<div id="content">
+ <div id="description">Define un vértice para una primitiva con textura.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">draw_vertex_texture(x, y, xtex, ytex);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>x</td><td>La posición horizontal en donde definir el vértice.</td>
+ </tr>
+ <tr>
+ <td>y</td><td>La posición vertical en donde definir el vértice.</td>
+ </tr>
+ <tr>
+ <td>xtex</td><td>La posición horizontal del punto de la textura a utilizar.</td>
+ </tr>
+ <tr>
+ <td>ytex</td><td>La posición vertical del punto de la textura a utilizar.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función permite definir la posición de un vértice en una primitiva texturizada. La apariencia final de la primitiva depende del tipo de primitiva escogido (ver <a target="_blank" href="topic.php?draw_primitive_begin"><code>draw_primitive_begin()</code></a> para más información), el orden de inserción de los vértices y la posición del punto inicial definido en la textura. Para finalizar el proceso y dibujar la primitiva, es necesario utilizar la función <code>draw_primitive_end()</code>.
+<br />
+<br />Es posible elegir la parte de la textura a dibujar sobre la superficie de la primitiva configurando adecuadamente las posiciones <span style="font-family:courier">xtex</span> y <span style="font-family:courier">ytex</span> (estas coordendas son conocidas como los puntos UV). Estos puntos son definidos con un valor entre 0 y 1, donde la esquina superior izquierda de la textura equivale al punto <span style="font-family:courier">(0, 0)</span>, y la esquina inferior derecha de la misma equivale al punto <span style="font-family:courier">(1, 1)</span>. De esta forma es posible texturizar una primitiva con sólo partes de la imagen definida como textura.
+<br />
+<br />Cuando se dibuja una primitiva texturizada, la textura es mezclada con el color de dibujo definido por <code>draw_set_colour()</code>, lo que significa que para dibujar la textura sin mezclar sus colores se debe definir el color de dibujo a blanco (<code>c_white</code>), como es mostrado en el ejemplo más adelante.
+<br />
+<br /><strong>NOTA:</strong> Para que una textura pueda repetirse, su tamaño debe ser una potencia de dos, por ejemplo: 32x32, 128x128, etc.</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Nada.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">tex = background_get_texture(bck_textura);
+len = 64;
+
+draw_set_colour(c_white);
+draw_primitive_begin_texture(pr_trianglefan, tex);
+draw_vertex_texture(len*2, len, 0, 0);
+draw_vertex_texture(len*3, len*2, 1, 0)
+draw_vertex_texture(len*2, len*3, 1, 1);
+draw_vertex_texture(len, len*2, 0, 1);
+draw_primitive_end();</pre>Imaginando que el background <span style="font-family:courier">bck_textura</span> existe, y posee la siguiente imagen (de 32x32):
+<br /><img src="https://3.bp.blogspot.com/-mDeal9H6GrA/WcH2Cgr1AGI/AAAAAAAAAaQ/jvRIajTbnJ4DxwQGyHIc49VmCKUfsXG8ACLcBGAs/s1600/draw_primitive_begin_texture2.png"/>
+<br />El código anterior dibujaría una primitiva cuadrilátera con el siguiente aspecto (con un tamaño total de 128x128):
+<br /><img src="https://2.bp.blogspot.com/-AockCAVJhQ0/WcH2gNrkPBI/AAAAAAAAAaY/9a0QyIVoC6kkacS_NVVkWwtEkxdrPLFUgCLcBGAs/s1600/draw_primitive_begin_texture1.png"/>
+</div>
+</div>

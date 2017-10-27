@@ -1,0 +1,36 @@
+<div id="name">
+draw_text_ext</div>
+<div id="content">
+<div id="description">
+Dibuja un texto en la posición dada con propiedades personalizadas.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_text_ext(x, y, str, sep, w);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>x</td><td>La posición horizontal en donde dibujar el texto.</td></tr>
+<tr><td>y</td><td>La posición vertical en donde dibujar el texto.</td></tr>
+<tr><td>str</td><td>La cadena de texto a dibujar.</td></tr>
+<tr><td>sep</td><td>La separación vertical entre las líneas de texto.</td></tr>
+<tr><td>w</td><td>El anchor máximo en pixeles antes de un salto de línea.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función es muy similar a <code>draw_text()</code>, con la diferencia de que es posible establecer el espacio que habrá entre cada línea de texto y limitar el anchor (en pixeles) que tendrá la cadena en cada línea, y cuando éste límite es superado, <i>GameMaker: Studio</i> moverá automáticamente el texto sobrante a la siguiente línea. Si se le da el valor de -1 al argumento <tt>sep</tt>, la separación del texto será la misma de la fuente que se esté usando.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var usuario = "Player1";
+var email  = "player1@correo.com";
+draw_text(x, y, "Tu nombre de usuario es: " + usuario + "#Tu correo electrónico es: " + email, 16, 320);</pre>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<div id="name">directory_destroy</div>
+<div id="content">
+	<div id="description">Elimina el directorio con el nombre dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">directory_destroy(dname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>dname</td><td>El nombre del directorio a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Elimina el directorio especificado del área de guardado local (<em>sandbox</em>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(directory_exists("Game/Comments"))
+    directory_destroy("Game/Comments");</pre>Si el directorio <strong>Comments</strong>, ubicado en el directorio <strong>Game</strong> del área de guardado local (<em>sandbox</em>), existe, entonces eliminarlo.</div>
+</div>

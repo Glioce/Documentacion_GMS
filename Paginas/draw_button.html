@@ -1,0 +1,40 @@
+<div id="name">draw_button</div>
+<div id="content">
+ <div id="description">Dibuja un simple botón de cualquier tamaño, presionado o desprecionado.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">draw_button(x1, y1, x2, y2);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>x1</td><td>La coordenada en x del lado izquierdo del botón.</td>
+ </tr>
+ <tr>
+ <td>y1</td><td>La coordenada en y del lado superior del botón.</td>
+ </tr>
+ <tr>
+ <td>x2</td><td>La coordenada en x del lado derecho del botón.</td>
+ </tr>
+ <tr>
+ <td>y2</td><td>La coordenada en y del lado inferior del botón.</td>
+ </tr>
+ <tr>
+ <td>up</td><td>Indica si el boton esta desprecionado(true) o si esta presionado(false).</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función dibuja un simple botón rectangular usando el color y transparencia seleccionados, el argumento up define como será el efecto de los bordes, como la imagen siguiente:
+<br /><img src="https://3.bp.blogspot.com/-h7zXwhc4aB8/WcH_K1Nm1hI/AAAAAAAAAbI/wD6tmvBxiKUnSiC1AGbpPAC_5aGJ-i6YgCLcBGAs/s1600/button.PNG"/>
+</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Nada</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">draw_button(100, 100, 200, 150, !mouse_check_button(mb_left));</pre>El código anterior dibuja un botón presionado si el botón izquierdo del ratón se mantiene presionado.</div>
+</div>

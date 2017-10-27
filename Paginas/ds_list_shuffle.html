@@ -1,0 +1,28 @@
+<div id="name">ds_list_shuffle</div>
+<div id="content">
+	<div id="description">Mueve a posiciones aleatorias los valores almacenados en una lista.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_shuffle(id);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a desordenar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con es función puede desordenar una lista, esto moverá todos los valores a posiciones aleatorias dentro de la lista.<br /><br /><em><strong>Nota:</strong> Esta función cambiará los elementos de la lista a las mismas posiciones cada vez que se ejecute nuevamente el juego, debido a que GameMaker:Studio genera la misma semilla al empezar el juego, con el objetivo de que la depuración del código sea más sencilla. Para evitar este comportamiento debe usar la función <code>randomize()</code> al inicio del juego. Esto solo es valido mientras se prueba y depura el código del juego, el ejecutable final siempre cambiara la semilla cada vez que se ejecute.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if restart{
+     ds_list_shuffle(card_list);
+}</pre>El código anterior desordena la lista indexada en la variable &quot;card_list&quot; si la variable &quot;restart&quot; es <code>true</code>.</div>
+</div>

@@ -1,0 +1,36 @@
+<div id="name">
+darctan2</div>
+<div id="content">
+<div id="description">
+Devuelve la tangente inversa (el ángulo) de un vector dado por determinados componentes.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">darctan2(b, a)</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>b</td><td>El componente vertical (cateto opuesto) del ángulo.</td></tr>
+<tr><td>a</td><td>El componente horizontal (cateto adyacente) del ángulo.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función obtiene la tangente inversa del ángulo que corresponde a un triángulo cuyo cateto opuesto es <tt>b</tt> y el adyacente es <tt>a</tt>. A diferencia de <code>darctan(n)</code>, esta función no corre el riesgo de una división por cero.
+
+<b>&nbsp;</b><br />
+<br />
+<b>NOTA:</b> El valor es devuelto en grados, no en radianes.
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var a = arctan2(1, 1); //devuelve 45 grados</pre>
+Dentro de un triángulo rectángulo, un ángulo cuyo cateto opuesto y adyacente sean 1  es 45 grados.</div>
+</div>

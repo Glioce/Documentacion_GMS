@@ -1,0 +1,33 @@
+<div id="name">
+draw_sprite_tiled</div>
+<div id="content">
+<div id="description">
+Dibuja un sprite y lo repite hasta rellenar la vista.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_sprite_tiled(sprite, subimg, x, y);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>sprite</td><td>El índice del sprite a dibujar.</td></tr>
+<tr><td>subimg</td><td>El número de la subimagen del sprite a dibujar (0 es la primera).</td></tr>
+<tr><td>x</td><td>La posición horizontal donde dibujar el sprite.</td></tr>
+<tr><td>y</td><td>La posición vertical donde dibujar el sprite.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función toma un sprite y lo dibuja repetidamente hasta que cruza el borde de la vista (o de la sala si no hay ninguna vista definida), iniciando desde las coordenadas dadas.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_sprite_tiled(sprite_index, image_index, x, y);</pre>
+Se dibujará repetidamente el sprite actual de la instancia, hasta llenar la vista de la sala.</div>
+</div>

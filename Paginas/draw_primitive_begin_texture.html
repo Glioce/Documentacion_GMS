@@ -1,0 +1,43 @@
+<div id="name">draw_primitive_begin_texture</div>
+<div id="content">
+ <div id="description">Inicia una primitiva con textura de acuerdo al tipo dado.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">draw_primitive_begin_texture(kind, texture);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>kind</td><td>El tipo de primitiva a iniciar.</td>
+ </tr>
+ <tr>
+ <td>texture</td><td>El índice de la textura a utilizar con la primitiva.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función debe ser llamada antes de poder definir cualquier figura primitiva con textura. Se debe indicar el tipo de primitiva a utilizar (ver <a target="_blank" href="http://docs-gamemaker-es.blogspot.com.co/p/drawprimitivebegin.html"><code>draw_primitive_begin()</code></a> para más información) y la identificación de la textura, la cual puede ser un sprite o background. La identificación de estos recursos pueden obtenerse utilizando las funciones <code>sprite_get_texture()</code> y <code>background_get_texture()</code> (ingresar -1 en caso de no querer utilizar ninguna textura).
+<br />
+<br /><strong>NOTA:</strong> Para que una textura pueda repetirse, su tamaño debe ser una potencia de dos, por ejemplo: 32x32, 128x128, etc.</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Nada.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">tex = background_get_texture(bck_textura);
+len = 64;
+
+draw_set_colour(c_white);
+draw_primitive_begin_texture(pr_trianglefan, tex);
+draw_vertex_texture(len*2, len, 0, 0);
+draw_vertex_texture(len*3, len*2, 1, 0)
+draw_vertex_texture(len*2, len*3, 1, 1);
+draw_vertex_texture(len, len*2, 0, 1);
+draw_primitive_end();</pre>Imaginando que el background <span style="font-family:courier">bck_textura</span> existe, y posee la siguiente imagen (de 32x32):
+<br /><img src="https://lh3.googleusercontent.com/-mDeal9H6GrA/WcH2Cgr1AGI/AAAAAAAAAac/DhCbc73ApuAcZofSwDNSHyN6JPiMNcY9QCEwYBhgL/draw_primitive_begin_texture2.png"/>
+<br />El código anterior dibujaría una primitiva cuadrilátera con el siguiente aspecto (con un tamaño total de 128x128):
+<br /><img src="https://lh3.googleusercontent.com/-AockCAVJhQ0/WcH2gNrkPBI/AAAAAAAAAac/mee-L9hnmuQKqYGtZvBa4KmvEqH9E8msACEwYBhgL/draw_primitive_begin_texture1.png"/></div>
+</div>

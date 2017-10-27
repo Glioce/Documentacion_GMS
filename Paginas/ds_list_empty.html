@@ -1,0 +1,30 @@
+<div id="name">ds_list_empty</div>
+<div id="content">
+	<div id="description">Devuelve si la lista dada esta vacía o no.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_list_empty(id);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>id</td><td>El id de la lista a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede comprobar si la lista dada esta vacía (devuelve <code>true</code>) o no (devuelve <code>false</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if count == 15 && !ds_list_empty(command_list){
+      ds_list_clear(command_list);
+      alarm[0] = room_speed;
+      ai_count = 0;
+}</pre>El código anterior comprueba si la variable &quot;count&quot; ha alcanzado un valor especifico y si la lista indexada en la variable &quot;command_list&quot; no esta vacía; de ser así limpiará la lista, establecerá una alarma y establecerá la variable &quot;ai_count&quot; a 0.</div>
+</div>

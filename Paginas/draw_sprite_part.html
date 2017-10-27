@@ -1,0 +1,47 @@
+<div id="name">
+draw_sprite_part</div>
+<div id="content">
+<div id="description">
+Dibuja una parte de un sprite en la posición dada.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_sprite_part(sprite, subimg, left, top, width, height, x, y);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>sprite</td><td>El índice del sprite a dibujar</td></tr>
+<tr><td>subimg</td><td>El número de la subimagen a dibujar (0 es la primera subimagen).</td></tr>
+<tr><td>left</td><td>La posición horizontal (ezquina superior izquierda) desde donde dibujar el sprite</td></tr>
+<tr><td>top</td><td>La posición vertical (ezquina superior izquierda) desde donde dibujar el sprite</td></tr>
+<tr><td>width</td><td>El tamaño (horizontal) del área del sprite a dibujar</td></tr>
+<tr><td>height</td><td>El tamaño (vertical) del área del sprite a dibujar.</td></tr>
+<tr><td>x</td><td>La posición horizontal donde dibujar el sprite.</td></tr>
+<tr><td>y</td><td>La posición vertical donde dibujar el sprite.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite dibujar una parte de cualquier sprite en una posición determinada. De forma similar a <code>draw_sprite()</code>, se especifica un índice de sprite y una subimagen para dibujar. Luego, se definen las coordenadas relativas al sprite desde las que se seleccionará el área del mismo a dibujar.<br />
+<br />
+<div style="text-align: center;">
+<img src="https://lh3.googleusercontent.com/-i6uzqPBxMqw/WdRC7Og5bvI/AAAAAAAAAiw/1et5rce5is8cO03pC6E08uaMX8edKGd4ACEwYBhgL/w1600-h800/spr_part.png" style="max-width: 80%;" /></div>
+<br />
+<br />
+Cabe mencionar que si la página de textura permite cropping automático esta función podría no trabajar como se espera, pues el espacio vacío extra alrededor del sprite habrá sido removido para crear dicha página. Para resolver este problema, es necesario desactivar el cropping en Global Game Settings.<br />
+<br />
+<b>NOTA: </b>Cuando se dibuja un sprite con esta función, el origen del mismo será ignorado y todos valores de posición tomarán en cuenta la esquina superior izquierda de éste.<br />
+<br />
+<b>NOTA:</b> Esta función sólo puede usarse con sprites de mapa de bits. Sprites vectoriales o de Spine no funcionarán.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_sprite_part(sprite_index, image_index, 4, 4, sprite_width - 8, sprite_height - 8, x, y );</pre>
+Se dbujará el sprite actual de la instancia dejando un margen de cuatro pixeles en cada borde del mismo.</div>
+</div>

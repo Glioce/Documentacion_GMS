@@ -1,0 +1,41 @@
+<div id="name">
+draw_sprite_stretched</div>
+<div id="content">
+<div id="description">
+Dibuja un sprite estirado.</div>
+<h2>
+Síntaxis</h2>
+<div id="syntax">
+<pre class="gml-syntax">draw_sprite_stretched(sprite, subimg, x, y, w, h);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments"><tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr><td>sprite</td><td>El índice del sprite a dibujar</td></tr>
+<tr><td>subimg</td><td>La subimagen del sprite a dibujar (0 es la primera subimagen)</td></tr>
+<tr><td>x</td><td>La posición horizontal donde dibujar el sprite.</td></tr>
+<tr><td>y</td><td>La posición vertical donde dibujar el sprite.</td></tr>
+<tr><td>w</td><td>El tamaño horizontal del sprite</td></tr>
+<tr><td>h </td><td>El tamaño vertical del sprite.</td></tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función simplemente toma un sprite y lo redimensiona al tamaño dado para dibujarlo. De igual forma a <code>draw_sprite()</code>, se especifica el sprite y la subimagen de éste que se dibujará.<br />
+<br />
+<br />
+<div style="text-align: center;">
+<img src="https://3.bp.blogspot.com/-4p3gc6OxaEA/WdW7jnHYgoI/AAAAAAAAAjA/rtxHL0-1TEkThNPSy1j3c5ea0-tmWMuZQCLcBGAs/s1600/spr_stretch.png" style="max-width: 80%;" /></div>
+<br />
+<b>&nbsp;NOTA:</b> Cuando se dibuja un sprite con esta función, el origen del sprite es ignorado y se dibujará como si éste fuera su ezquina superior izquierda.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">draw_sprite_stretched(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2);</pre>
+Se dibuja el sprite actual de la instancia con la mitad de su tamaño original.</div>
+</div>

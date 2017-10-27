@@ -1,0 +1,35 @@
+<div id="name">ds_grid_add</div>
+<div id="content">
+	<div id="description">Añade un valor a una celda dentro del a grid.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ds_grid_add(index, x, y, val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice de la grid.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La posición en x de la celda dentro de la grid.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La posición en y de la celda dentro de la grid.</td>
+	</tr>
+	<tr>
+	<td>val</td><td>El valor a añadir a la celda.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función puede ser usada para agregar un valor dado (número real o cadena de texto) a el valor de la celda dada dentro de la grid. El valor a agregar debe de ser del mismo tipo que contiene la celda, ejemplo: no puedes añadir una cadena de texto a un número real y viceversa, para las cadenas de texto esto corresponde a la concatenación.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ds_grid_add(grid, 5, 5, 6);</pre>El código anterior añade 6 a la celda dada dentro de la grid indexada en la variable &quot;grid&quot;.</div>
+</div>
