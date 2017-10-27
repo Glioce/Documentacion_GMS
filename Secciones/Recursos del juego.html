@@ -1,0 +1,32 @@
+<div class="main-text">
+<h2>
+Recursos del juego</h2>
+En GameMaker: Studio es posible definir varios tipos de recursos de juego, como sprites, sonidos, fuentes y backgrounds, y cada tipo de recurso posee una colección de códigos que permiten modificarle de diferentes formas. Es recomendable tener en cuenta las siguientes notas cuando se deseen utilizar estos códigos:<br />
+<ul>
+<li>Preferiblemente evitar borrar recursos que se estén utilizando en la sala actual del juego.</li>
+<li>Si se cambia algún recurso incluído en el juego por un externo, la función <code>game_restart()</code> NO restablecerá dichos recursos a su forma original.</li>
+<li>Crear recursos durante la ejecución puede producir un aumento enorme de memoria fácilmente. Por ejemplo, si se tiene un sprite de 128x128 con 32 subimágenes, y se crean 36 copias transformadas de éste, se consumiría 36x32x128x128x4 = 72MB de información; una barbaridad. Además de esto, los sprites que se añaden durante la ejecución se guardan en una nueva página de textura, y para utilizarse GameMaker: Studio debe realizar muchos cambios de página (<i>page swaps</i>), lo que ralentizaría considerablemente el juego.&nbsp;</li>
+<li>Es importante asegurarse de eliminar todos los recursos creados en ejecución que ya no se necesiten, pues de lo contrario podría producirse una fuga de memoria y eventualmente un cierre inserperado del juego.</li>
+</ul>
+En general, es mala idea reemplazar sprites incluidos durante la ejecución del juego, y es mejor crear los recursos necesarios al inicio del juego y no de la sala.<br />
+<h3>
+Relacionados</h3>
+<ul>
+<li>Sprites</li>
+<li>Backgrounds</li>
+<li>Audio</li>
+<li>Fuentes</li>
+<li>Paths</li>
+<li>Líneas de tiempo</li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/salas.html">Salas</a></li>
+</ul>
+Además, hay dos funciones que permiten manejar el índice y tipo de cualquier recurso del juego:<br />
+<ul>
+<li><code>asset_get_index()</code></li>
+<li><code>asset_get_type()</code></li>
+</ul>
+<ul>
+</ul>
+<ul>
+</ul>
+</div>

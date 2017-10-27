@@ -1,0 +1,38 @@
+<div class="main-text">
+<h2>
+Superficies</h2>
+En escencia, una superficie (<i>surface </i>en inglés) es un lienzo en donde se podrán dibujar todo tipo de elementos con las funciones de dibujo tradicionales. La ventaja principal que las diferencia es que no se tienen que dibujar todos elementos que la componen en cada fotograma; basta con dibujarlos sobre la superficie una vez (o las que sean necesarias) y después dibujar sólo la superficie completa.<br />
+<br />
+Normalmente, los eventos de dibujo no actúan directamente a la pantalla, sino que dibujan sobre una superficie denominada <i>application surface</i>. Esta superficie es, básicamente, un lienzo vacío que puede ser manipulado antes de dibujarse en pantalla, aunque por defecto GameMaker: Studio lo configura automáticamente (aún así, es posible manipular manualmente las propiedades de ésta).<br />
+<br />
+Sin embargo, aparte de la application surface, es posible crear superficies propias y usarlas para crear todo tipo de efectos especiales en el juego. Por ejemplo, puede usarse una superficie para grabar marcas como sangre o escombros sin tener que dibujarlos todos uno por uno, sólo la superficie en general.<br />
+<br />
+Normalmente, las superficies son algo fáciles de utilizar, aunque hay ciertos factores que deben tenerse muy en cuenta a la hora de utilizarlas:<br />
+<ol>
+<li>Primero, es vital entender que las superficies (a exepción de la <i>application surface</i>) son "volátiles". Esto significa que si, por ejemplo, el dispositivo o la ventana es minimizada o pierde su <i>foco</i>, cualquier superficie puede ser destruida<b> sin aviso previo</b>. Esto es a causa de que las superficies se almacenan en la memoria de textura, y ésta puede sobreescribirsecuando la plataforma necesita dicha memoriapara algo más. Es por ello que es importante tener un código de "recuperación" o redibujado, acompañado de la función <code>surface_exists()</code>.</li>
+<li>Cabe aclarar, además, que las superficies requieren hacer uso de mucha memoria de textura para ser utilizados, por lo que es recomendable mantenerlas tan pequeñas y ligeras como sea posible. Normalmente, es bueno intentar mantenerlas de un tamaño no mayor al de la ventana o vista.</li>
+<li>Es recomendable intentar dibujar dentro de las superficies en el evento <i>Draw</i>. Esto no es un requerimiento, ni tampoco es posible siempre, pero debido a la manera optimizada en la que <i>GameMaker: Studio</i> dibuja en la pantalla, es recomendable mantener todas las funciones de dibujo dentro de los eventos de dibujo.</li>
+<li>Cuando se dibuja una superficie manualmente, ésta se encuentra <b>siempre </b>en la posición (0, 0). Esto significa que puedes llegar a tener que convertir coordenadas absolutas (origen de la sala) a coordenadas dentro de las locales de la superficie (origen de la supreficie). Por ejemplo, si se tiene una superficie del tamaño de la vista, y se desea dibujar dentro de ella un elemento que sigue dicha vista, será necesario restarle a las coordenadas de este elemento la posición de la vista, para obtener una posición relativa a la posición (0,0) de la superficie.</li>
+</ol>
+<h3>
+Relacionados</h3>
+<ul>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfaceexists_65.html"><code>surface_exists()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacecreate_13.html"><code>surface_create()</code></a></li>
+<li><a href="javascript:void(0)"><code>surface_create_ext()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfaceresize_82.html"><code>surface_resize()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacesettarget_62.html"><code>surface_set_target()</code></a></li>
+<li><a href="javascript:void(0)"><code>surface_set_target_ext()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfaceresettarget_40.html"><code>surface_reset_target()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacecopy_33.html"><code>surface_copy()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacecopypart_91.html"><code>surface_copy_part()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacegetheight_84.html"><code>surface_get_height()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacegetwidth_4.html"><code>surface_get_width()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacegettexture_47.html"><code>surface_get_texture()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacegetpixel_46.html"><code>surface_getpixel()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacegetpixelext_50.html"><code>surface_getpixel_ext()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacefree_51.html"><code>surface_free()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacesave_38.html"><code>surface_save()</code></a></li>
+<li><a href="http://docs-gamemaker-es.blogspot.com/p/surfacesavepart_56.html"><code>surface_save_part()</code></a></li>
+</ul>
+</div>
