@@ -1,0 +1,32 @@
+<div id="name">string_pos</div>
+<div id="content">
+	<div id="description">Devuelve la posición de una subcadena en la cadena dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_pos(substr, str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>substr</td><td>La subcadena a buscar.</td>
+	</tr>
+	<tr>
+	<td>str</td><td>La cadena en donde buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la posición de la primera coincidencia de una subcadena en la cadena dada. Si no se encuentra ninguna coincidencia, devolverá 0.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "correo@electronico.com";
+arroba = string_pos("@", texto); //Devuelve 7
+if(arroba != 0)
+    show_message("¡Correo electrónico válido!");</pre></div>
+</div>

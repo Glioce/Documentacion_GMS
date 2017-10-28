@@ -1,0 +1,35 @@
+<div id="name">string_height_ext</div>
+<div id="content">
+	<div id="description">Devuelve la altura (en pixeles) de una cadena de texto, basado en la separación entre líneas y anchor máximos dados.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_height_ext(str, sep, w);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a la cual obtener su altura.</td>
+	</tr>
+	<tr>
+	<td>sep</td><td>La separación entre líneas, como si la cadena fuera a ser dibjada.</td>
+	</tr>
+	<tr>
+	<td>w</td><td>El anchor máximo, como si la cadena fuera a ser dibjada.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la altura (en pixeles) de la cadena ingresada, tomando en cuenta la separación de línea y el anchor máximo de línea (el cual es definido como el número de pixeles que la cadena puede ocupar antes de insertar un salto de línea). El resultado depende de la fuente definida actualmente para dibujo. Tanto la separación como el anchor máximo pueden ser establecidos a -1 para configurar el valor por defecto.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = "Un texto largo, que en realidad es corto";
+b = string_height_ext(a, 96, 16);
+draw_text_ext(32, 32, a, 96, 16);
+draw_text_ext(32, 32 + b, "Un texto abajo de ese", 96, 16);</pre>Se dibuja un texto con un anchor máximo de 96px y una separación entre líneas de 16px. Posteriormente se dibuja otro texto con las mismas propiedades justo debajo del anterior.</div>
+</div>

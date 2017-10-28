@@ -1,0 +1,40 @@
+<div id="name">surface_copy</div>
+<div id="content">
+	<div id="description">Copia el contenido de una surface dentro de otra surface.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_copy(destination, x, y, source);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>destination</td><td>El ID de la surface en la que se copiará la otra surface.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La coordenada en x donde se copiará.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La coordenada en y donde se copiará.</td>
+	</tr>
+	<tr>
+	<td>source</td><td>El ID de la surface a copiar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función simplemente toma lo dibujado en una surface y lo copia dentro de la surface especificada en el lugar que se le indica (donde la posición (0,0) es la esquina superior izquierda de la surface de destino). Si la surface de destino tiene información, será sobrescrita por la información que se esta copiando, esta función no modificará la surface que se esta copiando.<br /><br /><em><strong>Nota:</strong>Cuando se trabaja con surface, existe la posibilidad de que estas dejen de existir en cualquier momento, debido a que se almacenan en la memoria de texturas. Debe de <strong>siempre</strong> comprobar si existe la surface antes de usarlas con la función <code>surface_exists()</code> Para más información vea la sección de Surface</em>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if view_current == 0{
+     surface_copy(surf, 0, 0, temp_surf);
+}
+else{
+     draw_surface(surf, 0, 0);
+}</pre>El código anterior comprueba si la vista actual que esta siendo dibujada, si es la &quot;view[0]&quot;, copia la surface indexada en la variable &quot;temp_surf&quot; sobre la surface indexada en la variable &quot;surf&quot;. Si la vista actual es cualquier otra a &quot;view[0]&quot;, la surface &quot;surf&quot; se dibujará en pantalla.</div>
+</div>

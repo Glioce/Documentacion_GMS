@@ -1,0 +1,25 @@
+<div id="name">speed</div>
+<div id="content">
+	<div id="description">La velocidad de la instancia.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">speed;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Todas las instancias en <em>GameMaker: Studio</em> poseen ciertas propiedades internas que pueden ser configuradas para personalizar su comportamiento. La variable <code>speed</code> es una de ellas, y permite definir la velocidad con la que una instancia se mueve hacia la dirección definida por <code>direction</code>. Esta variable acepta valores negativos, en cuyo caso la instancia se movería en dirección opuesta a la definida por <code>direction</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">speed = 5;
+if(keyboard_check(vk_left))
+    direction += 5;
+if(keyboard_check(vk_right))
+    direction -= 5;</pre>Gracias al código anterior, es posible mover una instancia cambiando su dirección mediante las teclas direccionales (izquierda y derecha), con una velocidad de 5<em>px/step</em>.</div>
+</div>

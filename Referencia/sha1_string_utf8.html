@@ -1,0 +1,26 @@
+<div id="name">sha1_string_utf8</div>
+<div id="content">
+	<div id="description">Devuelve un <em>Hash SHA-1</em> del formato UTF-8 de la cadena dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">sha1_string_utf8(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a la cual obtener el Hash SHA-1.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">SHA-1 es una función criptográfica de Hash diseñada por la Agencia de Seguridad Nacional de los Estados Unidos, y es implementada en muchas aplicaciones de seguridad. Esta función toma la cadena ingresada en formato UTF-8 (lo que significa una cantidad de bytes variable por cada caracter) y devuelve un mensaje de 160 bits en formato ASCII.<br /><br /><strong>NOTA:</strong> Hay dos formatos para la encriptación SHA-1: UTF-8 y Unicode, aunque el más común es el formato Unicode.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">hash = sha1_string_utf8("hola"); //Devuelve '99800b85d3383e3a2fb45eb7d0066a4879a9dad0'</pre></div>
+</div>

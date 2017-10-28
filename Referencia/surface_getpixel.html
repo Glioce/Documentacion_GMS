@@ -1,0 +1,32 @@
+<div id="name">surface_getpixel</div>
+<div id="content">
+	<div id="description">Devuelve el color de una pixel correspondiente a una posición de la surface.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_getpixel(surface_id, x, y);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>surface_id</td><td>El ID de la surface.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La posición en x, de la surface, de donde se tomará el pixel.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La posición en y, de la surface, de donde se tomará el pixel.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función puede ser usada para obtener el color de un pixel en especifico, de una surface; usando las coordenadas locales del a surface donde (0, 0) es la esquina superior izquierda. Esta función es extremadamente lenta y puede causar una pausa en el juego.<br /><br /><em><strong>Nota:</strong> Cuando se trabaja con surface existe la posibilidad que se destruyan en cualquier momento. Debe <strong>siempre</strong> comprobar si existen con <code>surface_exists()</code> antes de hacer algo con ellas.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">col = surface_getpixel(surf, 56, 78 );</pre>El código anterior devuelve el color del pixel en las coordenadas (56, 78) de la surface indexada en la variable &quot;surf&quot;.</div>
+</div>

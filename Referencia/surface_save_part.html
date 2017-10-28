@@ -1,0 +1,43 @@
+<div id="name">surface_save_part</div>
+<div id="content">
+	<div id="description">Guarda una parte de una surface en el disco.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_save_part(surface_id, fname, x, y, width, height);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>surface_id</td><td>El ID de la surface a guardar.</td>
+	</tr>
+	<tr>
+	<td>fname</td><td>El nombre de la imagen a guardar.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La posición en x desde donde se guardará la surface.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La posición en y desde donde se guardará la surface.</td>
+	</tr>
+	<tr>
+	<td>width</td><td>El ancho de la parte a guardar.</td>
+	</tr>
+	<tr>
+	<td>height</td><td>El alto de la parte a guardar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función guarda una parte de una surface en el disco usando el nombre de archivo dado. La surface debe ser guardada con el formato *.png. La posición (x, y) dadas corresponden a las coordenadas locales de la surface, donde (0, 0) es la esquina superior izquierda de la surface.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_check_pressed(ord("S"){
+     surface_save_part(surf, "test.png", 0, 0, 100, 100);
+}</pre>El código anterior comprueba si la tecla &quot;S&quot; ha sido presionada, si es así, guarda una parte de la surface indexada en la variable &quot;surf&quot; en el disco.</div>
+</div>

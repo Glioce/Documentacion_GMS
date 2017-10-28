@@ -1,0 +1,40 @@
+<div id="name">
+script_execute</div>
+<div id="content">
+<div id="description">
+Ejecuta un <i>script</i> con los argumentos dados.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">script_execute(scr, [arg0, ..., arg14]);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>scr</td><td>La identificación del script a ejecutar.</td>
+ </tr>
+<tr>
+ <td>[arg0, ..., arg14]</td><td>La serie de argumentos (opcionales) con los cuales ejecutar el <i>script</i>.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función permite ejecutar un script creado por el usuario e ingresarle hasta 15 argumentos. Es importante saber que el primer argumento <b>NO</b> es una cadena de texto, es el identificador del script como tal, como ha sido escrito en el recurso dentro del IDE.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Valor devuelto por el script.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">//script(a, b);
+return (argument0+argument1)*(argument0/argument1);</pre>
+Imaginemos que tenemos un script llamado <code>script()</code>, cuyo código es el anterior. Entonces:
+<br />
+<pre class="gml-syntax">a = script_execute(script, 3, 6); //Devuelve 4.5</pre>
+</div>
+</div>

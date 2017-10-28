@@ -1,0 +1,40 @@
+<div id="name">
+room_goto</div>
+<div id="content">
+<div id="description">
+Esto se utiliza para ir a una <i>room</i> determinada.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_goto(num);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+  <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+   <td>num</td>
+   <td>El índice de la <i>room</i> a la que ir.</td>
+  </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función finalizará la <i>room</i> actual e irá a la <i>room</i> especificada en la entrada. La <i>room</i> debe existir, de lo contrario se mostrará un error, y si utiliza la misma <i>room</i> que en la que se encuentra tendrá el mismo efecto que <code>room_restart</code>. Tenga en cuenta que la <i>room</i> no cambiará hasta el final del evento en el que se llamó la función, por lo que cualquier código después de que se haya llamado se seguirá ejecutando.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+N/A</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">switch (global.rm)
+    {
+    case 0: room_goto(rm_level1); break;
+    case 1: room_goto(rm_level2); break;
+    case 2: room_goto(rm_level3); break;
+    }</pre>
+El código anterior comprobará una variable global y cambiará de <i>room</i> en función del valor que tenga.
+ </div>
+</div>

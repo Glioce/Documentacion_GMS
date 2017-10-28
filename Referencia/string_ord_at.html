@@ -1,0 +1,31 @@
+<div id="name">string_ord_at</div>
+<div id="content">
+	<div id="description">Devuelve el código Unicode del caracter ubicado en la posición dada de una cadena.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_ord_at(str, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena en donde buscar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición en donde buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite obtener el código Unicode del caracter ubicado en una posición determinada dentro de la cadena. La posición del primer caracter de una cadena es 1. Si no se ha encontrado ningún caracter, o el largor de la cadena es menor a la posición dada, se devolverá una cadena vacía (<code>&quot;&quot;</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "HOLA";
+a = string_ord_at(texto, 1); //Devuelve 72
+a = string_ord_at(texto, 4); //Devuelve 65</pre></div>
+</div>

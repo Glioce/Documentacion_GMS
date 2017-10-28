@@ -1,0 +1,24 @@
+<div id="name">y</div>
+<div id="content">
+	<div id="description">La posición vertical de una instancia.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">y;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">La posición <em>y</em> de una instancia es su posición vertical en la sala actual, definida en pixeles. Este valor puede ser un número positivo, negativo o 0. Donde 0 es el borde superior de la sala; valores menores son más hacia arriba, y valores mayores son hacia abajo (un valor negativo significa que la instancia está arriba (o afuera) del borde superior de la sala). Es posible asignar cualquier número real a la posición <em>y</em>, como 12.345, pero los valores decimales no parecerán tomados en cuenta.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check(vk_up))
+    y -= 5;
+if(keyboard_check(vk_down))
+    y += 5;</pre>El código anterior permite mover una instancia verticalmente al presionar las teclas de dirección (arriba y abajo), con una velocidad de 5<em>px/step</em>.<br /></div>
+</div>

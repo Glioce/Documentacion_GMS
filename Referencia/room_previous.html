@@ -1,0 +1,38 @@
+<div id="name">
+room_previous</div>
+<div id="content">
+<div id="description">
+Esto devolverá el índice de la <i>room</i> anterior del índice de la <i>room</i> dada.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_previous(num);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+  <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+   <td>num</td>
+   <td>El índice de la sala desde donde comprobar.</td>
+  </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Con esta función puede obtener el índice de la <i>room</i> anterior del índice dado en el argumento "num". Por ejemplo, puede usar la variable <code>room</code> de <b>sólo lectura</b> para obtener el índice de la <i>room</i> actual y luego usar esta función para encontrar la <i>room</i> que viene antes en el árbol de recursos. Si no hay <i>room</i> antes de la entrada, se devuelve -1.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número Real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if room_previous(room) != -1
+    {
+    room_goto(room_previous(room));
+    }</pre>
+El código anterior verificará si la <i>room</i> anterior existe y si es así, irá a ella.
+ </div>
+</div>

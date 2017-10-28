@@ -1,0 +1,33 @@
+<div id="name">script_exists</div>
+<div id="content">
+	<div id="description">Comprueba si el script con el índice dado existe.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">script_exists(scr);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>scr</td><td>El índice del <em>script</em> a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función comprueba si existe un <em>script</em> con el índice dado (en cuyo caso devuelve <code>true</code>) o no (en cuyo caso devuelve <code>false</code>). Este índice no es una cadena, sino el nombre del recurso del <em>script</em> (como aparece escrito en el IDE).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">scripts[0] = scr_mover_derecha;
+scripts[1] = -1;
+scripts[2] = scr_mover_izquierda;
+
+action = irandom(2);
+
+if(script_exists(scripts[action]))
+    script_execute(scripts[action]);</pre>Se crea un <em>array</em> de 3 índices; en dos de ellos contiene el índice de un script, y en el tercero, -1. Posteriormente, se obtiene un valor aleatorio de dicho <em>array</em>, y si este valor es un script, se ejecuta.</div>
+</div>

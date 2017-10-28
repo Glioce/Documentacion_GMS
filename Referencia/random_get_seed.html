@@ -1,0 +1,24 @@
+<div id="name">random_get_seed</div>
+<div id="content">
+	<div id="description">Devuelve la semilla aleatoria actual.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">random_get_seed();</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Para generar un número aleatorio, Game Maker Studio toma como base una semilla de aleatoriedad. Con esta función es posible obtener dicha semilla, la cual puede ser almacenada para reproducir series específicas de eventos aleatorios. Por ejemplo, en un juego se ha producido una serie de números aleatoriamente; entonces, se guarda la semilla con la cual estos números fueron generados para posteriormente cargarla y reproducir la misma serie de números aleatorios.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">randomize();
+for(var i = 0; i < 5; i++)
+    numero[i] = irandom(8);
+semilla = random_get_seed();</pre>Se genera una semilla aleatoria nueva, y luego una serie de 5 números aleatoriamente que se guardan en un <em>array</em>. Posteriormente, se guarda en la variable <code>semilla</code> la semilla con la que estos números fueron creados, para poderlos volver a generar después.</div>
+</div>

@@ -1,0 +1,34 @@
+<div id="name">string_count</div>
+<div id="content">
+	<div id="description">Devuelve el número de coincidencias de una subcadena encontradas en una cadena principal.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_count(substr, str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>substr</td><td>La cadena a buscar.</td>
+	</tr>
+	<tr>
+	<td>str</td><td>La cadena en donde buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve el número de veces que la subcadena dada aparece dentro de la cadena especificada.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "Un pequeño texto, dos pequeñas frases";
+
+a = string_count("e", texto); //Devuelve 6
+a = string_count("pequeñ", texto); //Devuelve 2
+a = string_count(" ", texto); //Devuelve 5
+a = string_count(",", texto); //Devuelve 1</pre></div>
+</div>

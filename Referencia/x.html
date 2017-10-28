@@ -1,0 +1,24 @@
+<div id="name">x</div>
+<div id="content">
+	<div id="description">La posición horizontal de una instancia.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">x;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">La posición <em>x</em> de una instancia es su posición horizontal en la sala actual, en pixeles. Este valor puede ser un número positivo, negativo o 0, donde 0 es el borde izquierdo de la sala; valores menores son más a la izquierda, y valores mayores a la derecha (un valor negativo significa que la instancia está por fuera del borde izquierdo de la sala). Es posible asignar cualquier número real al valor <em>x</em>, como 12.345, pero los valores decimales no parecerán tomados en cuenta.<br /><br />Modificando la posición de una instancia (<code>x</code> e <code>y</code>) es posible trasladarla a cualquier punto de la sala, o sumando/restando cantidades menores dar la impresión de movimiento sin utilizar las variables predefinidas <code>direction</code> y <code>speed</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check(vk_left))
+    x -= 5;
+if(keyboard_check(vk_right))
+    x += 5;</pre>El código anterior permite mover una instancia horizontalmente, al presionar las teclas de dirección, con una velocidad de 5<em>px/step</em>.</div>
+</div>

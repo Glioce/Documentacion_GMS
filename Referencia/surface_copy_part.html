@@ -1,0 +1,52 @@
+<div id="name">surface_copy_part</div>
+<div id="content">
+	<div id="description">Copia parte de una surface dentro de otra surface (sin ningún tipo de blending).</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_copy_part(destination, x, y, source, xs, ys, ws, hs);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>destination</td><td>El ID de la surface en la que se copiará la otra surface.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La coordenada en x donde se copiará.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La coordenada en y donde se copiará.</td>
+	</tr>
+	<tr>
+	<td>source</td><td>El ID de la surface a copiar.</td>
+	</tr>
+	<tr>
+	<td>xs</td><td>La coordenada inicial en x de la surface que se copiará.</td>
+	</tr>
+	<tr>
+	<td>ys</td><td>La coordenada inicial en y de la surface que se copiará.</td>
+	</tr>
+	<tr>
+	<td>ws</td><td>El ancho del área que se desea copiar de la surface.</td>
+	</tr>
+	<tr>
+	<td>hs</td><td>El alto del área que se desea copiar de la surface.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función simplemente toma lo dibujado en una surface y lo copia dentro de la surface especificada en el lugar que se le indique (donde la posición (0,0) es la esquina superior izquierda de la surface de destino). Puede especificar una posición &quot;x&quot; y &quot;y&quot; local de la surface a copiar, también el ancho y la altura del área. Tenga en cuenta que son coordenadas basadas en el tamaño de la surface y no en las coordenadas donde se dibuja la surface en el room (consulte la sección de Surfaces para mayor información). Si la surface de destino ya contiene información, esta será sobrescrita. La función no modifica la surface que se esta copiando.<br /><br /><em><strong>Nota:</strong> Cuando se trabaja con surface, existe la posibilidad de que estas dejen de existir en cualquier momento, debido a que se almacenan en la memoria de texturas. Debe de <strong>siempre</strong> comprobar si existe la surface antes de usarlas con la función <code>surface_exists()</code> Para más información vea la sección de Surface.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if view_current == 0{
+     surface_copy_part(surf, 0, 0, 0, 0, view_xview[1] - mouse_x, view_yview[1] - mouse_y, temp_surf);
+}
+else{
+     draw_surface(surf, 0, 0);
+}</pre>El código anterior comprobará la vista actual que se esta dibujando, si es la &quot;view[0]&quot;, copia la surface indexada en la variable &quot;temp_surf&quot; sobre la surface indexada en la variable &quot;surf&quot;. El área copiada corresponde a un rectángulo formando por la posición relativa del raton dentro del a surface tal como se dibujaría la view[1]. Si la vista actual es otra a la view[0], la surface &quot;surf&quot; se dibujara en pantalla.</div>
+</div>

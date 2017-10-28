@@ -1,0 +1,28 @@
+<div id="name">
+room_last</div>
+<div id="content">
+<div id="description">
+El índice de la última <i>room</i> en el juego.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_last;</pre>
+</div>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta variable de <b>sólo lectura</b> devuelve el índice de la última <i>room</i> del juego (definida por el orden en que las <i>rooms</i> aparecen en el árbol de recursos y <b>no</b> por el orden en que se crearon.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if keyboard_check_pressed(ord("Q"))
+{
+    room_goto(room_last);
+}</pre>
+El código anterior comprueba si se ha pulsado la tecla "Q" y, de ser así, se pasa a la última <i>room</i> del juego.
+ </div>
+</div>

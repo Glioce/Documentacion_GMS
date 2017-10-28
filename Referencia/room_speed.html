@@ -1,0 +1,25 @@
+<div id="name">
+room_speed</div>
+<div id="content">
+<div id="description">
+La velocidad de la <i>room</i> actual en <i>steps</i>.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_speed;</pre>
+</div>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta variable contiene la velocidad de la <i>room</i> actual. Tenga en cuenta que esto <b>NO</b> son los FPS (frames por segundo) sino que es el número de <i>steps</i> de juego que GameMaker: Studio intentará manener cada segundo.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número Real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">alarm[0] = room_speed * 10;</pre>
+El código anterior usa room_speed para configurar una alarma para que se ejecute en 10 segundos. El uso de la variable de esta manera se asegurará de que la alarma se ejecute en 10 segundos, no importa qué velocidad se establezca para la <i>room</i>.
+ </div>
+</div>

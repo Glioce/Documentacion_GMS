@@ -1,0 +1,35 @@
+<div id="name">string_copy</div>
+<div id="content">
+	<div id="description">Devuelve una parte de una cadena de texto.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_copy(str, pos, count);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena de la cual copiar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición del primer caracter a obtener.</td>
+	</tr>
+	<tr>
+	<td>count</td><td>La cantidad de caracteres a obtener.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función es posible seleccionar una copia de una cadena. El primer caracter de una cadena se encuentra en la posición 1.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "Hola mundo";
+a = string_copy(texto, 1, 1); //Devuelve 'H'
+a = string_copy(texto, 1, 4); //Devuelve 'Hola'
+a = string_copy(texto, 3, 5); //Devuelve 'la mu'</pre></div>
+</div>

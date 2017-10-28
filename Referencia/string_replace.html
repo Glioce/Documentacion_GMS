@@ -1,0 +1,36 @@
+<div id="name">string_replace</div>
+<div id="content">
+	<div id="description">Reemplaza la primera coincidencia de una subcadena en una cadena por otra.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_replace(str, substr, newstr);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a examinar.</td>
+	</tr>
+	<tr>
+	<td>substr</td><td>La cadena a reemplazar.</td>
+	</tr>
+	<tr>
+	<td>newstr</td><td>La cadena por la cual reemplazar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite reemplzar la primera coincidencia de una subcadena dentro de una cadena por otra.<br /><br /><strong>NOTA:</strong> Esta función <strong>no</strong> modifica la cadena original, sólo devuelve una copia modificada de la misma.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "Hola mundo";
+nuevo = string_replace(texto, "mundo", "Pepito"); //Devuelve 'Hola Pepito'
+
+texto = "El mundo es un mundo mejor que cualquier otro mundo";
+nuevo = string_replace(texto, "mundo", "tren"); //Devuelve 'El tren es un mundo mejor que cualquier otro mundo'</pre></div>
+</div>

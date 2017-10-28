@@ -1,0 +1,29 @@
+<div id="name">
+room_persistent</div>
+<div id="content">
+<div id="description">
+Contiene el estado de la marca persistente de la <i>room</i></div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_persistent;</pre>
+</div>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta variable se puede usar para obtener y establecer el indicador persistente para la <i>room</i> actual. Si es persistente, en cuyo caso cada vez que salga de la <i>room</i> y vuelva a entrar a la misma <i>room</i> el estado de las instancias dentro de la <i>room</i> se mantendrán. Sin embargo, si no es persistente, cada vez que regrese a la <i>room</i> se restablecerá a su estado inicial. Usted debería considerar que al usar una habitación persistente utiliza una cantidad de memoria considerablemente mayor que una <i>room</i> normal y no se recomienda tener demasiadas <i>rooms</i> persistentes en su juego.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Booleano</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if vidas &lt; 1
+    {
+    room_persistent = false;
+    room_goto(rm_inicio);
+    }</pre>
+El código anterior comprueba la variable "vidas" y si es menor que 1, establecerá la persistencia de la <i>room</i> en <i>false</i> y luego cambiará de <i>room</i>.
+ </div>
+</div>

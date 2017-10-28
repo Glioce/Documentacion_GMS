@@ -1,0 +1,33 @@
+<div id="name">string_insert</div>
+<div id="content">
+	<div id="description">Inserta una subcadena en la posición dada de la cadena argumentada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_insert(substr, str, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>substr</td><td>La subcadena a insertar</td>
+	</tr>
+	<tr>
+	<td>str</td><td>La cadena en donde insertar</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición en donde insertar</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve una copia de la cadena original, con la subcadena dada insertada en una posición determinada. La posición del primer caracter de una cadena es 1.<br /><br /><strong>NOTA:</strong> Esta función <strong>no</strong> modifica la cadena original, sólo devuelve una copia modificada.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = "Hola,cómo estás?";
+b = string_insert(" Pepito; ¿", a, 6); //Devuelve 'Hola, Pepito; ¿cómo estás?'</pre></div>
+</div>

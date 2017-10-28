@@ -1,0 +1,29 @@
+<div id="name">surface_free</div>
+<div id="content">
+	<div id="description">Destruye la surface, liberándola de la memoria.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_free(surface_id);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>surface_id</td><td>El ID de la surface a liberar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Cuando se trabaja con surface, siempre se debe de usar esta función cada vez que se utilicen. Las surfaces ocupan espacio en la memoria y necesitan ser removidas, normalmente al finalizar una habitación, pero puede hacerse en cualquier momento dependiendo del uso que se les de. Si no lo hace causará perdidas de memoria que eventualmente ralentizarán y bloquearán su juego.<br /><br /><em><strong>Nota:</strong> Cuando se trabaja con surface existe la posibilidad que se destruyan en cualquier momento. Debe <strong>siempre</strong> comprobar si existen con <code>surface_exists()</code> antes de hacer algo con ellas.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_check_pressed(vk_escape){
+     surface_free(surf);
+     room_goto(rm_Menu);
+}</pre>El código anterior comprueba si una tecla es presionada, si es así libera la memoria reservada para la surface indexada en la variable &quot;surf&quot; y luego cambia de room.</div>
+</div>

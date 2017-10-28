@@ -1,0 +1,26 @@
+<div id="name">sha1_file</div>
+<div id="content">
+	<div id="description">Devuelve un <em>Hash SHA-1</em> para el archivo dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">sha1_file(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre del archivo al cual obtener el Hash SHA-1.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">SHA-1 es una función criptográfica de Hash diseñada por la Agencia de Seguridad Nacional de los Estados Unidos, y es implementada en muchas aplicaciones de seguridad. Esta función devuelve un mensaje de 160 bits (en formato ASCII) único para el archivo dado.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">file_hash = sha1_file("Created_Leveles/level07.ini");</pre>Se obtiene un Hash SHA-1 para el archivo <code>&quot;level07.ini&quot;</code> que se encuentra dentro del directorio <code>&quot;Created_Levels&quot;</code>, y es almacenado en la variable <code>file_hash</code>.</div>
+</div>

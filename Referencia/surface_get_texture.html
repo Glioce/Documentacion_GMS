@@ -1,0 +1,33 @@
+<div id="name">surface_get_texture</div>
+<div id="content">
+	<div id="description">Devuelve el id de la textura de la surface dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">surface_get_texture(surface_id);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>surface_id</td><td>El ID de la surface a obtener su textura.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve un <em>indicador</em> especial textura de la surface. Este valor puede ser usado en otras funciones de dibujo, generalmente usado en 3D y algunas funciones 2D de primitivas.<br /><br /><em><strong>Nota:</strong> Cuando se trabaja con surface existe la posibilidad que se destruyan en cualquier momento. Debe <strong>siempre</strong> comprobar si existen con <code>surface_exists()</code> antes de hacer algo con ellas.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Indicador</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">var tex;
+tex = surface_get_texture(surf);
+draw_primitive_begin_texture(pr_trianglestrip, tex);
+draw_vertex_texture(0, 480, 0, 0);
+draw_vertex_texture(640, 480, 1, 0);
+draw_vertex_texture(640, 480, 1, 1);
+draw_vertex_texture(0, 480, 0, 1);
+draw_primitive_end();</pre>El código anterior dibuja 4 vértices de una tira de triángulos con textura, el indicador de la textura esta en la variable &quot;tex&quot;, que fue tomada de la surface creada con anterioridad.</div>
+</div>

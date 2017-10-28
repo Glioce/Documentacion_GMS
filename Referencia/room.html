@@ -1,0 +1,28 @@
+<div id="name">
+room</div>
+<div id="content">
+<div id="description">
+El índice de la <i>room</i> actual.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room;</pre>
+</div>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta variable contiene el índice de la <i>room</i> actual en la que el juego se encuentra. Esto <b>no</b> es una variable de sólo lectura, sin embargo cambiando esto no cambiará el valor del índice para la <i>room</i> actual, sino que cambiará la <i>room</i> para que coincida con el índice al que ha establecido la variable. Debe tener cuidado al hacer esto, ya que si el índice al que se cambia la variable no es válido el juego lanzará un error y se cerrará. En general, es mucho mejor usar <code>room_goto()</code> para cambiar de <i>room</i>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número Real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if room_next(room) != -1
+    {
+    room_goto(room_next(room));
+    }</pre>
+El código anterior verificará si la <i>room</i> siguiente existe y si es así, irá a ella.
+ </div>
+</div>

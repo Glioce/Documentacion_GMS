@@ -1,0 +1,29 @@
+<div id="name">string_width</div>
+<div id="content">
+	<div id="description">Devuelve el anchor (en pixeles) de una cadena de texto.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_width(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a examinar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve el anchor (en pixeles) de la cadena dada. Este valor depende de la fuente definida actualmente para dibujo.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "Hola mundo!";
+ancho = string_width(texto);
+draw_text(32, 32, texto);
+draw_text(32 + ancho, 32, "Un texto al frente");</pre>Se dibuja un texto en pantalla en la posición [32,32], y justo en frente de él, se dibuja otro texto.</div>
+</div>

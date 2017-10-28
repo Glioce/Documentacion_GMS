@@ -1,0 +1,37 @@
+<div id="name">string_char_at</div>
+<div id="content">
+	<div id="description">Devuelve el caracter ubicado en una posición dada de una cadena.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_char_at(str, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a revisar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición del caracter a obtener.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función, es posible obtener un caracter ubicado en una posición dada de una cadena de texto. La posición 1 equivale al primer caracter de la cadena. Si no se ha encontrado un caracter en la posición dada, o el largor de la cadena es menor a la misma, se devolverá una cadena vacía (<code>&quot;&quot;</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">texto = "Una cadena muy genial";
+
+a = string_char_at(texto, 1); //Devuelve 'U'
+a = string_char_at(texto, 2); //Devuelve 'n'
+a = string_char_at(texto, 4); //Devuelve ' '
+a = string_char_at(texto, 5); //Devuelve 'c'
+a = string_char_at(texto, 2); //Devuelve 'n'
+a = string_char_at(texto, 21); //Devuelve 'l'
+a = string_char_at(texto, 25); //Devuelve ''</pre></div>
+</div>

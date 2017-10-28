@@ -1,0 +1,38 @@
+<div id="name">string_format</div>
+<div id="content">
+	<div id="description">Convierte un número real a una cadena de texto con propiedades personalizadas.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">string_format(val, int, dec);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>val</td><td>El número real a convertir.</td>
+	</tr>
+	<tr>
+	<td>int</td><td>El mínimo número de cifras enteras que se convertirán.</td>
+	</tr>
+	<tr>
+	<td>dec</td><td>El número de cifras decimales que se convertirán.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función convierte un número real a una cadena de texto utilizando un formato propio. Si la cantidad de cifras enteras es menor al mínimo de éstas a convertir (argumento <code>int</code>), las cifras faltantes se llenarán con espacios de izquierda a derecha. Si el número de cifras decimales es menor al mínimo de éstas a convertir (argumento <code>dec</code>), las cifras faltantes se llenarán con ceros. </div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = 123.5678;
+b = string_format(a, 3, 4); //Devuelve '123.5678'
+b = string_format(a, 1, 4); //Devuelve '123.5678'
+b = string_format(a, 2, 3); //Devuelve '123.568'
+b = string_format(a, 4, 4); //Devuelve ' 123.5678'
+b = string_format(a, 5, 6); //Devuelve '  123.567800'
+b = string_format(a, 3, 1); //Devuelve '123.6'</pre></div>
+</div>

@@ -1,0 +1,31 @@
+<div id="name">real</div>
+<div id="content">
+	<div id="description">Convierte una cadena de texto a un número real.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">real(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a convertir.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite convertir una cadena de texto dada a un número real. En la conversión, los números, signos menos, puntos decimales y partes exponenciales de la cadena son tomadas en cuenta, mientras que otros caracteres (como letras) causarán un error. Si existe la posibilidad de que la cadena que se usará contenga caracteres no admitidos, se puede hacer uso de la función <code>string_digits()</code> para remover todos los caracteres no numéricos antes de realizar la conversión.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = "5";
+b = "32.5";
+
+ra = real(a); //Devuelve 5
+rb = real(b) + ra; //Devuelve 37.5
+r = real("-11.1"); //Devuelve -11.1</pre></div>
+</div>

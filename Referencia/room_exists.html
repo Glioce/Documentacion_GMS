@@ -1,0 +1,39 @@
+<div id="name">
+room_exists</div>
+<div id="content">
+<div id="description">
+Devuelve si existe o no una <i>room</i> con el índice dado.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_exists(índice);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+  <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+   <td>índice</td>
+   <td>El índice de la <i>room</i> para comprobar.</td>
+  </tr>
+<!-- ... -->
+ </tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Con esta función podemos comprobar y ver si la habitación que especifique existe o no. Esta función toma el índice de la <i>room</i> (un número real) y no el nombre de la habitación (una cadena). Esta función es muy útil cuando se están creando <i>rooms</i> dinámicamente usando la función <code>room_add()</code>, pero también se puenden usar las variables de lectura <code>room_first</code> y <code>room_last</code> o las funciones <code>room_next()</code> y <code>room_previous()</code> para obtener un índice de la habitación específico o proporcionar una variable que ha almacenado el índice de cualquier otra habitación en tu juego.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Booleano</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">if room_exists(global.rm[0])
+{
+    room_goto(global.rm[0]);
+}</pre>
+El código anterior comprueba si la <i>room</i> indexada en el <i>array</i> <code>global.rm[]</code> existe y si es así, entonces va a esa <i>room</i>.
+</div>
+</div>

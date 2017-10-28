@@ -1,0 +1,36 @@
+<div id="name">
+room_get_name</div>
+<div id="content">
+<div id="description">
+Devuelve el nombre de la <i>room</i> con el índice dado.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">room_get_name(índice);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+  <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+   <td>índice</td>
+   <td>El índice de la <i>room</i> para comprobar su nombre.</td>
+  </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función se puede utilizar para devolver el nombre de la <i>room</i> especificada como una cadena. Tenga en cuenta que esto es sólo una cadena y no se puede utilizar para hacer referencia directamente a la <i>room</i>. Sin embargo, puede utilizar esta cadena para obtener el índice de la <i>room</i> utilizando la cadena devuelta juento con la función <code>asset_get_index()</code>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Cadena de Texto</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var nombreroom = room_get_name(room);
+draw_text(32, 32, nombreroom);</pre>
+El código anterior obtendrá el nombre de la <i>room</i> actual y lo dibujará en la pantalla.
+ </div>
+</div>
