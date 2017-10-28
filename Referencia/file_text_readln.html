@@ -1,0 +1,33 @@
+<div id="name">file_text_readln</div>
+<div id="content">
+	<div id="description">Mueve el puntero de un archivo de texto hasta la siguiente línea.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_readln(fid);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fid</td><td>La identificación del archivo de texto.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite mover el puntero de un archivo de texto hasta el inicio de la siguiente línea, con el fin de continuar la lectura del archivo. Además, la función devuelve la línea actual (antes de mover el puntero) completa (incluyendo el salto de línea) del archivo de texto.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">lineas[0] = 0;
+pos = 0;
+file = file_text_open_read("datos.ini");
+while(!file_text_eof(file)) {
+    lineas[pos++] = file_text_read_string(file);
+    file_text_readln(file);
+}
+file_text_close(file);</pre>El ejemplo anterior permite leer todas las líneas de un archivo de texto y guardarlas dentro de un array.</div>
+</div>

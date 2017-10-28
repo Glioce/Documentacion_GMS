@@ -1,0 +1,30 @@
+<div id="name">ini_open</div>
+<div id="content">
+	<div id="description">Abre el archivo <span style="font-family:courier">ini</span> establecido para lectura y escritura.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_open(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre del archivo <span style="font-family:courier">ini</span> a abrir.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite abrir un archivo <span style="font-family:courier">ini</span> para lectura y escritura de la información que éste posee. Si el archivo proporcionado no existe, GameMaker: Studio lo creará si se escribe información en él; de lo contrario, las funciones de lectura devolverán el valor por defecto, mas el archivo no será creado.<br /><br />Cabe mencionar que sólo es posible tener abierto un archivo <span style="font-family:courier">ini</span> simultáneamente; por ello, es importante utilizar <code>ini_close()</code> para cerrar el archivo. Además, la información que se escriba en el archivo no se guardará en el disco duro hasta que esta función sea llamada.<br /><br /></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini_open("datos.ini");
+monedas = ini_read_real("datos", "monedas", 0);
+nivel = ini_read_real("datos", "nivel", 1);
+nombre = ini_read_string("datos", "nombre", "Player");
+ini_close();</pre>Se abre el archivo <span style="font-family:courier">datos.ini</span> para lectura y escritura. Posteriormente se leen algunos datos del archivo y por último éste se cierra.</div>
+</div>

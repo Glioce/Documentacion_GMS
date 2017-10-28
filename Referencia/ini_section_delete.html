@@ -1,0 +1,28 @@
+<div id="name">ini_section_delete</div>
+<div id="content">
+	<div id="description">Elimina una sección de un archivo <span style="font-family:courier">ini</span>.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_section_delete(section);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>section</td><td>La sección del archivo <span style="font-family:courier">ini</span> a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite eliminar una sección del archivo actualmente abierto, incluyendo todas las llaves (y su respectivo valor) asociadas a ella.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini_open("perfil.ini");
+ini_section_delete("estadisticas");
+ini_close();</pre>Se abre el archivo <span style="font-family:courier">perfil.ini</span> y se elimina la sección <code>&quot;estadisticas&quot;</code> junto con todas las llaves asociadas a ella. Posteriormente cierra el archivo.</div>
+</div>

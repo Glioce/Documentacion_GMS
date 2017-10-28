@@ -1,0 +1,29 @@
+<div id="name">filename_ext</div>
+<div id="content">
+	<div id="description">Obtiene la extensión de un nombre de archivo.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">filename_ext(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre de archivo al cual obtener la extensión.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la parte de la extensión del nombre de un archivo, incluyendo el punto.<br /><br /><strong>NOTA:</strong> Esta función no maneja archivos reales, sólo trabaja con cadenas de texto, por lo que no importa si el nombre de archivo ingresado no existe.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">file = "D:/Descargas/MyGame/Downloaded_Levels/level_137.dat";
+ext = filename_ext(file); //Devuelve '.dat'
+dir = filename_dir(file); //Devuelve 'D:/Descargas/MyGame/Downloaded_Levels'
+drive = filename_drive(file); //Devuelve 'D:'</pre></div>
+</div>

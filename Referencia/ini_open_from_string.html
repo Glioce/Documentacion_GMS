@@ -1,0 +1,34 @@
+<div id="name">ini_open_from_string</div>
+<div id="content">
+	<div id="description">Abre un archivo <span style="font-family:courier">ini</span> temporal a partir de la cadena de texto dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_open_from_string(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena de texto que contiene la información del archivo ini.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función crea un archivo <span style="font-family:courier">ini</span> temporal desde una cadena de texto, para su lectura y escritura. La cadena de texto ingresada debe tener un correcto formato <span style="font-family:courier">ini</span> (con secciones, saltos de línea y valores). De lo contrario, el archivo <span style="font-family:courier">ini</span> no se creará correctamente. Cabe mencionar que el archivo <span style="font-family:courier">ini</span> es temporal y será eliminado al momento de ser cerrado, descartando toda la información almacenada en él. Sin embargo, con la función <code>ini_close()</code> se puede obtener el contenido completo del archivo <span style="font-family:courier">ini</span>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">archivo = 
+"[datos]
+monedas=5
+nivel=23";
+
+ini_open_from_string(archivo);
+monedas = ini_read_real("datos", "monedas", 0); //Devuelve 5
+nivel = ini_read_real("datos", "nivel", 1); //Devuelve 23
+ini_close();</pre></div>
+</div>

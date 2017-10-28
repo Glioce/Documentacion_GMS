@@ -1,0 +1,27 @@
+<div id="name">game_save</div>
+<div id="content">
+	<div id="description">Guarda el juego en un archivo.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_save(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre del archivo en donde guardar (de no existir, se creará).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite realizar un guardado básico del juego en un archivo determinado.<br /><br /><strong>NOTA:</strong> Esta función es muy limitada y está diseñada para ofrecer un sistema de guardado fácil para los principiantes. Probablemente, un usuario más avanzado prefiera programar su propio sistema de guardado utilizando otras funciones de archivos. Cabe mencionar que esta función no guarda ningún recurso dinámico como estructuras de datos, superficies ni <em>backgrounds </em>o <em>sprites </em>cargados externamente.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check(ord("S")))
+    game_save("Checkpoints/savegame3.sav");</pre>Si se presiona la tecla <strong>S</strong>, se guardará el juego en el archivo <code>&quot;savegame3.sav&quot;</code> dentro del directorio <code>&quot;Checkpoints&quot;</code>.</div>
+</div>

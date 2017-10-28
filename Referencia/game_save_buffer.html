@@ -1,0 +1,27 @@
+<div id="name">game_save_buffer</div>
+<div id="content">
+	<div id="description">Guarda el juego en un búfer.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_save_buffer(buffer);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>buffer</td><td>El identificador del búfer en donde guardar el juego.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite guardar el estado actual del juego en un búfer de tipo <em>grow</em> creado previamente.<br /><br /><strong>NOTA:</strong> Esta función es muy limitada y está diseñada para ofrecer un sistema de guardado fácil para los principiantes. Probablemente, un usuario más avanzado prefiera programar su propio sistema de guardado utilizando otras funciones de archivos. Cabe mencionar que esta función no guarda ningún recurso dinámico como estructuras de datos, superficies ni <em>backgrounds </em>o <em>sprites </em>cargados externamente.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">partida = buffer_create(32, buffer_grow, 1);
+game_save_buffer(partida);</pre>Se guarda el estado del juego en el búfer <code>partida</code>.</div>
+</div>

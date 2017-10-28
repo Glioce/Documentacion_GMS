@@ -1,0 +1,30 @@
+<div id="name">ini_section_exists</div>
+<div id="content">
+	<div id="description">Comprueba si una sección existe dentro de un archivo <span style="font-family:courier">ini</span>.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_section_exists(section);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>section</td><td>El nombre de la sección a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite comprobar si una sección existe (en cuyo caso devolverá <code>true</code>) dentro del archivo <span style="font-family:courier">ini</span> actualmente abierto o no (en cuyo caso devolverá <code>false</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini_open("perfil.ini");
+if(ini_section_exists("datos"))
+    nombre = ini_read_string("datos", "nombre", "player");
+else show_message("No hemos podido encontrar información sobre tu cuenta.");
+ini_close();</pre></div>
+</div>

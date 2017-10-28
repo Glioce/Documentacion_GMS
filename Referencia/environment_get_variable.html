@@ -1,0 +1,26 @@
+<div id="name">environment_get_variable</div>
+<div id="content">
+	<div id="description">Devuelve el valor de una variable de entorno.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">environment_get_variable(name);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>name</td><td>El nombre de la variable de entorno (una cadena de texto).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve el valor (una cadena de texto) de la variable de entorno con el nombre dado.<br /><br /><strong>NOTA:</strong> Esta función sólo trabaja en la plataforma Windows.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">appdata = environment_get_variable("APPDATA");</pre>Se obtiene el valor de la variable de entorno <code>&quot;%appdata%&quot;</code>, que en Windows Vista/7 equivale normalmente a <code>&quot;C:\Users\{usuario}\AppData\Roaming&quot;</code>.</div>
+</div>

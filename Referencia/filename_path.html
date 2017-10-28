@@ -1,0 +1,29 @@
+<div id="name">filename_path</div>
+<div id="content">
+	<div id="description">Devuelve la ruta de un nombre de archivo.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">filename_path(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre de archivo al cual obtener la ruta.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la ruta de un nombre de archivo dado <strong>con</strong> la barra inclinada final. <br /><br /><strong>NOTA:</strong> Esta función no maneja archivos reales, sino que sólo trabaja con cadenas de texto, por lo que no importa si el archivo o ruta especificados no existen.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">file = "D:/Descargas/MyGame/Downloaded_Levels/level_137.dat";
+name = filename_name(file); //Devuelve 'level_137.dat'
+dir = filename_path(file); //Devuelve 'D:/Descargas/MyGame/Downloaded_Levels'
+drive = filename_drive(file); //Devuelve 'D:'</pre></div>
+</div>

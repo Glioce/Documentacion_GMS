@@ -1,0 +1,39 @@
+<div id="name">ini_read_real</div>
+<div id="content">
+ <div id="description">Lee un número real del archivo <span style="font-family:courier">ini</span> abierto actualmente.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">ini_read_real(section, key, def);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>section</td><td>La sección del archivo <span style="font-family:courier">ini</span> del cual obtener el valor.</td>
+ </tr>
+ <tr>
+ <td>key</td><td>La llave que contiene el valor.</td>
+ </tr>
+ <tr>
+ <td>def</td><td>El valor por defecto que se devolverá en caso de producirse algún error.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Un archivo <span style="font-family:courier">ini</span> se compone de <strong>secciones</strong>, y dentro de cada una de ellas se encuentran parejas <strong><span style="font-family:courier">llave=valor</span></strong>. Un ejemplo de la estructura de un archivo <span style="font-family:courier">ini</span> es el siguiente:
+<br /><img src="https://1.bp.blogspot.com/-QP09bCQl9YY/WcHlRm_giWI/AAAAAAAAAZ0/52pvNkEQxy8jaT8Q0L0wsI8rH3bEiVQLgCLcBGAs/s1600/ini_files.PNG"/>
+<br />Donde las secciones se encuentran encerradas en corchetes (<span style="font-family:courier">[</span> y <span style="font-family:courier"> ]</span>), y cada llave posee en frente suyo su respectivo valor.
+<br />
+<br />Esta función permite obtener un número real almacenado dentro de la sección y la llave dados. En caso de que el archivo abierto, la sección o la llave dados no existan, se devolverá el valor por defecto establecido.</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Número real.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">ini_open("datos.ini");
+monedas = ini_read_real("datos", "monedas", 0);
+nivel = ini_read_real("datos", "nivel", 1);
+ini_close();</pre>Se abre un archivo <span style="font-family:courier">ini</span>, se leen algunos valores reales del archivo y posteriormente se cierra.</div>
+</div>

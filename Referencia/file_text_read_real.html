@@ -1,0 +1,33 @@
+<div id="name">file_text_read_real</div>
+<div id="content">
+	<div id="description">Lee un número real del archivo dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_read_real(fid);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fid</td><td>La identificación del archivo de texto.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite obtener un número real tomado de la línea en la que se encuentre el puntero del archivo. Si no se encuentra un número real (éste debe aparecer antes de cualquier caracter no numérico), devolverá 0.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">numeros[0] = 0;
+pos = 0;
+f = file_text_open_read("archivo.ini");
+while(!file_text_eof(f)) {
+    numeros[pos++] = file_text_read_real(f);
+    file_text_readln();
+}
+file_text_close(f);</pre>Se abre un archivo de texto para su lectura, se guardan los números reales leídos del archivo en un array, y posteriormente éste se cierra.</div>
+</div>

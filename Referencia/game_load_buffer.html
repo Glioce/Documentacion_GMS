@@ -1,0 +1,27 @@
+<div id="name">game_load_buffer</div>
+<div id="content">
+	<div id="description">Carga un juego guardado desde un búfer.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_load_buffer(buffer);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>buffer</td><td>La identificación del búfer del cual cargar el juego.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite cargar un estado del juego. El juego es cargado de un búfer de tipo <em>grow</em> previamente creado, el cual tiene dentro de sí el estado del juego guardado utilizando la función <code>game_save_buffer()</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check(ord("L")))
+    game_load_buffer(gamesave[3]);</pre>Si se presiona la tecla <strong>L</strong>, se cargará el estado del juego desde el búfer encontrado en el índice 3 de la variable <code>gamesave</code>.</div>
+</div>

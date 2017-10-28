@@ -1,0 +1,36 @@
+<div id="name">gml_pragma</div>
+<div id="content">
+	<div id="description">Establece cómo el YYC compila.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">gml_pragma(command);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>command</td><td>El comando a ejecutar (cadena de texto).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función afecta la forma en la que el <em>YoYoCompiler </em>compila el código del juego, y puede ser llamada utilizando diferentes comandos para modificar la compilación final del proyecto. Los comandos disponibles son:<br /><br /><code>&quot;forceline&quot;</code>: Cuando la función es llamada <strong>en un script</strong> utilizando este comando, el YYC compilará el proyecto de modo en que en donde el script se llame, se encuentre todo el código del mismo, y no la llamada a éste.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">c = (argument0 + argument1)*(argument0/argument1);
+gml_pragma("forceline");
+return c;</pre>Imaginemos que tenemos un script llamado <code>miscript()</code> que contiene el código anterior. Entonces, si desde un objeto cualquiera le llamamos así:<pre>
+p = 32;
+h = 15.5;
+w = miscript(p, h);
+</pre>Gracias al YYC, el código no sería compilado así, sino que quedaría de esta forma:<pre>
+p = 32;
+h = 15.5;
+w = (32 + 15.5)*(32/15.5);
+</pre></div>
+</div>

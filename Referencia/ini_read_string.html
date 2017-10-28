@@ -1,0 +1,38 @@
+<div id="name">ini_read_string</div>
+<div id="content">
+ <div id="description">Lee una cadena de texto almacenada en un archivo <span style="font-family:courier">ini</span>.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">ini_read_string(section, key, def);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>section</td><td>La sección del archivo <span style="font-family:courier">ini</span> en donde se encuentra la cadena a leer.</td>
+ </tr>
+ <tr>
+ <td>key</td><td>La llave de la sección del archivo en donde se encuentra la cadena a leer</td>
+ </tr>
+ <tr>
+ <td>def</td><td>El valor por defecto (una cadena de texto) que se devolverá en caso de error.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Un archivo <span style="font-family:courier">ini</span> se compone de <strong>secciones</strong>, y dentro de cada una de ellas se encuentran parejas <strong><span style="font-family:courier">llave=valor</span></strong>. Un ejemplo de la estructura de un archivo <span style="font-family:courier">ini</span> es el siguiente:
+<br /><img src="https://1.bp.blogspot.com/-QP09bCQl9YY/WcHlRm_giWI/AAAAAAAAAZ0/52pvNkEQxy8jaT8Q0L0wsI8rH3bEiVQLgCLcBGAs/s1600/ini_files.PNG"/>
+<br />Donde las secciones se encuentran encerradas en corchetes (<span style="font-family:courier">[</span> y <span style="font-family:courier"> ]</span>), y cada llave posee en frente suyo su respectivo valor.
+<br />
+<br />Esta función permite obtener una cadena de texto almacenada dentro de la sección y la llave dados. En caso de que el archivo abierto, la sección o la llave dados no existan, se devolverá el valor por defecto establecido.</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Cadena de texto.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">ini_open("datos.ini");
+nombre = ini_read_string("perfil", "usuario", "Player");
+ini_close();</pre>Se abre el archivo <code>&quot;datos.ini&quot;</code>. Posteriormente se lee la cadena almacenada en la llave <span style="font-family:courier">usuario</span> de la sección <span style="font-family:courier">perfil</span>, y por último se cierra el archivo. Si el archivo, la sección o la llave no existen, se devolverá <code>&quot;Player&quot;</code>.</div>
+</div>

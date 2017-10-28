@@ -1,0 +1,37 @@
+<div id="name">is_string</div>
+<div id="content">
+	<div id="description">Comprueba si un valor es una cadena de texto.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">is_string(val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>val</td><td>El valor a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función comprueba si un valor dado es de tipo cadena de texto. En algunas ocaciones puede llegar a ser necesario saber si una variable almacena una cadena de texto o no, y en estos casos esta función es de utilidad. Devuelve <code>true</code> o <code>false</code> dependiendo si el tipo de dato es una cadena de texto o no.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">datos[0] = "Una cadena";
+datos[1] = "Otra cadena";
+datos[2] = 32;
+datos[3] = "Otra más";
+datos[4] = false;
+datos[5] = spr_Enemigo;
+
+for(i = 0; i < 6; i++) {
+    if(is_string(datos[i]))
+        show_message("¡Es una cadena!");
+    else show_message("No es una cadena :(");
+}</pre>Se crea un array con 6 índices diferentes, y se usa un ciclo para comprobar si cada índice almacena una cadena o no. Los mensajes que se mostrarían serían, en este orden, <code>&quot;¡Es una cadena!&quot;</code>, <code>&quot;¡Es una cadena!&quot;</code>, <code>&quot;No es una cadena :(&quot;</code>, <code>&quot;¡Es una cadena!&quot;</code>, <code>&quot;No es una cadena :(&quot;</code> y <code>&quot;No es una cadena :(&quot;</code>.</div>
+</div>

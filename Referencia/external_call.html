@@ -1,0 +1,29 @@
+<div id="name">external_call</div>
+<div id="content">
+	<div id="description">Llama a una función externa previamente definida.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">external_call(name, args[1, ..., 15]);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>name</td><td>El nombre de la función externa a llamar (cadena de texto).</td>
+	</tr>
+	<tr>
+	<td>args[1, ..., 15]</td><td>Los diferentes valores que se desean enviar como argumentos a la función externa.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Si se ha creado una función externa desde una <em>dll</em> o <em>dylib</em> utilizando <code>external_define()</code>, es posible utilizar esta función para llamarla. Se argumenta el nombre de la función previamente definida y los argumentos que se desan enviar (cada argumento debe concordar con el tipo de dato seleccionado al crearse la función).<br /><br />Esta función devuelve el resultado que devuelve función externa llamada.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto o número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = external_call("mi_funcion", 2, 4); //Se llama a la función externa 'mi_funcion' con los números 2 y 4 como argumentos.</pre></div>
+</div>

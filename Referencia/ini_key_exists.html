@@ -1,0 +1,36 @@
+<div id="name">ini_key_exists</div>
+<div id="content">
+	<div id="description">Comprueba si una llave existe en un archivo ini.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_key_exists(section, key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>section</td><td>La sección del archivo <span style="font-family:courier">ini</span> en donde buscar la llave.</td>
+	</tr>
+	<tr>
+	<td>key</td><td>La llave a buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite comprobar si una llave existe en el archivo <span style="font-family:courier">ini</span> abierto actualmente (en cuyo caso devolverá <code>true</code>) o no (en cuyo caso devolverá <code>false</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini_open("perfil.ini");
+if(ini_key_exists("perfil", "usuario"))
+    usuario = ini_read_string("perfil", "usuario");
+else {
+    show_message("No hemos encontrado un nombre de usuario para tu perfil. Por el momento usaremos uno automático");
+    usuario = "Albert";
+}
+ini_close();</pre></div>
+</div>

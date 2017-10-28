@@ -1,0 +1,29 @@
+<div id="name">irandom</div>
+<div id="content">
+	<div id="description">Devuelve un número entero aleatorio entre cero y el número dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">irandom(n);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>n</td><td>El número límite para generar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite obtener un número entero aleatorio entre cero y <code>n</code>. El número argumentado <strong>puede</strong> ser generado. Esta función tiene un límite máximo de <strong>$7fffffffffffffffLL</strong>, por lo que es necesario tener cuidado al trabajarla con números grandes.<br /><br /><strong>NOTA:</strong> Esta función generará los mismos resultados (en el mismo orden) cada vez que se ejecuta el juego. Esto gracias a que Game Maker Studio genera la misma semilla aleatoria inicial. Para evitar esto, usar <code>randomize()</code> al inicio del juego para generar una nueva semilla aleatoria.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = irandom(10); //Genera un número aleatorio entre 0 y 10. El número 10 puede ser generado.
+if(a == 5) {
+    show_message("¡Has ganado un premio!");
+}</pre>Se hace uso de <code>irandom()</code> para crear una probabilidad del 10% de que se muestre un mensaje emergente que diga <code>&quot;¡Has ganado un premio!&quot;</code>.</div>
+</div>

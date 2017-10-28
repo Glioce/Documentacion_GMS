@@ -1,0 +1,32 @@
+<div id="name">file_text_close</div>
+<div id="content">
+	<div id="description">Cierra el archivo de texto dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_close(fid);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fid</td><td>La identificación del archivo a cerrar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Al terminar de trabajar con un archivo de texto, es necesario cerrarlo, ya que de lo contrario se corre el riesgo de producirse pérdidas de información, como por ejemplo que el contenido escrito en el archivo no se guarde. Esta función previene saturaciones de memoria y problemas con el límite del sistema de archivos.<br /><br />Cabe mencionar que es posible mantener sólo hasta 32 archivos de texto abiertos simultáneamente, por lo que el uso de esta función es necesario para evitar errores.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">contenido = "";
+file = file_text_open_read("datos/partida1.ini");
+while(!file_text_eof(file)) {
+    contenido += file_text_read_string(file) + chr(13) + chr(10);
+    file_text_readln(file);
+}
+file_text_close(file);</pre>En el ejemplo anterior, se abre un archivo de texto y se guarda su contenido en la variable <code>contenido</code>. Posteriormente se cierra el archivo.</div>
+</div>

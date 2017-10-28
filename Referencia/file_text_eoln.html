@@ -1,0 +1,33 @@
+<div id="name">file_text_eoln</div>
+<div id="content">
+	<div id="description">Comprueba si el puntero del archivo dado ha llegado al final de la línea actual.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_eoln(fid);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fid</td><td>La identificación del archivo de texto.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función comprueba si el puntero del archivo dado ha llegado al final de una línea (en cuyo caso devolverá <code>true</code>) o no (en cuyo caso devolverá <code>false</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">numeros[0] = 0;
+pos = 0;
+
+f = file_text_open_read("miarchivo.num");
+while(!file_text_eoln(f)) {
+    numeros[pos++] = file_text_read_real(f);
+}
+file_text_close(f);</pre>En el ejemplo anterior, se realiza la lectura de todos los números reales de la primera línea del archivo, éstos son almacenados dentro de un array, y posteriormente se cierra el archivo.</div>
+</div>

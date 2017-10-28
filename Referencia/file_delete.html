@@ -1,0 +1,28 @@
+<div id="name">file_delete</div>
+<div id="content">
+	<div id="description">Elimina el archivo especificado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_delete(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El archivo a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite eliminar el archivo especificado del disco duro. Cabe mencionar que esta función sólo eliminará archivos que Game Maker Studio pueda crear y leer: archivos INI, archivos de texto y archivos binarios, o archivos creados para almacenar recursos del juego, como sprites o superficies. Esta función devuelve <code>true</code> si se ha podido eliminar el archivo, y <code>false</code> en cualquier caso de error.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">d = file_delete("Downloads/level03.ini");
+if(d)
+    show_message("El nivel descargado ha sido eliminado con éxito");</pre></div>
+</div>

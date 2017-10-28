@@ -1,0 +1,27 @@
+<div id="name">game_load</div>
+<div id="content">
+	<div id="description">Carga un juego guardado desde un archivo.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_load(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre del archivo a cargar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite cargar un juego previamente guardado (utilizando <code>game_save()</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check(ord("L")))
+    game_load("Checkpoints/savegame3.sav");</pre>Si se presiona la tecla <strong>L</strong>, se cargará el juego del archivo <code>&quot;savegame3.sav&quot;</code> encontrado en el directorio <code>&quot;Checkpoints&quot;</code>.</div>
+</div>

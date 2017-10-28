@@ -1,0 +1,22 @@
+<div id="name">file_find_next</div>
+<div id="content">
+	<div id="description">Busca el siguiente archivo que cumpla con el patrón y los atributos dados.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_find_next();</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve el nombre del siguiente archivo que cumpla con el patrón y los atributos previamente definidos (usando la función <code>file_find_first()</code>). Si no se encuentra ningún archivo, se devolverá una cadena vacía (<code>&quot;&quot;</code>).<br /><br /><strong>NOTA:</strong> Esta función trabaja en todas las plataformas basadas en C++ (Windows, Mac, iOS, Android y Windows Phone), pero los atributos sólo funcionan en Windows o Windows Phone.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">primero = file_find_first("*.ini", 0);
+siguiente = file_find_next();</pre>Se busca el primer archivo que tenga extensión <span style="font-family:courier">.ini</span>, y posteriormente se busca el siguiente archivo que cumpla esta misma condición.</div>
+</div>

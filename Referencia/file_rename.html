@@ -1,0 +1,30 @@
+<div id="name">file_rename</div>
+<div id="content">
+	<div id="description">Renombra el archivo dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_rename(fname, newname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El archivo a renombrar</td>
+	</tr>
+	<tr>
+	<td>newname</td><td>El nuevo nombre del archivo.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite renombrar el archivo especificado por el nuevo nombre dado. La función devuelve <code>true</code> si el archivo se ha renombrado exitosamente, o <code>false</code> en caso contrario.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(file_exists("Downloads/level_03.ini"))
+    file_rename("Downloads/level_03.ini", "Downloads/level_03_Completed.ini");</pre>Si el archivo <code>&quot;level_03.ini&quot;</code> existe dentro del directorio <code>&quot;Downloads&quot;</code>, renombrarlo por <code>&quot;level_03_Completed.ini&quot;</code>.</div>
+</div>

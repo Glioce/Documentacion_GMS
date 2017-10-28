@@ -1,0 +1,30 @@
+<div id="name">file_attributes</div>
+<div id="content">
+	<div id="description">Comprueba si un archivo posee el atributo especificado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_attributes(fname, attr);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El archivo a examinar.</td>
+	</tr>
+	<tr>
+	<td>attr</td><td>El atributo a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite saber si un archivo dado posee el atributo dado. El atributo a comprobar puede ser una de las siguientes constantes:<br /><ul><li><span style="font-family:courier">fa_readonly</span>: Archivos de solo lectura.</li><li><span style="font-family:courier">fa_hidden</span>: Archivos ocultos.</li><li><span style="font-family:courier">fa_sysfile</span>: Archivos del sistema.</li><li><span style="font-family:courier">fa_volumeid</span>: Archivos <em>volume-id</em>.</li><li><span style="font-family:courier">fa_directory</span>: Directorios.</li><li><span style="font-family:courier">fa_archive</span>: Archivados.</li></ul><strong>NOTA:</strong> Esta función sólo trabaja en Windows.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Booleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(file_attributes("downloads/level03.ini", fa_readonly))
+    show_message("El archivo que intentas borrar está protegido (sólo lectura). La acción no se puede completar");</pre></div>
+</div>

@@ -1,0 +1,31 @@
+<div id="name">file_find_first</div>
+<div id="content">
+	<div id="description">Obtiene el nombre del primer archivo que cumpla con el patrón dado y posea el atributo establecido.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_find_first(mask, attr);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>mask</td><td>El patrón de búsqueda.</td>
+	</tr>
+	<tr>
+	<td>attr</td><td>El atributo que debe tener el archivo a buscar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite obtener el nombre del primer archivo que cumpla con el patrón de búsqueda dado y también posea el atributo especificado. Si no se encuentra ningún archivo, se devolverá una cadena vacía (<code>&quot;&quot;</code>). Por ejemplo, el patrón <code>&quot;Levels/*.ini&quot;</code> permite buscar todos los archivos con la extensión <code>&quot;.ini&quot;</code> dentro del directorio Levels. El atributo indica los archivos adicionales que se deseen buscar; además, los archivos normales son siempre tomados en cuanda si éstos cumplen con el patrón. El atributo puede ser una de las siguientes constantes (si no se desea utilizar ningún atributo, usar 0):<br /><ul><li><span style="font-family:courier">fa_readonly</span>: Archivos de solo lectura.</li><li><span style="font-family:courier">fa_hidden</span>: Archivos ocultos.</li><li><span style="font-family:courier">fa_sysfile</span>: Archivos del sistema.</li><li><span style="font-family:courier">fa_volumeid</span>: Archivos <em>volume-id</em>.</li><li><span style="font-family:courier">fa_directory</span>: Directorios.</li><li><span style="font-family:courier">fa_archive</span>: Archivados.</li></ul>NOTA: Esta función no trabaja en plataformas JS (<strong>HTML5</strong>, <strong>Tizen</strong> y <strong>Windows8</strong>), y los atributos sólo funcionan en <strong>Windows</strong> y <strong>Windows Phone</strong> (utilizar 0 para las demás plataformas).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini = file_find_first("Archivos/*.ini", 0); //Busca el primer archivo con extensión '.ini'
+anything = file_find_first("Niveles/*", fa_directory); //Busca el primer archivo o directorio
+file = file_find_first("Niveles/*.*", 0); //Busca el primer archivo con cualquier extensión</pre></div>
+</div>

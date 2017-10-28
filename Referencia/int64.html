@@ -1,0 +1,28 @@
+<div id="name">int64</div>
+<div id="content">
+	<div id="description">Intenta convertir un valor dado en un entero de 64 bits.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">int64(val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>val</td><td>El valor a intentar convertir.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función intenta convertir un valor dado en un entero de 64 bits, donde el valor dado puede ser un real, una cadena, un entero de 64bits, un entero de 32 bits o un puntero. Cualquier otro tipo de valor producirá un error. Además, es posible verificar si una variable almacena un entero de 64 bits utilizando la función <code>is_int64()</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero de 64 bits.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">val = int64("30"); //Devuelve 30 (número, no cadena)
+val2 = int64("25xyz"); //Devuelve 25 (número, no cadena)
+val3 = int64("19.31"); //Devuelve 19 (número, no cadena)</pre></div>
+</div>

@@ -1,0 +1,26 @@
+<div id="name">file_text_open_read</div>
+<div id="content">
+	<div id="description">Abre un archivo de texto para su lectura.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_open_read(fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fname</td><td>El nombre del archivo de texto a abrir.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite abrir el archivo de texto con el nombre dado para su posterior lectura. En caso exitoso, se devolverá una identificación única que debe almacenarse para poder ejecutar acciones con el archivo abierto; de lo contrario, devolverá -1.<br /><br /><strong>NOTA:</strong> Sólo puede mantenerse un máximo de 32 archivos abiertos simultáneamente. Por ello, es necesario cerrar cada archivo una vez finalizado su uso, con el fin de liberar la memoria asociada e éste.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">archivo = file_text_open_read("datos.ini");</pre></div>
+</div>

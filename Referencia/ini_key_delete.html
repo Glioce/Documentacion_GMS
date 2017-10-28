@@ -1,0 +1,31 @@
+<div id="name">ini_key_delete</div>
+<div id="content">
+	<div id="description">Elimina una llave de un archivo <span style="font-family:courier">ini</span>.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">ini_key_delete(section, key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>section</td><td>La sección del archivo <span style="font-family:courier">ni</span> en donde se encuentra la llave a eliminar.</td>
+	</tr>
+	<tr>
+	<td>key</td><td>La llave a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función es posible eliminar una llave (y su respectivo valor=) de un archivo ini. La llave a eliminar debe existir.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">ini_open("perfil.ini");
+ini_key_delete("perfil", "nivel");
+ini_close();</pre>Se abre el archivo <span style="font-family:courier">perfil.ini</span> y se elimina la llave <code>&quot;nivel&quot;</code> de la sección <code>&quot;perfil&quot;</code>. Posteriormente se cierra el archivo.</div>
+</div>

@@ -1,0 +1,36 @@
+<div id="name">file_text_writeln</div>
+<div id="content">
+	<div id="description">Escribe una nueva línea en el archivo de texto dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">file_text_writeln(fid);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>fid</td><td>La identificación del archivo de texto.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite insertar un nuevo salto de línea dentro del archivo de texto dado.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">datos[0] = "Usuario 32";
+datos[1] = "Nivel 5";
+datos[2] = "Cristobal";
+num = array_length_1d(datos);
+
+f = file_text_open_write("datos.dat");
+for(i = 0; i < num; i++) {
+    file_text_write_string(f, datos[i]);
+    file_text_writeln(f);
+}
+file_text_close(f);</pre>En el anterior ejemplo, se abre un archivo de texto para su escritura, y se escriben en él todos los valores del array dado. Posteriormente, se cierra el archivo.</div>
+</div>

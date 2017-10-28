@@ -1,0 +1,35 @@
+<div id="name">
+external_free</div>
+<div id="content">
+<div id="description">
+Libera de la memoria las funciones externas asociadas con la <i>dll</i> o <i>dylib</i> dada.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">external_free(name);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>name</td><td>El nombre de la dll o dylib que desea liberar</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función libera la memoria asociada con la <i>dll </i>o <i>dylib </i>con el nombre dado. Esto debería hacerse cuando la extensión en cuestión no será necesitada en el juego, como por ejemplo en el evento <i>game end</i>.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">
+external_free("MyDLL.dll");
+</pre>
+El anterior código liberará la memoria relacionada a la extensión <i>MyDLL.dll</i>.
+</div>
+</div>

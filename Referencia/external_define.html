@@ -1,0 +1,41 @@
+<div id="name">external_define</div>
+<div id="content">
+	<div id="description">Define una función externa.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">external_define(dll, name, calltype, restype, argnumb, argtype[0, ..., 10]) ;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>dll</td><td>El nombre del archivo DLL del cual obtener la función. (Una cadena de texto).</td>
+	</tr>
+	<tr>
+	<td>name</td><td>El nombre de la función a obtener de la DLL. (Una cadena de texto).</td>
+	</tr>
+	<tr>
+	<td>calltype</td><td>El tipo de llamada a usar.</td>
+	</tr>
+	<tr>
+	<td>restype</td><td>El tipo de resultado que se espera.</td>
+	</tr>
+	<tr>
+	<td>argnumb</td><td>El número de argumentos (de 0 a 10).</td>
+	</tr>
+	<tr>
+	<td>argtype[0, ..., 10]</td><td>El tipo de dato que se usará en cada argumento.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite definir una función externa desde un archivo <em>dll</em> (para windows) o <em>dylib</em> (para Mac). Este archivo puede encontrarse tanto en un archivo incluído como en una extensión. Se ingresa el nombre (incluyendo la ruta) del archivo, y posteriormente el nombre de la función a definir. Luego, es necesario establecer el tipo de llamada a utilizar, el cual es una de las siguientes constantes:<br /><br /><table class="in-desc" align="center"><tr><th>Constante</th><th>Descripción</th></tr><tr><td><span style="font-family:Courier New">dll_cdecl</span></td><td>La llamada a C/C++ por defecto</td></tr><tr><td><span style="font-family:Courier New">dll_stdcall</span></td><td>La llamada a WinAPI estándar (sólo para <em>dll</em>'s windows)</td></tr></table><br /><br />Después, se ingresa el tipo de dato que se espera la función externa devuelva; puede ser <code>ty_real</code> si se espera un número real, o <code>ty_string</code> si se espera una cadena de texto. Lo siguiente es establecer el número de argumentos que se deben ingresar a la función externa, puede ser un número de 0 a 10. Por último, también se debe especificar el tipo de dato que se espera sea cada argumento que se ingresará a la función externa, utilizando las mismas constantes anteriores. Para funciones externas que requieran más de 4 argumentos, todos estos deben ser de tipo real.<br /><br /><strong>NOTA:</strong> Si la <em>dll</em> o <em>dylib </em>se encuentra en una extensión, las funciones externas deben definirse dentro de la extensión también.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">external_define("funciones_extra.dll", "repetir_cadena", dll_cdecl, ty_real, 2, ty_string, ty_real);</pre>Se define una función externa llamada <code>&quot;repetir_cadena&quot;</code> que se encuentra dentro del archivo <code>&quot;funciones_extra.dll&quot;</code>. El tipo de llamada es <code>dll_cdecl</code> y la función tiene que devolver un número real. Posee dos argumentos, el primero es una cadena de texto y el segundo un número real.</div>
+</div>

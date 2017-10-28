@@ -1,0 +1,22 @@
+<div id="name">game_restart</div>
+<div id="content">
+	<div id="description">Reinicia el juego.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_restart();</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite reiniciar el juego. Al ejecutarse, también se ejecutará el evento <strong>Game End</strong>. Igualmente, al reiniciarse el juego será, en escencia, igual a como si se estuviera ejecutando por primera vez, lo que significa que también se ejecutará el evento <strong>Game Start</strong>. Sin embargo, las variables globales no será re-inicializadas automáticamente. Por ejemplo, la variable <code>score</code> no iniciará en 0 después de reiniciar el juego si ésta se ha modificado anteriormente.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_check_pressed(ord("R"))
+    game_restart(); </pre>Si se presiona la tecla <strong>R</strong>, se reiniciará el juego.</div>
+</div>

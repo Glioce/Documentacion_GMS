@@ -1,0 +1,48 @@
+<div id="name">
+ini_write_string</div>
+<div id="content">
+<div id="description">
+Escribe una cadena de texto dentro de un archivo <span style="font-family: &quot;courier&quot;;">ini</span>.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">ini_write_string(section, key, value);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>section</td><td>La sección del archivo <span style="font-family: &quot;courier&quot;;">ini</span> en donde escribir el valor.</td>
+ </tr>
+<tr>
+ <td>key</td><td>La llave en donde escribir el valor.</td>
+ </tr>
+<tr>
+ <td>value</td><td>La cadena de texto a escribir.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Un archivo <span style="font-family: &quot;courier&quot;;">ini</span> se compone de <b>secciones</b>, y dentro de cada una de ellas se encuentran parejas <b><span style="font-family: &quot;courier&quot;;">llave=valor</span></b>. Un ejemplo de la estructura de un archivo <span style="font-family: &quot;courier&quot;;">ini</span> es el siguiente:
+<br />
+<img src="https://1.bp.blogspot.com/-QP09bCQl9YY/WcHlRm_giWI/AAAAAAAAAZ0/52pvNkEQxy8jaT8Q0L0wsI8rH3bEiVQLgCLcBGAs/s1600/ini_files.PNG" />
+<br />
+Donde las secciones se encuentran encerradas en corchetes (<span style="font-family: &quot;courier&quot;;">[</span> y <span style="font-family: &quot;courier&quot;;"> ]</span>), y cada llave posee en frente suyo su respectivo valor.
+<br />
+<br />
+Esta función permite escribir una cadena de texto en un archivo <span style="font-family: &quot;courier&quot;;">ini</span> teniendo en cuenta la sección y la llave dadas. Si la sección establecida no existe, ésta se creará. Si la llave establecida no existe, ésta también se creará; de lo contrario, su valor será reemplazado.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">ini_open("datos.ini");
+ini_write_string("perfil", "usuario", "Albert");
+ini_close();</pre>
+Se abre el archivo <span style="font-family: &quot;courier&quot;;">datos.ini</span> y se escribe la cadena <code>"Albert"</code> dentro de la llave <code>"usuario"</code> de la sección <code>"perfil"</code> del archivo. Posteriormente se cierra el archivo.</div>
+</div>

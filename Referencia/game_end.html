@@ -1,0 +1,22 @@
+<div id="name">game_end</div>
+<div id="content">
+	<div id="description">Cierra el juego.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">game_end();</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite finalizar el juego (y ejecutar el evento <strong>Game End</strong>). Esta acción no se lleva a cabo inmediatamente al ejecutarse, sino al final del <em>step</em> actual. Por ello, cualquier código que se tenga en el mismo <em>step </em>que la función ha sido llamada, continuará ejecutándose. Esta función tiene ciertas condiciones:<br /><ul><li>En los módulos <strong>Windows 8</strong> e <strong>iOS </strong>se reportará un error, como está establecido en las condiciones de sus respectivas tiendas.</li><li>No funciona en el módulo HTML5</li><li>Trabaja correctamente en las plataformas <strong>Windows </strong>(incluyendo <em>Steam Workshop</em>), <strong>Windows Phone</strong>, <strong>Android</strong>, <strong>Linux </strong>y <strong>Mac</strong>.</li></ul></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if(keyboard_check_pressed(vk_escape))
+    game_end();</pre>Si se presiona la tecla <span style="font-family:courier">escape</span>, se cerrará el juego.</div>
+</div>

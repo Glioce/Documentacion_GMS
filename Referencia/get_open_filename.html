@@ -1,0 +1,26 @@
+<div id="name">get_open_filename</div>
+<div id="content">
+	<div id="description">Abre un cuadro de diálogo que permite cargar un archivo.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">get_open_filename(filter, fname);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>filter</td><td>El filtro de archivo a cargar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función abre un cuadro de diálogo en donde el jugador podrá elegir un archivo cuyo nombre coincida con el filtro dado. El filtro posee la forma <code>&quot;Nombre 1|formato1|nombre2|formato2...&quot;</code>. Donde el formato contiene los diferentes nombres que puede tener el archivo a elegir, separados por <em>punto y coma</em>; el asterisco (*) indica que se puede tratar de cualquier nombre. Cabe mencionar que esta función <strong>no abre el archivo para leerlo</strong>. Sólo devuelve una cadena de texto con la ruta y nombre completo del archivo que se ha abierto. Si el usuario cancela la operación (dígase presiona <strong>Cancel</strong>, o cierra el cuadro de diálogo), la función devolverá una cadena de texto vacía (<code>&quot;&quot;</code>).<br /><br />Es importante saber que, a pesar del límite del sistema de archivos de GameMaker: Studio (que normalmente impide administrar archivos fuera del área local), esta función otorga permisos de lectura para el archivo abierto durante el resto del juego. Gracias a esto, es posible leer el contenido de un archivo abierto por esta función.<br /><br /><strong>NOTA:</strong> Esta función es sólo para la plataforma <strong>Windows</strong>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">file = get_open_filename("Imagen|*.png;*.jpg", "");</pre>Se abre un cuadro de diálogo que permitirá al usuario escoger sólo un archivo con formato <span style="font-family:courier">.png</span> o <span style="font-family:courier">.jpg</span>.</div>
+</div>

@@ -1,0 +1,31 @@
+<div id="name">irandom_range</div>
+<div id="content">
+	<div id="description">Devuelve un número entero aleatorio entre dos límites de un rango.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">irandom_range(n1, n2);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>n1</td><td>El límite inferior del rango en el cual se generará el número.</td>
+	</tr>
+	<tr>
+	<td>n2</td><td>El límite superior del rango en el cual se generará el número.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve un número entero aleatorio dentro del rango especificado por los argumentos dados. El límite superior (<code>n2</code>) <strong>puede</strong> ser generado.<br /><br /><strong>NOTA:</strong> Esta función generará los mismos resultados (en el mismo orden) cada vez que se ejecuta el juego. Esto gracias a que Game Maker Studio genera la misma semilla aleatoria inicial. Para evitar esto, usar <code>randomize()</code> al inicio del juego para generar una nueva semilla aleatoria.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número entero.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = irandom_range(3, 9); //Devuelve un número entero aleatorio entre 3 y 9. Tanto 6 como 9 pueden generarse.
+b = irandom_range(-5, 6); //Devuelve un número entero aleatorio entre  -5 y 6. Tanto -5 como 6 pueden generarse.
+c = irandom_range(2.8, 7.47); //Devuelve un número entero aleatorio entre 2 y 7, ya que los límites del rango son aproximados al menor entero más cercano.</pre></div>
+</div>
