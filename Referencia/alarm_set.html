@@ -1,0 +1,29 @@
+<div id="name">alarm_set</div>
+<div id="content">
+	<div id="description">Establece el valor de una alarma.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">alarm_set(index, val);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice de la alarma a modificar. Un número de 0 a 11.</td>
+	</tr>
+	<tr>
+	<td>val</td><td>El valor a asignar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función puede ser utilizada para activar una alarma. Se ingresa el índice de la alarma (un número de 0 a 11) y el valor que se le asignará. El valor a asignar debe ser un número entero, y se puede asignar -1 para detener la alarma. Esta función es una alternativa a establecer el valor de la alarma directamente desde el array <code>alarm</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">alarm_set(0, room_speed);</pre>Se activa la alarma 0 para que se ejecute en un segundo.</div>
+</div>
