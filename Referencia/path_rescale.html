@@ -1,0 +1,32 @@
+<div id="name">path_rescale</div>
+<div id="content">
+	<div id="description">Escala el path dado con referencia su centro.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_rescale(index, xscale, yscale);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a escalar.</td>
+	</tr>
+	<tr>
+	<td>xscale</td><td>Por cuanto se multiplicará el tamaño horizontal. La escala predeterminada es 1.</td>
+	</tr>
+	<tr>
+	<td>yscale</td><td>Por cuanto se multiplicará el tamaño vertical. La escala predeterminada es 1.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función puede ser usada para escalar el path dado en los dos ejes (o solamente uno), eje vertical y horizontal. Básicamente moviendo cada uno de los puntos del path a una nueva posición que corresponda, relativa al centro del path. Esta función cambia los datos del path de forma permanente desde que se usa hasta el final del juego, por lo que todas las instancias que usen del path se verán afectadas.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_rescale(path0, 3, 3);</pre>El código anterior escalará &quot;path0&quot; a tres veces su tamaño original.</div>
+</div>

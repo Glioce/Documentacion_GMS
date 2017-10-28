@@ -1,0 +1,30 @@
+<div id="name">path_append</div>
+<div id="content">
+	<div id="description">Copia un path al final de otro path.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_append(index, path);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El nuevo índice del path.</td>
+	</tr>
+	<tr>
+	<td>path</td><td>El índice del path que se añadira a 'index'.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede añadir un path a otro, para que funcione correctamente deben existir ambos paths al momento de ejecutarlo (hechos con el editor de paths o creados con <code>path_add</code>).<br /><br /><em><strong>Nota:</strong> Esta función no elimina el path que esta siendo agregado, solamente sus puntos son removidos, si ya no será utilizado, debe eliminarlo con la función <code>path_delete</code>.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_append(mypath, mppath);
+path_delete(mppath);</pre>El código anterior añade la información del path &quot;mppath&quot; a el path que se encuentra en la variable &quot;mypath&quot; y luego elimina &quot;mppath&quot; de la memoria.</div>
+</div>

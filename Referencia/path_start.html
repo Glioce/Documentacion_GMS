@@ -1,0 +1,35 @@
+<div id="name">path_start</div>
+<div id="content">
+	<div id="description">Inicia un path con la instancia actual.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_start(index, speed, endaction, absolute);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a iniciar.</td>
+	</tr>
+	<tr>
+	<td>speed</td><td>La velocidad con la que se recorrerá el path en pixeles por step, un valor negativo lo hará ir en sentido inverso.</td>
+	</tr>
+	<tr>
+	<td>endaction</td><td>Que se hará al termianr el path (vea el listado de constantes abajo).</td>
+	</tr>
+	<tr>
+	<td>absolute</td><td>Si la instancia debe de recorrer el path tal como esta en el editor(true) o relativo a la posición actual(false).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Un path es creado a partir de una seria de puntos definidos que se enlazan, con el fin de planificar el movimiento de una instancia, se pueden crear mediando codigo o con el editor de path y se asignan a una instancia que la utilizará en el juego. Puede utilizar esta función para indicar a una instancia que path debe de seguir, con que velocidad (en píxeles por step), que debe hacer al llegar al final del path, y si debe de seguir el path de forma absoluta o relativa. Esta última configuración establece si se sigue la ruta exactamente como se diseño en el editor de path(absoluto) o desde la posición actual de la instancia(relativa).<br /><br /><img src="media/path_start.png"/><br /><br />Como puede verse en la imagen anterior, las dos instancias siguen el mismo path, iniciado con <code>path_start()</code>, pero una de ellas sigue el path de forma absoluta y la otra de forma relativa. Debe de tenerse en cuenta que al iniciar el path como absoluta(<code>false</code>) la instancia &quot;saltará&quot; al inicio del path sin importar donde se encuentre en el room.<br /><br />Las constantes utilizadas para definir la acción de la instancia al llegar al final del path son las siguientes:<br /><br /><table class="in-desc" align="center"><tr><th>path_action_stop</th><th>Detiene el path</th></tr><tr><th>path_action_restart</th><th>Continua desde la posición inicial, saltando al comienzo del path si no es cerrado</th></tr><tr><th>path_action_continue</th><th>Comienza el path de nuevo desde la posición actual</th></tr><tr><th>path_action_reverse</th><th>Invierte la velocidad del path (recorre el path en reversa)</th></tr></table><br /><br /></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_start(path, 4, path_action_reverse, 0);</pre>El código anterior hará que la instancia siga el path indexado en la variable &quot;path&quot; con una velocidad de 4 píxeles por step. Seguirá el path de forma relativa a su posición, y cuando llegue al final invertirá su velocidad para recorrer el path en sentido inverso.</div>
+</div>

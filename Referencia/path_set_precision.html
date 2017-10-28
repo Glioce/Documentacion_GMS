@@ -1,0 +1,41 @@
+<div id="name">
+path_set_precision</div>
+<div id="content">
+<div id="description">
+Establece la precisión del path dado.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">path_set_precision(index, prec);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>index</td><td>El índice del path a modificar.</td>
+ </tr>
+<tr>
+ <td>prec</td><td>La precisión del path. Este es un entero entre 1 y 8.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Con esta función puede establecer que tan "suavizado" será el path. Este valor está entre 1 y 8, con un valor bajo hará bordes rectos con curvas más redondeadas entre los puntos; con un valor alto redondeará todos los puntos teniendo un path más curvilíneo. Tenga en cuenta que la función no tendrá efecto si el path no es establecido como suavizado con la función <code>path_set_kind()</code>. Esta función cambia los datos del path desde que es usada hasta el final del juego, por lo que todas las instancias que usen el path se verán afectadas.
+<br />
+<br />
+<div style="text-align: center;">
+<img src="https://3.bp.blogspot.com/-OfCyM4monPA/Wd7RnafSYNI/AAAAAAAAAls/CaEPUoj9EAYawuoagBx99vdtM-EyjA0hACLcBGAs/s1600/path_set_precision.PNG" /></div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">path_set_precision(path0, 2);</pre>
+El código anterior establece al path0 una precisión de 2.</div>
+</div>

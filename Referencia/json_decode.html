@@ -1,0 +1,43 @@
+<div id="name">json_decode</div>
+<div id="content">
+	<div id="description">Decodifica una cadena de objeto JSON en un mapa.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">json_decode(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena JSON a decodificar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, el cual es fácil de leer y escribir tanto para personas como para computadoras. Este formato está compuesto de dos estructuras básicas:<br /><ul><li>Colecciones de parejas <span style="font-family:courier">nombre:valor</span>, conocidas comúnmente como <em>diccionarios </em>u <em>objetos</em>. Con esta función, <em>Game Maker Studio</em> decodifica estos elementos en mapas.</li><li>Listas de valores, conocidas comunmente como <em>arrays</em> o <em>secuencias</em>. Con esta función, <em>Game Maker Studio</em> decodifica estos elementos en listas.</li></ul>Esta función decodifica una cadena en formato JSON y la convierte en un mapa (<span style="font-family:courier">ds_map</span>). Si el JSON a ser decodificado requiere una jeraquía de listas y mapas dentro del mapa central, éstos también son decodificados utiliazando las siguientes reglas:<br /><ul><li>Si el JSON contiene un único valor, se devuelve un mapa con una única llave llamada <code>&quot;default&quot;</code>, en donde se encuentra el valor.</li><li>Si el JSON es una lista o <em>array </em>de valores, se devuelve una mapa con una única llave llamada <code>&quot;default&quot;</code>, y dentro de ésta, una lista que contiene los valores.</li><li>Si el JSON es un objeto o diccionario, se devuelve un mapa con la información.</li></ul><strong>NOTA:</strong> Cuando se decodifican arrays o listas de valores, el mapa con la llave &quot;default&quot; es creado <strong>sólo </strong>cuando el array está en el nivel más alto de la estructura. Los arrays que se encuentran dentro de la estructura se decodifican directamente en una lista, sin ésta ser almacenada dentro de un mapa.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Mapa, o -1 si ocurre un error.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">JSON = 
+'{
+"Nivel":5, 
+"Nombre": "Juan",
+"Puntos": {
+    "Nivel 1": 65,
+    "Nivel 2": 13,
+    "Nivel 3": 0
+},
+"Texto personal": "Soy un usuario de este juego!"
+}';
+
+info = json_decode(JSON);
+nivel = info[?"Nivel"]; //Devuelve 5
+nombre = info[?"Nombre"]; //Devuelve 'Juan'
+puntos = info[? "puntos"]; //Devuelve un mapa
+puntos_Nivel2 = puntos[? "Nivel 2"]; //Devuelve 13
+texto = info[?"Texto personal"]; //Devuelve 'Soy un usuario de este juego!'</pre></div>
+</div>

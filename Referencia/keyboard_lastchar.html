@@ -1,0 +1,24 @@
+<div id="name">keyboard_lastchar</div>
+<div id="content">
+	<div id="description">Almacena el ultimo caracter presionado (como una cadena de texto).</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_lastchar;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta variable almacena una cadena de texto del ultimo carácter presionado. Esta variable <em>no es</em> de solo lectura, y puede cambiarla por ejemplo a &quot;&quot; (una cadena de texto vacía) con el fin de reiniciarla.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_lastkey != -1{
+     str += keyboard_lastchar;
+     keyboard_lastkey = -1;
+}</pre>Con el código anterior comprueba si la variable <code>keyboard_lastkey</code> es mayor a -1, si esto es verdadero agrega el ultimo carácter a la variable &quot;str&quot;.</div>
+</div>

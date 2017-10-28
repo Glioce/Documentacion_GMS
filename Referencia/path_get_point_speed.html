@@ -1,0 +1,31 @@
+<div id="name">path_get_point_speed</div>
+<div id="content">
+	<div id="description">Devuelve la velocidad establecida de un punto del path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_get_point_speed(index, n);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a comprobar.</td>
+	</tr>
+	<tr>
+	<td>n</td><td>El número del punto a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede obtener la velocidad de un punto (tal como fue definido con el editor de path o agregado dinámicamente el punto usando <code>path_add_point()</code>) expresando en forma de porcentaje. Por ejemplo, si tiene un punto en el path con una velocidad de 50 en el editor de path, esta función devolverá 50 al ser utilizada.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if path_get_point_speed(c_path, 0) != 100{
+     path_change_point(c_path, 0, path_get_point_x(c_path, 0), path_get_point_y(c_path, 0), 100);
+}</pre>El código anterior comprueba si la velocidad del punto &quot;0&quot; del path indexado en &quot;c_path&quot; no es igual a 100. Si no es 100, entonces la velocidad será establecida a 100.</div>
+</div>

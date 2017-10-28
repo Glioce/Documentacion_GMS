@@ -1,0 +1,26 @@
+<div id="name">path_get_name</div>
+<div id="content">
+	<div id="description">Devuelve el nombre del path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_get_name(index);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve el nombre del path en forma de una cadena de texto. El nombre es el definido en el editor de path ó (si el path a sido creado a través de funciones de código) este regresara una cadena de texto  con el formato &quot;_newpathXX&quot; donde &quot;XX&quot; es el numero del path creado, empezando en 0 e incrementando de uno en uno cada vez que un path es creado. Tener en cuentra que este es una cadena de texto y no funciona para hacer referencia al path - para eso es necesario el <em>path index</em>. Puede usar la cadena de texto dada para obtener el <em>path index</em> con la función <code>asset_get_index()</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">name = path_get_name(mypath);</pre>El código anterior establece &quot;name&quot; con el nombre del path indexado en la variable &quot;mypath&quot;.</div>
+</div>

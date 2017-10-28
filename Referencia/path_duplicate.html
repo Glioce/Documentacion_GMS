@@ -1,0 +1,26 @@
+<div id="name">path_duplicate</div>
+<div id="content">
+	<div id="description">Duplica un path existente, regresando su índice.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_duplicate(index);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path existente a duplicar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función toma un path y lo copia dentro de un nuevo path. El nuevo path es creado en el proceso, y el índice es guardado en una variable para las llamadas posteriores del nuevo path.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">mypath = path_duplicate(choose(path_1, path_2, path_3, path_4));</pre>El código anterior elige uno de los cuatro posibles paths y lo duplica, el índice del nuevo path es guardado en la variable &quot;mypath&quot;.</div>
+</div>

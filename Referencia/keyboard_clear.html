@@ -1,0 +1,26 @@
+<div id="name">keyboard_clear</div>
+<div id="content">
+	<div id="description">Limpia el estado de la tecla dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_clear(key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>key</td><td>La tecla a limpiar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puedes limpiar el estado actual del teclado, la utilidad es que si una tecla esta siendo presionada, deja de reconocerse hasta que sea soltada (Al utilizar esta función no se genera el evento <code>keyboard_key_release</code>) y presionada de nuevo.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">keyboard_clear(vk_space);</pre>Este código limpia el esta de la barra de espacio.</div>
+</div>

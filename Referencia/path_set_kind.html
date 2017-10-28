@@ -1,0 +1,41 @@
+<div id="name">
+path_set_kind</div>
+<div id="content">
+<div id="description">
+Establece el tipo de conexiones del path dado.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">path_set_kind(index, val);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>index</td><td>El índice del path a modificar.</td>
+ </tr>
+<tr>
+ <td>val</td><td>El tipo del path, 0 para recto y 1 para suavizado.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función puede ser usada para establecer el tipo de conexiones de un path en especifico. Estas pueden ser lineas rectas (colocándolo en 0) o pueden ser suavizadas (colocándolo en 1), se debe de tener en cuenta la precisión del path (la precisión puede ser establecida con la función <code>path_set_precision</code>). Esta función modifica los datos del path desde que se usa la función hasta que termina el juego, por lo que todas las instancias que usen el path se verán afectadas.
+<br />
+<br />
+<div style="text-align: center;">
+<img src="https://3.bp.blogspot.com/-47wMIi8ZU3s/Wd7SV4uYUpI/AAAAAAAAAl4/-ECIoe2H2qASSrI3n6a91dia53A1K2MbwCLcBGAs/s1600/path_set_kind.PNG" /></div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Nada</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">path_set_kind(path0, 1);</pre>
+El código anterior establece path0 como un path suavizado.</div>
+</div>

@@ -1,0 +1,30 @@
+<div id="name">path_assign</div>
+<div id="content">
+	<div id="description">Duplica un path existente.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_assign(index, path);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path en que se escribirá.</td>
+	</tr>
+	<tr>
+	<td>path</td><td>El índice del path que será escrito en 'index'.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede copiar los datos de un path a otro path. El path al que se copiará se borrará primero (si tiene datos) y se sobrescribirá con el path que será copiado. Ninguno de los path se eliminan, el resultado son dos paths iguales, pero con índices diferentes.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">mypath = path_add();
+path_assign(mypath, choose(path_1, path_2, path_3));</pre>El código anterior crea un nuevo y vació path con el índice en la variable &quot;mypath&quot;. Luego copia los datos de uno de las tres posibilidades de path dados.</div>
+</div>

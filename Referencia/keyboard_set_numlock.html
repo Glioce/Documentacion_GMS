@@ -1,0 +1,31 @@
+<div id="name">keyboard_set_numlock</div>
+<div id="content">
+	<div id="description">Establece el estado de la tecla &quot;numberlock&quot;.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_set_numlock(value);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>value</td><td>Establece este valor en true para </td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede cambiar la tecla numberlock entre encendido y apagado (<strong>true</strong> para encendido y <strong>false</strong> para apagado)<br /><br /><em><strong>Nota:</strong> Esta funcionalidad solo esta disponible en Windows y esta no funciona en ningún otro dispositivo.</em></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_get_numlock(){
+     keyboard_set_numlock(0);
+}
+else{
+     keyboard_set_numlock(1);
+}</pre>El código anterior comprueba el estado de la tecla numberlock y si está encendida (true) la establece en apagado (false) y viceversa.</div>
+</div>

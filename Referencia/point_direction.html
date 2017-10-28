@@ -1,0 +1,57 @@
+<div id="name">
+point_direction</div>
+<div id="content">
+<div id="description">
+Obtiene el ángulo (en grados) del vector dado.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">point_direction(x1, y1, x2, y2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+        <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+            <td>x1</td>
+            <td>La componente horizontal del primer punto del vector.</td>
+</tr>
+<tr>
+            <td>y1</td>
+            <td>La componente vertical del primer punto del vector.</td>
+</tr>
+<tr>
+            <td>x2</td>
+            <td>La componente horizontal del segundo punto del vector.</td>
+</tr>
+<tr>
+            <td>y2</td>
+            <td>La componente vertical del segundo punto del vector.</td>
+</tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función devuelve la dirección del vector formado por los puntos especificados (x1, y1) y (x2, y2) en relación con las coordenadas fijas de la sala, como se aprecia en la siguiente imagen:<br />
+<br />
+<div style="text-align: center;">
+<img src="https://lh3.googleusercontent.com/-3Q-Yhc3jVbA/WcxDYbb2LBI/AAAAAAAAAhg/KtBocdDV_0omT2UWYGWlf7TOAm3Y5c-lwCLcBGAs/point_direction.png" style="max-width: 80%;" /></div>
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var angulo = point_direction(x, y, enemigo.x, enemigo.y);
+with(instance_create(x, y, oBala))
+{
+    direction = angulo;
+    speed = 20;
+}
+</pre>
+Se obtiene el ángulo que hay entre el objeto actual y el objeto <i>enemigo</i>, y posteriormente se crea una bala que irá en dicha dirección con una velocidad de 20<i>px/step</i>.
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div id="name">path_get_closed</div>
+<div id="content">
+	<div id="description">Devuelve el estado de la propiedad &quot;closed&quot; del path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_get_closed(index);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede conocer si el path esta marcado como cerrado (true) o como abierto (false), es decir, si el path es un bucle o si tiene un comienzo y un final definidos.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">state = path_get_closed(c_path);</pre>Se establecerá &quot;state&quot; en <code>true</code> o <code>false</code> dependiendo si el path indexado en &quot;c_path&quot; es cerrado o abierto.</div>
+</div>

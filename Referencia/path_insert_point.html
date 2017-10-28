@@ -1,0 +1,38 @@
+<div id="name">path_insert_point</div>
+<div id="content">
+	<div id="description">Inserta un punto en el path dado, en la posición indicada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_insert_point(index, n, x, y, speed);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path en el que se insertara el punto.</td>
+	</tr>
+	<tr>
+	<td>n</td><td>La posición del nuevo punto, los puntos se desplazaran hacia delante.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La coordenada en x del nuevo punto (relativa al path).</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La coordenada en y del nuevo punto (relativa al path).</td>
+	</tr>
+	<tr>
+	<td>speed</td><td>El factor de velocidad del punto.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede insertar un nuevo punto dentro del path (el path puede haber sido creado con el editor de path o mediante la función <code>path_add()</code>. El punto ha ser agregado en el path será antes del punto &quot;n&quot; especificado en la función.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_insert_point(mypath, 0, 50, 50, 100);</pre>El código anterior inserta un punto al comienzo del path indexado en la variable &quot;mypath&quot; en (50, 50), con una velocidad del 100%.</div>
+</div>

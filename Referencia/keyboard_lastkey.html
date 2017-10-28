@@ -1,0 +1,24 @@
+<div id="name">keyboard_lastkey</div>
+<div id="content">
+	<div id="description">Almacena el codigo de la ultima tecla presionada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_lastkey;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta variable contiene el valor de <code>keyboard_key</code> del cuadro anterior, regresando el código asignado a la tecla (todos los códigos de las constantes estándares son devueltos). Esta variable <em>no es</em> de solo lectura y puede ser cambiada, por ejemplo a -1 para &quot;reiniciarla&quot;.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if (keyboard_lastkey != -1){
+     str += keyboard_lastchar;
+     keyboard_lastkey = -1;
+}</pre>El código anterior comprueba si la variable <code>keyboard_lastkey</code> no es igual a -1, si esto es verdadero agrega la ultima tecla como una cadena de texto a la variable &quot;str&quot;, luego reinicia la variable <code>keyboard_lastkey</code> para permitir una futura comprobación.</div>
+</div>

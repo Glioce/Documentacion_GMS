@@ -1,0 +1,31 @@
+<div id="name">path_delete</div>
+<div id="content">
+	<div id="description">Elimina el path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_delete(index);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Usando esta función puede eliminar un path de la memoria. Si el path ha sido creado dinamicamente usando <code>path_add</code>, no se podrá usar la variable que contenía su indice para acceder al path, por que este ya no existe, si el path a sido creado usando el <strong>Path Editor</strong> no podrá acceder a él durante todo el juego, por que lo esta eliminando permanentemente.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">var t_path;
+t_path = path_add();
+if mp_grid_path(grid, t_path, x, y, obj_Player.x, obj_Player.y, 1){
+     path_assign(mypath, t_path);
+}
+path_delete(t_path);</pre>Con el código anterior crea un path y almacena su índice en una variable local. Este path es usado para guardar el path generado por la función <code>mp_grid_path</code>, que, si logra encontrar un camino hacia el destino, sera copiado al path &quot;mypath&quot;. Por ultimo se elimina &quot;t_path&quot;.</div>
+</div>

@@ -1,0 +1,35 @@
+<div id="name">path_get_point_x</div>
+<div id="content">
+	<div id="description">Devuelve la coordenada x del punto especificado del path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_get_point_x(index, n);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a comprobar.</td>
+	</tr>
+	<tr>
+	<td>n</td><td>El número del punto a comprobar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la posición en X (de las coordenadas del room) del punto dado del path. Si el punto a comprobar está fuera del rango del path (ejemplo, si el path tiene 8 puntos y se pide la posición en X del punto 10) devolverá 0.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if path_position = 1{
+     var i;
+     i = floor(random(path_get_number(mypath)));
+     x = path_get_point_x(mypath, i);
+     y = path_get_point_y(mypath, i);
+     path_position = (1 / path_get_number(mypath)) * i;
+}</pre>El código anterior comprueba si una instancia esta al final del path. Si es cierto, elegirá un punto aleatorio del path y moverá a la instancia a ese punto.</div>
+</div>

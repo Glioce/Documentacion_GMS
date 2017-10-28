@@ -1,0 +1,23 @@
+<div id="name">path_endaction</div>
+<div id="content">
+	<div id="description">Establece u obtiene que debe hacer la instancia al terminar un path.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_endaction;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta variable puede obtener o cambiar la acción de una instancia cuando termina el path actual. Normalmente se establece al momento de iniciar un path con <code>path_start</code>, pero es posible cambiarlo a gusto durante el juego. Los valores disponibles son las si[list]guientes constantes:<br /><br /><table class="in-desc" align="center"><tr><th>path_action_stop</th><th>Detiene el path</th></tr><tr><th>path_action_restart</th><th>Continua desde la posición inicial, saltando al comienzo del path si no es cerrado</th></tr><tr><th>path_action_continue</th><th>Comienza el path de nuevo desde la posición actual</th></tr><tr><th>path_action_reverse</th><th>Invierte la velocidad del path (recorre el path en reversa)</th></tr></table></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Constante</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if path_endaction == path_action_stop{
+     path_endaction = choose(path_action_restart, path_action_continue, path_action_reverse);
+}</pre>El código anterior comprueba la acción final del path, si la acción es &quot;detenerse&quot;, entonces una nueva acción será seleccionada de forma aleatoria.</div>
+</div>

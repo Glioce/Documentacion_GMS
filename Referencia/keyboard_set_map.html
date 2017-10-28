@@ -1,0 +1,29 @@
+<div id="name">keyboard_set_map</div>
+<div id="content">
+	<div id="description">Asigna a una tecla el valor de otra tecla.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_set_map(key1, key2);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>key1</td><td>Esta es la tecla que recibirá un nuevo valor.</td>
+	</tr>
+	<tr>
+	<td>key2</td><td>Esta es la tecla que debe de ser asignada.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función permite asignar a una tecla el valor de otra y la pulsación de estas teclas se interpretaran como el mismo. Para ello elige la tecla que desea asignar (key2) y la tecla a la cual se le asignará (key1).<br />Con esta función puede crear un sistema en el cual el jugador defina sus propias teclas para jugar cómodamente su juego.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">keyboard_set_map(ord("A"), vk_left);</pre>El código anterior, asignará a la tecla &quot;A&quot; el valor de la tecla <code>vk_left</code>. Esto significa que el jugador puede utilizara la tecla &quot;A&quot; o la tecla izquierda, y todo el código escrito para la flecha izquierda también responderá a la tecla &quot;A&quot;.</div>
+</div>

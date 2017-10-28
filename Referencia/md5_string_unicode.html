@@ -1,0 +1,26 @@
+<div id="name">md5_string_unicode</div>
+<div id="content">
+	<div id="description">Devuelve un <em>Hash MD5</em> del formato Unicode de la cadena dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">md5_string_unicode(str);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>str</td><td>La cadena a la cual obtener el Hash MD5.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">En criptografía, MD5 (<em>Message-Digest algorithm 5</em>) es una función de hash de 128 bits bastante común, utilizada en diferentes aplicaciones de seguridad. Esta función toma la cadena dada en formato unicode (lo que significa, 16bits por cada caracter) y devuelve el <em>Hash MD5</em> hexadecimal de 32 caracteres, único para la cadena original.<br /><br /><strong>NOTA:</strong> Hay dos formatos para la encriptación MD5: UTF-8 y Unicode, aunque el más común es el formato Unicode.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Cadena de texto.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">hash = md5_string_unicode("hola"); //Devuelve '6ef03d50ba96fe64a44e8bc0be049d38'</pre></div>
+</div>

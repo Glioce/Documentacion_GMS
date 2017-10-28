@@ -1,0 +1,42 @@
+<div id="name">point_in_rectangle</div>
+<div id="content">
+ <div id="description">Comprueba si el punto dado se encuentra dentro del área rectangular establecida.</div>
+
+ <h2>Sintaxis</h2>
+ <div id="sintax">
+  <pre class="gml-syntax">point_in_rectangle(px, py, x1, y1, x2, y2);</pre>
+ </div>
+
+ <h2>Argumentos</h2>
+ <table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+ <tr>
+ <td>px</td><td>La posición horizontal del punto a comprobar.</td>
+ </tr>
+ <tr>
+ <td>py</td><td>La posición vertical del punto a comprobar.</td>
+ </tr>
+ <tr>
+ <td>x1</td><td>La posición horizontal del primer punto del área rectangular.</td>
+ </tr>
+ <tr>
+ <td>y1</td><td>La posición vertical del primer punto del área rectangular.</td>
+ </tr>
+ <tr>
+ <td>x2</td><td>La posición horizontal del segundo punto del área rectangular.</td>
+ </tr>
+ <tr>
+ <td>y2</td><td>La posición vertical del segundo punto del área rectangular.</td>
+ </tr>
+</table>
+
+ <h2>Descripción</h2>
+ <div id="longdescription">Esta función permite definir un área rectangular y comprobar si el punto dado se encuentra dentro de ésta (en cuyo caso devolverá <code>true</code>) o no (en cuyo caso devolverá <code>false</code>).</div>
+
+ <h2>Devuelve</h2>
+ <div id="returns">Booleano.</div>
+
+ <h2>Ejemplo</h2>
+ <div id="example"><pre class="gml-syntax">if(point_in_rectangle(mouse_x, mouse_y, 32, 32, 96, 64))
+    show_message("¡El cursor está dentro del recuadro!");</pre>En el ejemplo anterior, se comprueba si el cursor se encuentra dentro de un área rectangular dada, y de ser así, mostrará un mensaje indicándolo.</div>
+</div>

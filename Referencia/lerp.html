@@ -1,0 +1,34 @@
+<div id="name">lerp</div>
+<div id="content">
+	<div id="description">Devuelve la interpolación lineal de dos valores con la cantidad dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">lerp(a, b, c);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>a</td><td>El primer valor a interpolar.</td>
+	</tr>
+	<tr>
+	<td>b</td><td>El segundo valor a interpolar.</td>
+	</tr>
+	<tr>
+	<td>c</td><td>La cantidad a interpolar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función se puede obtener el valor que se encuentra una posición entre otros valores según el porcentaje dado. Por ejemplo, <code>lerp(0, 16, 0.5)</code> devolverá 8, porque 8 es el 50% entre 0 y 16.<br />La fórmula de la interpolación lineal es <code>a + (b-a)*c</code></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">a = lerp(10, 15, 0.5); //Devuelve 12.5
+c = lerp(12, 18, 1.5); //Devuelve 21.
+d = lerp(21, 3, 0.5); //Devuelve 12.</pre></div>
+</div>

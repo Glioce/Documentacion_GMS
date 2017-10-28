@@ -1,0 +1,57 @@
+<div id="name">
+point_distance_3d</div>
+<div id="content">
+<div id="description">
+Obtiene la distancia en pixeles entre dos puntos ubicados en un espacio tridimensional.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">point_distance_3d(x1, y1,  z1, x2, y2, z2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+        <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+            <td>x1</td>
+            <td>La componente x del primer punto.</td>
+</tr>
+<tr>
+            <td>y1</td>
+            <td>La componente y del primer punto.</td>
+</tr>
+<tr>
+            <td>z1</td>
+            <td>La componente z del primer punto.</td>
+</tr>
+<tr>
+            <td>x2</td>
+            <td>La componente x del segundo punto.</td>
+</tr>
+<tr>
+            <td>y2</td>
+            <td>La componente y del segundo punto.</td>
+</tr>
+<tr>
+            <td>z2</td>
+            <td>La componente z del segundo punto.</td>
+</tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función devuelve la distancia entre un punto (x1, y1, z1) y otro (x2, y2, z2). Esta función trabaja prácticamente igual a <code>point_distance()</code>, con la excepción de que usa la coordenada z, para espacios tridimensionales.</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">
+var distancia = point_distance_3d(x, y, posz, enemigo.posx, enemigo.posy, enemigo.posz);
+</pre>
+Se obtiene la distancia y la dirección que hay entre el objeto actual y el objeto <i>enemigo</i>, asumiendo que se trata de un espacio tridimensional.
+    </div>
+</div>

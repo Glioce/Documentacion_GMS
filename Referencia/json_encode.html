@@ -1,0 +1,48 @@
+<div id="name">
+json_encode</div>
+<div id="content">
+<div id="description">
+Codifica un mapa en una cadena con formato JSON.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">json_encode(map);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+<tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+ <td>map</td><td>El mapa a codificar.</td>
+ </tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos, el cual es fácil de leer y escribir tanto para personas como para computadoras.
+<br />
+<br />
+Esta función codifica un mapa previamente creado en una cadena en formato JSON, la cual puede ser útil para, por ejemplo, enviar la información a través de una URL o almacenarla de forma externa, como en un archivo.
+<br />
+<br />
+NOTA: La funcionalidad jearárquica de JSON está disponible con mapas y listas, por lo que es posible codificar sub-mapas y listas también.
+</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Cadena de texto.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">info = ds_map_create();
+ds_map_add(info, "usuario", "Pedro");
+ds_map_add(info, "puntos", 13);
+ds_map_add(info, "arma", "Lanza");
+
+data = json_encode(info);</pre>
+Se codifica la información almacenada en el mapa <code>info</code> dentro de la variable <code>data</code>, la cual obtendría el siguiente valor:
+<br />
+<pre class="gml-syntax">'{ "arma": "Lanza", "puntos": 13.000000, "usuario": "Pedro" }'</pre>
+</div>
+</div>

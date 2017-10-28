@@ -1,0 +1,21 @@
+<div id="name">path_add</div>
+<div id="content">
+	<div id="description">Agrega un path vació y regrese su índice.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_add();</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede crear un path en GameMaker: Studio sin usar el editor de path's, esta función regresa el índice del path para ser guardado dentro de una variable y usar dicha variable para manipular el path. Consideré que el path creado esta vació, es decir, no tiene puntos definidos y es necesario usar otras funciones para agregarlos o usar una <code>mp_grids</code> para generar el path. Al terminar de usar el path, o deseé crear otro dentro de la misma variable, primero debe de eliminar el path viejo con <code>path_delete</code> y así prevenir fugas de memoria que causarían el cierre de su juego.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">global.newpath = path_add();</pre>Con el código anterior se crea un nuevo path y se asigna su indice a la variable <code>global.newpath</code></div>
+</div>

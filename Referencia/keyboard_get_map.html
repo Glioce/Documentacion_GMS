@@ -1,0 +1,28 @@
+<div id="name">keyboard_get_map</div>
+<div id="content">
+	<div id="description">Obtiene el código ASCII asignado actualmente a la tecla dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_get_map(key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>key</td><td>Esta es la tecla de la que se desea obtener el código ASCII asignado.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Es posible que desee obtener el código ASCII que esta asignado actualmente a una tecla (por ejemplo, para saber si está asignada a la tecla que deseamos) lo cual puede ser hecho con esta función.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_get_map(ord("A")) == ord("A"){
+     keyboard_set_map(ord("A"), keyboard_lastkey);
+}</pre>En el código anterior comprueba si la tecla <em>A</em> a sido asignada a otra tecla, y si esto no ha sucedido la asigna a la ultima tecla que el usuario a presionado.</div>
+</div>

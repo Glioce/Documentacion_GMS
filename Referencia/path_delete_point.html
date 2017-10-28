@@ -1,0 +1,29 @@
+<div id="name">path_delete_point</div>
+<div id="content">
+	<div id="description">Elimina un punto existente del path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_delete_point(index, n);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path que contiene el punto a eliminar.</td>
+	</tr>
+	<tr>
+	<td>n</td><td>El número del punto a eliminar.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede eliminar un punto del path especificado. Los puntos del path son enumerados desde el 0, por lo que el punto 0 siempre sera el primero y el último punto del path siempre será <code>path_get_number() - 1</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_delete_point(mypath, path_number(mypath) - 1);</pre>El código anterior elimina el ultimo punto del path indexado en la variable &quot;mypath&quot;.</div>
+</div>

@@ -1,0 +1,54 @@
+<div id="name">
+point_distance</div>
+<div id="content">
+<div id="description">
+Obtiene la distancia en pixeles entre un punto y otro.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">point_distance(x1, y1, x2, y2);</pre>
+</div>
+<h2>
+Argumentos</h2>
+<table id="arguments">
+        <tbody>
+<tr><th>Argumento</th><th>Descripción</th></tr>
+<tr>
+            <td>x1</td>
+            <td>La componente horizontal del primer punto.</td>
+</tr>
+<tr>
+            <td>y1</td>
+            <td>La componente vertical del primer punto.</td>
+</tr>
+<tr>
+            <td>x2</td>
+            <td>La componente horizontal del segundo punto.</td>
+</tr>
+<tr>
+            <td>y2</td>
+            <td>La componente vertical del segundo punto.</td>
+</tr>
+</tbody></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta función devuelve la distancia entre un punto (x1, y1) y otro (x2, y2).</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real.</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">
+var distancia = point_distance(x, y, enemigo.x, enemigo.y);
+var angulo    = point_direction(x, y, enemigo.x, enemigo.y);
+var tiempo    = room_speed;
+
+direction = angulo;
+speed     = distancia / tiempo;
+</pre>
+Se obtiene la distancia y la dirección que hay entre el objeto actual y el objeto <i>enemigo</i>, y posteriormente se asigna a la variable <code>speed</code> el valor necesario para recorrer dicha distancia en un segundo.
+    </div>
+</div>

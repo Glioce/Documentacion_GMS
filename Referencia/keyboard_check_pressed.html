@@ -1,0 +1,28 @@
+<div id="name">keyboard_check_pressed</div>
+<div id="content">
+	<div id="description">Devuelve si la tecla dada ha sido presionada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_check_pressed(key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>key</td><td>La tecla a comprobar si ha sido presionada.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puedes comprobar si una tecla a sido presionada o no. A diferencia de la función <code>keyboard_check</code>, esta función es activada solo cuando es presionada la tecla, para volver a activarla es necesario soltar el botón y volver a presionarla.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_check_pressed(vk_anykey){
+   room_goto_next();
+}</pre>El código anterior avanzará al siguiente cuarto si el jugador presionar cualquier tecla (Como para un mensaje de <em><strong>Presiona Cualquier Tecla para Continuar</strong></em>)</div>
+</div>

@@ -1,0 +1,42 @@
+<div id="name">path_change_point</div>
+<div id="content">
+	<div id="description">Cambia los valores de un punto existente en el path.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_change_point(index, n, x, y, speed);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path que contiene el punto a modificar.</td>
+	</tr>
+	<tr>
+	<td>n</td><td>El número del punto a modificar.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La nueva coordenada en x (relativa al path).</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La nueva coordenada en y (relativa al path).</td>
+	</tr>
+	<tr>
+	<td>speed</td><td>El nuevo factor de velocidad.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede cambiar la posición y/o el factor de velocidad de cualquier punto previamente definido en el path (el path puede haber sido creado con el editor de path o utilizando el codigo <code>path_add</code>).</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">for(var i = 0; i < path_get_number(path0); i ++){
+     var px = path_get_point_x(path0, i) + 32 - random(64);
+     var py = path_get_point_y(path0, i) + 32 - random(64);
+     path_change_point(path0, i, px, py, 100);
+}</pre>El código anterior, recorre todos los puntos del path indexado en la variable &quot;path0&quot; y re-posiciona todos los puntos en una posición aleatoria dentro de un área de 64x64 pixeles.   </div>
+</div>

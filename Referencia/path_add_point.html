@@ -1,0 +1,41 @@
+<div id="name">path_add_point</div>
+<div id="content">
+	<div id="description">Agrega un punto al path dado.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_add_point(index, x, y, speed);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path al cual se le agregará el punto.</td>
+	</tr>
+	<tr>
+	<td>x</td><td>La coordenada en x del nuevo punto.</td>
+	</tr>
+	<tr>
+	<td>y</td><td>La coordenada en y del nuevo punto.</td>
+	</tr>
+	<tr>
+	<td>speed</td><td>El factor de velocidad del nuevo punto (por defecto es 100).</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede agregar un punto al path especificado y establecer su factor de velocidad. Este punto es agregado al final del path, sin importar su posición dentro del cuarto, el factor será igual al porcentaje de <code>path_speed</code> que la instancia tenga en ese punto del path. Si desea colocar un punto del path en otra posición que no sea el final, debe usar la función <code>path_insert_point</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path = path_add();
+var i;
+i = 0;
+repeat(10){
+     path_add_point(path, x + lengthdir_x(50, i), y + lengthdir_y(50, i), 100);
+     i += 36;
+}</pre>El código anterior crea un path circular alrededor de la posición (x, y) de la instancia que ejecuta el código.</div>
+</div>

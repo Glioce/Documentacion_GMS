@@ -1,0 +1,25 @@
+<div id="name">keyboard_key</div>
+<div id="content">
+	<div id="description">Almacena la tecla que esta actualmente en uso.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_key;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta variable puede obtener el código de la tecla que esta siendo actualmente presionada y devolverá 0 si no hay ninguna tecla presionada en el momento en que se comprueba.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">switch (keyboard_key){
+     case vk_numpad1: gun = weapon[0,0]; break;
+     case vk_numpad2: gun = weapon[1,0]; break;
+     case vk_numpad3: gun = weapon[2,0]; break;
+}</pre>El código anterior usa el valor de la variable <code>keyboard_key</code> para establecer una variable con un valor de un arreglo.</div>
+</div>

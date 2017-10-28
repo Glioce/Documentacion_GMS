@@ -1,0 +1,23 @@
+<div id="name">path_index</div>
+<div id="content">
+	<div id="description">El índice del path que la instancia sigue actualmente.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_index;</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">Ninguno</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Todos los recursos de GameMaker: Studio poseen un identificador numérico único, la variable path_index es de <strong>solo lectura</strong> y almacena el índice del path asignado. Si la instancia no tiene un path asignado, la variable devolverá -1.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">ID</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if path_index = -1{
+     path_start(pth_enemy3, 4, path_action_reverse, 0);
+}</pre>El codigo anterior comprueba si hay un path asigando a la instancia, si no es así comenzará un nuevo path. Asignando el índice del path a path_index al mismo tiempo).</div>
+</div>

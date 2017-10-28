@@ -1,0 +1,31 @@
+<div id="name">
+path_positionprevious</div>
+<div id="content">
+<div id="description">
+La posición de la instancia dentro del path en el step anterior.</div>
+<h2>
+Sintaxis</h2>
+<div id="sintax">
+<pre class="gml-syntax">path_positionprevious;</pre>
+</div>
+<h2>
+Argumentos</h2>
+Ninguno<table id="arguments"></table>
+<h2>
+Descripción</h2>
+<div id="longdescription">
+Esta variable puede ser usada para obtener o establecer la posición de una instancia a lo largo del path en el step anterior, siendo este un valor entre 0 y 1. Es similar a las funciones de <code>xprevious</code> y <code>yprevious</code> solamente que es exclusiva para path. Puede ser útil para detener temporalmente a una instancia si algo esta en el camino (ejemplo a continuación).</div>
+<h2>
+Devuelve</h2>
+<div id="returns">
+Número real</div>
+<h2>
+Ejemplo</h2>
+<div id="example">
+<pre class="gml-syntax">var xx, yy;
+xx = x + lengthdir_x(16, direction);
+yy = y + lengthdir_y(16, direction);
+if collision_circle(xx, yy, 16, obj_Player, false,true)
+    path_position = path_positionprevious;</pre>
+EL código anterior comprueba el área de enfrente de la instancia, por una colisión con el objeto "obj_Player" y si esto es cierto, la instancia volverá a su posición anterior que ocupaba en el actual path. </div>
+</div>

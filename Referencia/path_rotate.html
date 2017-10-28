@@ -1,0 +1,29 @@
+<div id="name">path_rotate</div>
+<div id="content">
+	<div id="description">Rota el path dado con relación a su centro.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_rotate(index, angle);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a rotar.</td>
+	</tr>
+	<tr>
+	<td>angle</td><td>El ángulo de rotación en grados.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Puede usar esta función para rotar el path dado con relación a su centro. Recuerde que en GameMaker: Studio (sin usar físicas) los ángulos se calculan al contrario de las agujas del reloj, por lo que establecer la orientación del path en 90, girará el path actual hacia la izquierda. Esta función modifica los datos del path permanentemente, desde que se usa la función hasta el final del juego, por lo que todas las instancias que usen el path se verán afectadas.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_rotate(path0, 90);</pre>El código anterior rota el path0 grados al contrario de las agujas del reloj.</div>
+</div>

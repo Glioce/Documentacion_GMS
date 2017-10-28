@@ -1,0 +1,29 @@
+<div id="name">path_get_x</div>
+<div id="content">
+	<div id="description">Devuelve la coordenda en x de la posición dada de un path.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_get_x(index, pos);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a comprobar.</td>
+	</tr>
+	<tr>
+	<td>pos</td><td>La posición del path a obtener. Entre 0 (inicio) y 1 (final), acepta decimales.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede obtener la coordenada en X de una posición cualquiera del path dado. 0 es el inicio del path y 1 es el final del path; cualquier valor decimal intermedio a 0 y 1 equivale a una parte del path. Esto no necesita puntos definidos en el path.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Número real</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">x = path_get_x( path0, 0.5 );</pre>El código anterior establece la posición en x de la instancia, a la coordenada en x de la posición media del path0.</div>
+</div>

@@ -1,0 +1,32 @@
+<div id="name">path_shift</div>
+<div id="content">
+	<div id="description">Desplaza el path dado a cualquier cantidad de pixeles horizontal y verticalmente.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">path_shift(index, xshift, yshift);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>index</td><td>El índice del path a cambiar.</td>
+	</tr>
+	<tr>
+	<td>xshift</td><td>El número de pixeles horizontales a desplazar el path. Negativo = izquierda, Positivo = derecha.</td>
+	</tr>
+	<tr>
+	<td>yshhift</td><td>El número de pixeles verticales a desplazar el path. Negativo = arriba, Positivo = abajo.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede desplazar el path a lo largo del eje horizontal y vertical. Tenga en cuenta que el cambio no será visible en le juego si la instancia sigue el path de forma relativa, ya que la posición del path no es tomada en cuenta. Esta función cambia los datos del path de forma permanente desde que se usa la función hasta el final del juego, por lo que todas las instancias que usen el path se verán afectadas.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">path_shift(mypath, 50, 50);</pre>El código anterior desplaza el path0 50 pixeles a la derecha, y 50 pixeles abajo.</div>
+</div>

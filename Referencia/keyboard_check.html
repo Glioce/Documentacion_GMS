@@ -1,0 +1,28 @@
+<div id="name">keyboard_check</div>
+<div id="content">
+	<div id="description">Devuelve si la tecla dada está actualmente presionada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">keyboard_check(key);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+<tr><th>Argumento</th><th>Descripción</th></tr>
+	<tr>
+	<td>key</td><td>La tecla a comprobar si esta actualmente presionada.</td>
+	</tr>
+</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puedes comprobar si una tecla esta siendo presionada o no. A diferencia de <code>keyboard_check_pressed</code> o <code>keyboard_check_released</code> que se activan solamente al presionar o soltar una tecla, esta función se activara a cada paso mientras la tecla este presionada.<br /></div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">if keyboard_check(vk_left){
+     x -= 5;
+}</pre>El código anterior comprueba si la tecla <em>flecha izquierda</em> esta siendo presionada, si esto es cierto, moverá la instancia 5 pixeles a la izquierda a cada paso mientras esto sea cierto.</div>
+</div>
