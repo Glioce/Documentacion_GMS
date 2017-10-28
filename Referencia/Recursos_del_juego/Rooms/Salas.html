@@ -1,0 +1,60 @@
+<div class="main-text">
+<h2>Rooms</h2>
+Las <i>rooms</i> en GameMaker: Studio son los lugares (escenas) donde todo sucede en tu juego. Debes tener por lo menos una habitación en cualquier juego para que funcione, pero en general necesitarás muchas más. Esta sección tiene todas las funciones GML relacionadas con las <i>rooms</i> e información sobre ellas al igual que para establecerles ciertas propiedades. Cabe decir que aquellas funciones relacionadas con cambiar las propiedades de las <i>rooms</i> <b>nunca</b> deben ser ejecutadas desde la misma habitación, sino que deben ser ejecutadas primero desde una instancia en otra habitación.
+<br />
+<ol>
+<li><h2>
+Información de <i>rooms</i></h2>
+Las siguientes funciones y variables globales son usadas para obtener información básica sobre la <i>room</i>: <br /><br />
+<ul>
+<li><code>room_exists()</code></li>
+<li><code>room_first</code></li>
+<li><code>room_last</code></li>
+<li><code>room_previous()</code></li>
+<li><code>room_next()</code></li>
+<li><code>room</code></li>
+<li><code>room_speed</code></li>
+<li><code>room_height</code></li>
+<li><code>room_width</code></li>
+<li><code>room_persistent</code></li>
+<li><code>room_caption</code></li>
+<li><code>room_get_name()</code></li>
+</ul>
+</li>
+<li><h2>
+Moverse entre <i>rooms</i></h2>
+Las siguientes funciones son usadas para moverse entre las <i>rooms</i>:
+ <br /><br />
+<ul>
+<li><code>room_goto()</code></li>
+<li><code>room_goto_next()</code></li>
+<li><code>room_goto_previous()</code></li>
+<li><code>room_restart()</code></li>
+</ul>
+</li>
+<li><h2>
+Crear y cambiar <i>rooms</i></h2>
+Las siguientes funciones son usadas para crear <i>rooms</i> y cambiar propiedades de las <i>rooms</i>:<br />
+<br />
+<b>NOTA:</b> Estas funciones <b>no pueden ser usadas en la misma room</b>, de lo contrario pueden producirse errores y comportamientos impredecibles.
+ <br /><br />
+<ul>
+<li><code>room_add()</code></li>
+<li><code>room_duplicate()</code></li>
+<li><code>room_assign()</code></li>
+<li><code>room_instance_add()</code></li>
+<li><code>room_instance_clear()</code></li>
+<li><code>room_tile_add()</code></li>
+<li><code>room_tile_add_ext()</code></li>
+<li><code>room_tile_clear()</code></li>
+<li><code>room_set_background()</code></li>
+<li><code>room_set_background_colour()</code></li>
+<li><code>room_set_height()</code></li>
+<li><code>room_set_width()</code></li>
+<li><code>room_set_persistent()</code></li>
+<li><code>room_set_view()</code></li>
+<li><code>room_set_view_enabled()</code></li>
+</ul>
+</li>
+</ol>
+</div>
