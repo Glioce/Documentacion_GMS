@@ -1,0 +1,120 @@
+<div class="main-text">
+	
+<h2>Funciones de dibujo</h2>
+
+Cuando un objeto tiene un <i>sprite </i>asignado a él, éste se dibujará sin necesidar de programar nada en el evento <i>Draw</i>. Sin embargo, existen muchas ocasiones en las que será necesario añadir otros elementos dentro de dicho evento. Esta sección presenta las funciones disponibles para dibujar los diferentes elementos. Desde figuras geométricas básicas, <i>sprites</i>, texto e incluso primitivas, superficies y 3D.<br />
+<ol>
+<li>
+	<h2>Formas básicas</h2>
+	GameMaker: Studio cuenta con una colección de funciones disponibles para dibujar diferentes formas y figuras. Estas funciones sólo deben utilizarse dentro del evento <i>Draw </i>de alguna instancia (es posible usarlas en otro evento, pero no se mostrará nada en pantalla) y permiten crear efectos únicamente gráficos, es decir que no poseen ningun tipo de evento de colisión por sí mismos. Todas estas funciones son afectadas por el color de dibujo, opacidad y modo de mezcla actuales.
+	<h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_point()</code></li>
+		<li><code>draw_point_colour()</code></li>
+		<li><code>draw_line()</code></li>
+		<li><code>draw_line_width()</code></li>
+		<li><code>draw_line_colour()</code></li>
+		<li><code>draw_line_width_colour()</code></li>
+		<li><code>draw_circle()</code></li>
+		<li><code>draw_circle_colour()</code></li>
+		<li><code>draw_rectangle()</code></li>
+		<li><code>draw_rectangle_colour()</code></li>
+		<li><code>draw_roundrect()</code></li>
+		<li><code>draw_roundrect_colour()</code></li>
+		<li><code>draw_roundrect_ext()</code></li>
+		<li><code>draw_roundrect_colour_ext()</code></li>
+		<li><code>draw_ellipse()</code></li>
+		<li><code>draw_ellipse_colour()</code></li>
+		<li><code>draw_triangle()</code></li>
+		<li><code>draw_triangle_colour()</code></li>
+		<li><code>draw_arrow()</code></li>
+		<li><code>draw_button()</code></li>
+		<li><code>draw_set_circle_precision()</code></li>
+	</ul>
+</li>
+<li>
+	<h2>Dibujo de texto</h2>
+	En GameMaker: Studio, existe una colección de funciones disponibles para dibujar texto en distintas formas. Estas funciones permiten modificar el color, tamaño y otras propiedades del texto dinámicamente, pero en plataformas como HTML5 y dispositivos móviles, estas modificaiones pueden ralentizar el juego, o bien hacer que el texto se vea mal. Por ello, es más recomendable tener fuentes con distintos tamaños que redimensionar el texto con código, o bien tener fuentes de gran tamaño y <b>reducirlo </b>con código, pero esto último sólo cuando se necesiten dibujar piezas pequeñas de texto.
+	<h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_set_font()</code></li>
+		<li><code>draw_set_halign()</code></li>
+		<li><code>draw_set_valign()</code></li>
+		<li><code>draw_text()</code></li>
+		<li><code>draw_text_ext()</code></li>
+		<li><code>draw_text_colour()</code></li>
+		<li><code>draw_text_transformed()</code></li>
+		<li><code>draw_text_ext_colour()</code></li>
+		<li><code>draw_text_ext_transformed()</code></li>
+		<li><code>draw_text_transformed_colour()</code></li>
+		<li><code>draw_text_ext_transformed_colour()</code></li>
+	</ul>
+</li>
+<li>
+	<h2>Primitivas</h2>
+	Una primitiva es un tipo de figura que se forma mediante la definición de diferentes puntos en la pantalla. Estas figuras pueden ser desde simples grupos de puntos, líneas e incluso triángulos, a la vez que pueden poseer propiedades como cualquier otra figura (color, alfa e incluso una textura asignada). Con estos elementos es posible crear efectos fascinantes en un videojuego 2D. Por ejemplo, es posible crear un rectángulo utilizando múltiples primitivas triangulares, asignarles una textura y modificar secuencialmente la forma de la primitiva para crear un efecto de bandera ondulante.<br />
+	<h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_primitive_begin()</code></li>
+		<li><code>draw_primitive_begin_texture()</code></li>
+		<li><code>draw_primitive_end()</code></li>
+		<li><code>draw_vertex()</code></li>
+		<li><code>draw_vertex_colour()</code></li>
+		<li><code>draw_vertex_texture()</code></li>
+		<li><code>draw_vertex_texture_colour()</code></li>
+	</ul>
+</li>
+<li>
+	<h2>Dibujo de sprites</h2>
+	Cuando se le asigna un sprite a una instancia, GameMaker: Studio lo dibujará por defecto con las propedades definidas con las diferentes variables de sprites. Sin embargo, al añadir cualquier código en el evento Draw se está "tomando el control" y dándole a GameMaker: Studio las instrucciones de lo que debe dibujar exactamente. Esto significa que debes usar las funcioniones de dibujo para definir lo que se debe, cómo y dónde dibujar.
+	<br /><br /><b>NOTA:</b> Las propiedades que se definan con estas funciones no afectarán a los recursos reales del juego, son propiedades que se toman en cuenta únicamente para el momento de ejecutar dichas funciones.<br /><h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_self()</code></li>
+		<li><code>draw_sprite()</code></li>
+		<li><code>draw_sprite_ext()</code></li>
+		<li><code>draw_sprite_general()</code></li>
+		<li><code>draw_sprite_part()</code></li>
+		<li><code>draw_sprite_part_ext()</code></li>
+		<li><code>draw_sprite_stretched()</code></li>
+		<li><code>draw_sprite_stretched_ext()</code></li>
+		<li><code>draw_sprite_pos()</code></li>
+		<li><code>draw_sprite_tiled()</code></li>
+		<li><code>draw_sprite_tiled_ext()</code></li>
+	</ul>
+</li>
+
+<li>
+	<h2>Dibujo de backgrounds</h2>
+	Aunque en el editor de <i>Rooms</i> existen opciones para dibujar backgrounds en pantalla, es más común dibujarlos utilizando código. Con este fin, <i>GameMaker: Studio</i> tiene una serie de funciones que permiten dibujarlos de distintas maneras.
+	<br /><br />
+	<b>NOTA:</b> Es importante que al añadir cualquier código dentro del evento <i>Draw</i> de una instancia desactivará el dibujo automático del sprite de ésta, por lo que será necesario dibujar manualmente este sprite.
+	<h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_background()</code></li>
+		<li><code>draw_background_ext()</code></li>
+		<li><code>draw_background_part()</code></li>
+		<li><code>draw_background_part_ext()</code></li>
+		<li><code>draw_background_stretched()</code></li>
+		<li><code>draw_background_stretched_ext()</code></li>
+		<li><code>draw_background_tiled()</code></li>
+		<li><code>draw_background_tiled_ext()</code></li>
+		<li><code>draw_background_general()</code></li>
+	</ul>
+</li>
+
+<li>
+   <h2>Color y mezcla </h2>
+	<i>GameMaker: Studio</i> tiene la capacidad de manipular el color, opacidad y mezcla (<i>blending</i>) de todos los elementos que se dibujan en pantalla. Con estas funciones es posible separar un color en sus componentes (RGB o HSV), crear nuevos colores, manipular la opacidad e incluso modificar los modos de mezcla (<i>blend modes</i>) para cambiar cómo los diferentes elementos se dibujarán en pantalla. Además de estas funciones, existen varias constantes qe pueden ser utilizadas como colores base.<br /><a href="http://docs-gamemaker-es.blogspot.com.co/p/anexo-constantes-de-color.html">Ver <b>Anexo: Constantes de colores</b></a>.<br /><h3>
+	Relacionados</h3>
+	<ul>
+		<li><code>draw_set_colour()</code></li>
+	</ul>
+</li>
+
+</ol>
+</div>
