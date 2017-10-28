@@ -117,4 +117,14 @@ Cuando un objeto tiene un <i>sprite </i>asignado a él, éste se dibujará sin n
 </li>
 
 </ol>
+
+
+
+<strong>NOTA:</strong> La mezcla de colores es recomendada en la plataforma HTML5 <strong>sólo</strong> cuando el
+<em>WebGL</em> está activo. Anque esta mezcla pueda realizarse aun sin <em>WebGL</em>, esto provocará que se cree
+una copia del <em>background</em> (u otro recurso, como <em>sprites</em>) con las modificaciones de color hechas,
+almacenándoce en la caché. Esto es muy poco óptimo, y muchos cambios de mezcla de color ralentizará el rendimiento
+del juego. Si aún así usted no desea usar <em>WebGL</em> y necesita realizar mezclas de color, puede considerar
+limitar el tamaño del caché de los sprites (y backgrounds) usando la función <code>sprite_set_cache_size()</code>.
+		
 </div>

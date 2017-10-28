@@ -1,0 +1,89 @@
+<div id="name">draw_background_ext</div>
+
+<div id="content">
+
+	
+	<div id="description">
+		Dibuja un <em>background</em> con color, opacidad, escala y ángulo personalizados.
+	</div>
+
+	<h2>Síntaxis</h2> 
+	<div id="sintax">
+		<pre class="gml-syntax">
+			draw_background_ext(back, x, y, xscale, yscale, rot, colour, alpha);
+		</pre>
+	</div>
+
+	<h2>Argumentos</h2> 
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th> <th>Descripción</th>
+		</tr>
+		<tr>
+			<td>back</td>
+			<td>El índice del <em>background</em> a dibujar. (Número real o constante de nombre).</td>
+		</tr>
+		<tr>
+			<td>x</td>
+			<td>La posición horizontal donde dibujar el <em>background</em>.</td>
+		</tr>
+		<tr>
+			<td>y</td>
+			<td>La posición vertical donde dibujar el <em>background</em>.</td>
+		</tr>
+		<tr>
+			<td>xscale</td>
+			<td>La escala horizontal del <em>background</em> (1 es tamaño original).</td>
+		</tr>
+		<tr>
+			<td>yscale</td>
+			<td>La escala vertical del <em>background</em> (1 es tamaño original).</td>
+		</tr>
+		<tr>
+			<td>rot</td>
+			<td>La rotación del <em>background</em> (en grados).</td>
+		</tr>
+		<tr>
+			<td>colour</td>
+			<td>
+				El color con el cual mezclar el <em>background</em> (usar <code>c_white</code> 
+				para dibujarlo normalmente.
+			</td>
+		</tr>
+		<tr>
+			<td>alpha</td>
+			<td>La opacidad del <em>background</em> (1 es totalmente opaco).</td>
+		</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">
+		Esta función permite dibujar un <em>backrground</em> determinado de forma similar a <code>draw_background()</code>,
+		con la diferencia de que es posible establecer propiedades como la escala, rotación, color y opacidad del mismo.
+
+		<br><br>
+
+		<strong>NOTA:</strong> La mezcla de colores es recomendada en la plataforma HTML5 <strong>sólo</strong> cuando el
+		<em>WebGL</em> está activo. Anque esta mezcla pueda realizarse aun sin <em>WebGL</em>, esto provocará que se cree
+		una copia del <em>background</em> (u otro recurso, como <em>sprites</em>) con las modificaciones de color hechas,
+		almacenándoce en la caché. Esto es muy poco óptimo, y muchos cambios de mezcla de color ralentizará el rendimiento
+		del juego. Si aún así usted no desea usar <em>WebGL</em> y necesita realizar mezclas de color, puede considerar
+		limitar el tamaño del caché de los sprites (y backgrounds) usando la función <code>sprite_set_cache_size()</code>.
+	</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada.</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">
+draw_background_ext(bck_Sky, 0, 0, background_xscale[0], background_yscale[0], 0, c_red, 0.5);
+		</pre>
+
+		Se dibuja el background <em>bck_Sky</em> en la posición (0, 0) de la sala, con la escala actual del background
+		de la sala. El <em>background</em> no está rotado (0°), se mezclará de color rojo y tendrá una opacidad del 50%.
+
+	</div>
+
+
+</div>
