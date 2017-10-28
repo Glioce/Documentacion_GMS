@@ -1,0 +1,54 @@
+<div class="main-text">
+<h2>Estructuras de datos</h2>
+En muchas ocasiones, es necesario almacenar información de forma precisa y ordenada. Es posible utilizar arreglos, pero si necesitas realizar operaciones más complicadas con los datos, como buscar determinados elementos o grupos de ellos, tendrías que programar grandes piezas de código que podría llegar a ser ineficiente, difícil y realmente doloroso de escribir.<br />
+<br />
+Para solucionar esto, GameMaker: Studio posee una serie de estructuras de datos que pueden ser manejadas con funciones especializadas. Existen seis tipos de estructuras de datos disponibles (actualmente sólo una traducida), cada una teniendo sus propias utilidades dependiendo del tipo de información que se desee almacenar y la manera en la que se necesite manupular: Pilas, colas, listas, mapas, colas de prioridad y cuadrículas.<br />
+<br />
+En escencia, todas las estructuras de datos trabajan de la misma forma: Se crea la estructura y se almacena su identificador en una variable. Este identificador se utilizará para referenciar la estructura con la que se desean realizar operaciones. Finalmente, después de haberla utilizado por completo, se debe eliminar de la memoria. Puedes utilizar cuantas estructuras de datos necesites al tiempo, y todas las estructuras pueden almacenar tanto números como cadenas de texto.<br />
+<br />
+<i><b>NOTA: </b>Como con todos los recursos dinámicos, las estructuras de datos consumen memoria y deben ser destruídas siempre cuando dejan de ser necesarias, con el fin de prevenir fugas de memoria y posterior ralentización e incluso posible fallo general del juego.</i><br />
+<ol>
+<li>
+    <h2>Listas</h2>
+	Una lista es una estructura de datos que almacena información secuencialmente, en el orden en el que es añadida; de forma similar a un arreglo unidimensional. Las listas son estructuras de datos muy flexibles que permiten añadir valores en cualquier posición, teniendo también la posibilidad de ordenar o desordenar los elementos.<br /><br />Cuando se accede a una lista, es necesario utilizar <b>valores enteros</b> como posiciones (índices) de la lista. Todos los índices no enteros se aproximarán al menor entero más cercano automáticamente.<br />
+	<h3>Relacionados</h3>
+	<ul>
+		<li><code>ds_list_create()</code></li>
+		<li><code>ds_list_destroy()</code></li>
+		<li><code>ds_list_clear()</code></li>
+		<li><code>ds_list_empty()</code></li>
+		<li><code>ds_list_size()</code></li>
+		<li><code>ds_list_add()</code></li>
+		<li><code>ds_list_delete()</code></li>
+		<li><code>ds_list_find_index()</code></li>
+		<li><code>ds_list_find_value()</code></li>
+		<li><code>ds_list_insert()</code></li>
+		<li><code>ds_list_replace()</code></li>
+		<li><code>ds_list_shuffle()</code></li>
+		<li><code>ds_list_sort()</code></li>
+		<li><code>ds_list_copy()</code></li>
+		<li><code>ds_list_read()</code></li>
+		<li><code>ds_list_write()</code></li>
+	</ul>
+</li>
+<li>
+   	<h2>Pilas</h2>
+	Una pila es una estructura de datos de la forma <i>Ultimo en entrar Primero en salir</i>. Puedes <i>apilar </i>valores en la estructura y tomarlos. El valor añadido más recientemente es el primero en la pila (justo como una pila de monedas, para conseguir las monedas que están abajo, primero debes tomar las que están encima una a una). Las pilas son usadas cuando hay interrupciones en el manejo, o para funciones recursivas, también para la realización de IA rudimentaria en sus juegos.
+	   <h3>Relacionados</h3>
+	<ul>
+		<li><code>ds_stack_create()</code></li>
+		<li><code>ds_stack_destroy()</code></li>
+		<li><code>ds_stack_clear()</code></li>
+		<li><code>ds_stack_size()</code></li>
+		<li><code>ds_stack_empty()</code></li>
+		<li><code>ds_stack_copy()</code></li>
+		<li><code>ds_stack_top()</code></li>
+		<li><code>ds_stack_pop()</code></li>
+		<li><code>ds_stack_push()</code></li>
+		<li><code>ds_stack_read()</code></li>
+		<li><code>ds_stack_write()</code></li>
+	</ul>
+</li>
+</ol>
+Para saber si una estructura de datos existe. Puede utilizarse la función <code>ds_exists()</code>.
+</div>
