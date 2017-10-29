@@ -1,0 +1,74 @@
+<div class="main-text">
+	<h1>Sistemas de Partículas</h1>
+    <p>
+        Antes de usar partículas es necesario crear sistemas de partículas. Un 
+        sistema de partículas es como un contenedor donde se colocan las partículas 
+        y emisores. Se pueden tener tantos sistemas como sea necesario, sin embargo, 
+        es mejor mantener una cantidad reducida ya que los sistemas, emisores y 
+        partículas ocupan memoria y tener demasiados puede causar problemas.
+    </p>
+    <p>
+        Este es un ejemplo de uso. Imagine que necesita algún efecto que aparezca sobre 
+        un instancia, y otro efecto que aparezca debajo de todas instancias, podría 
+        crear dos sistemas con profundidades diferentes para tener el efecto deseado.
+    </p>
+    
+    <ol>
+        <li>
+            <h2>Funciones para preparar sistemas de partículas</h2>
+            <p>
+                Ya que un sistema de partículas es un recurso creado dinámicamente, se debe 
+                almacenar su índice en una variable para hacer referencia al sistema en las 
+                siguientes funciones. Es muy importante destruir los sistemas cuando ya no son 
+                necesarios, de lo contrario se podría usar un exceso de memoria que bajaría el 
+                rendimiento del juego. Cabe resaltar que los sistemas de partículas vivirán por 
+                siempre después de que son creados, incluso si su índice no se guarda en una 
+                variable. Al cambiar de room o reiniciar el juego, los sistemas de partículas 
+                permanecerán activos. Esta es otra razón por la que deben ser destruidos cuando 
+                ya no son necesarios.
+            </p>
+            <p>
+                A continuación se listan las funciones básicas 
+                para preparar sistemas de partículas:
+            </p>
+            <ul>
+                <li><code>part_system_exists</code></li>
+                <li><code>part_system_create</code></li>
+                <li><code>part_system_clear</code></li>
+                <li><code>part_system_depth</code></li>
+                <li><code>part_system_position</code></li>
+                <li><code>part_system_destroy</code></li>
+                <li><code>part_particles_clear</code></li>
+                <li><code>part_particles_count</code></li>
+			</ul>
+        </li>
+        <li>
+            <h2>Funciones para dibujar sistemas de partículas</h2>
+            <p>
+                Las instancias de partículas normalmente se actualizan en cada Step y se 
+                dibujan en base a los parámetros que las definen. Sin embargo, algunas 
+                veces es necesario controlar cuándo y cómo se actualiza un sistema 
+                y cómo se dibuja. Para ello, GMS provee las siguientes funciones:
+            </p>
+            <ul>
+                <li><code>part_system_automatic_update</code></li>
+                <li><code>part_system_automatic_draw</code></li>
+                <li><code>part_system_update</code></li>
+                <li><code>part_system_drawit</code></li>
+                <li><code>part_system_draw_order</code></li>
+			</ul>
+        </li>
+        <li>
+            <h2>Crear partículas directamente</h2>
+            <p>
+                Se pueden usar emisores para crear instancias de partículas en estallidos o en
+                un flujo contante, pero en muchas situaciones los emisores no son necesarios 
+                y es mejor crear las partículas directamente con las siguientes funciones:
+            </p>
+            <ul>
+                <li><code>part_particles_create</code></li>
+                <li><code>part_particles_create_colour</code></li>
+			</ul>
+        </li>
+    </ol>
+</div>
