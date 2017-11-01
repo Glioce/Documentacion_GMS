@@ -1,0 +1,38 @@
+<div id="name"><h1>part_system_create</h1></div>
+<div id="content">
+    <div id="description">Crea un sistema de partículas y devuelve su índice.</div>
+    
+    <h2>Sintaxis</h2>
+    <div id="syntax">
+        <pre class="gml-syntax">part_system_create();</pre>
+    </div>
+    
+    <!-- No hay argumentos
+    <h2>Argumentos</h2>
+    <table id="arguments">
+        <tr><th>Argumento</th><th>Descripción</th></tr>
+        <tr><td>x</td><td>Posición X del efecto (si aplica)</td></tr>
+    </table>
+    -->
+    
+    <h2>Descripción</h2>
+    <div id="longdescription">
+        Esta función crea un nuevo sistema de partículas y devuelve el índice 
+        único que debe ser almacenado en una variable y puede ser utilizado 
+        como argumento en otras funciones para hacer referencia a ese sistema.
+        <br><br>
+        Los índices son números enteros. El primer sistema de partículas 
+        creado tiene índice 0 y los siguientes van incrementado en unidades.
+    </div>
+    
+    <h2>Devuelve</h2> <div id="returns">Entero (0, 1, 2,…)</div>
+    
+    <h2>Ejemplo</h2>
+    <div id="example">
+        <pre class="gml-syntax">
+global.partsys1 = part_system_create();
+        </pre>
+        En el ejemplo se crea un sistema de partículas y 
+        el índice se guarda en la variable global partsys1.
+    </div>
+</div>

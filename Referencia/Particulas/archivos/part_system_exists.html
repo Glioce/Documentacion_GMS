@@ -1,0 +1,36 @@
+<div id="name"><h1>part_system_exists</h1></div>
+<div id="content">
+    <div id="description">Revisa si un sistema de partículas existe.</div>
+    
+    <h2>Sintaxis</h2>
+    <div id="syntax">
+        <pre class="gml-syntax">part_system_exists(ind);</pre>
+    </div>
+    
+    <h2>Argumentos</h2>
+    <table id="arguments">
+        <tr><th>Argumento</th><th>Descripción</th></tr>
+        <tr><td>ind</td><td>Índice del sistema de partículas a revisar.</td></tr>
+    </table>
+    
+    <h2>Descripción</h2>
+    <div id="longdescription">
+        Con esta función se puede comprobar si un sistema de partículas existe. 
+        Normalmente se usa una variable como argumento, cuyo valor fue asignado 
+        previamente con la función <code>part_system_create()</code>.
+    </div>
+    
+    <h2>Devuelve</h2> <div id="returns">Devuelve: Booleano (true o false)</div>
+    
+    <h2>Ejemplo</h2>
+    <div id="example">
+        <pre class="gml-syntax">
+if !part_system_exists(global.partsys1)
+{
+   global.partsys1 = part_system_create();
+}
+        </pre>
+        En este código, si el sistema de partículas referenciado en la 
+        variable global no existe, se crea un nuevo sistema de partículas.
+    </div>
+</div>
