@@ -19,7 +19,16 @@
 </table>
 
 	<h2>Descripción</h2>
-	<div id="longdescription">Esta función devuelve un número multiplicado por sí mismo <code>n</code> veces (<code>a<sup>n</sup></code>). Es importante saber que <code>a</code> <strong>no</strong> puede ser un número negativo.</div>
+	<div id="longdescription">Esta función devuelve un número multiplicado por sí mismo <code>n</code> veces (<code>a<sup>n</sup></code>).
+
+	<br><br>
+
+	<strong>NOTA:</strong> A diferencia de la función <code>sqrt()</code>, obtener la raíz par de un número 
+	negativo con esta función (<em>ej:</em> <code>power(-1, 0.5)</code>) no producirá un error, sino que devolverá
+	<code>NaN</code>, un valor especial que en <em>GameMaker: Studio</em> es considerado como número real por la
+	función <code>is_real()</code>.
+
+	</div>
 
 	<h2>Devuelve</h2>
 	<div id="returns">Número real</div>
