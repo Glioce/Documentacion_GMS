@@ -1,0 +1,57 @@
+<div id="name">draw_background_tiled_ext</div>
+<div id="content">
+	<div id="description">Dibuja un background repetidamente con escala, color y opacidad personalizados.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">draw_background_tiled_ext(back, x, y, xscale, yscale, colour, alpha);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+	<tr>
+		<th>Argumento</th><th>Descripción</th>
+	</tr>
+	<tr>
+		<td>back</td>
+		<td>El indice del background a dibujar.</td>
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>La coordenada en x desde donde se dibujará el background.</td>
+	</tr>
+	<tr>
+		<td>y</td>
+		<td>La coordenada en y desde donde se dibujará el background.</td>
+	</tr>
+	<tr>
+		<td>xscale</td>
+		<td>La escala horizontal del <em>background</em> (1 es tamaño original).</td>
+	</tr>
+	<tr>
+		<td>yscale</td>
+		<td>La escala vertical del <em>background</em> (1 es tamaño original).</td>
+	</tr>
+	<tr>
+		<td>colour</td>
+		<td>
+			El color con el cual mezclar el <em>background</em> (usar <code>c_white</code> 
+			para dibujarlo normalmente).
+		</td>
+	</tr>
+	<tr>
+		<td>alpha</td>
+		<td>La opacidad del <em>background</em> (1 es totalmente opaco).</td>
+	</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función es una mezcla entre <code>draw_background_tiled()</code> y
+	<code>draw_background_ext().</code>.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">draw_background_tiled_ext(bck_Sky, x, y, 2, 2, c_red, 0.5);</pre></div>
+</div>

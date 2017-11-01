@@ -1,0 +1,39 @@
+<div id="name">draw_background_tiled</div>
+<div id="content">
+	<div id="description">Dibuja un background repetidamente.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">draw_background_tiled(back, x, y);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+	<tr>
+		<th>Argumento</th><th>Descripción</th>
+	</tr>
+	<tr>
+		<td>back</td>
+		<td>El indice del background a dibujar.</td>
+	</tr>
+	<tr>
+		<td>x</td>
+		<td>La coordenada en x desde donde se dibujará el background.</td>
+	</tr>
+	<tr>
+		<td>y</td>
+		<td>La coordenada en y desde donde se dibujará el background.</td>
+	</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función es muy similar a <code>draw_background()</code>, con la diferencia
+	de que el background se dibuja repetidamente desde las coordenadas dadas hasta llenar la vista actual, o la
+	sala, en caso de que no hayan vistas activas.</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Nada</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">draw_background_tiled(bck_Sky, x, y);</pre></div>
+</div>
