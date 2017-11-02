@@ -1,3 +1,35 @@
-﻿<div id="name">ds_map_exists</div><div id="content"><div id="description">Devuelve si la llave dad existe o no en el mapa(ds_map) dado.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_exists(id, key);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El índice de la estructura de datos a comprobar.</td></tr><tr><td>key</td><td>La llave a comprobar.</td></tr></table><h2>Descripción</h2><div id="longdescription">Esta función devuelve <code> true</code> si la llave especificada existe en el mapa (previamente creado), y <code>false</code> si este no existe.</div><h2>Devuelve</h2><div id="returns">Boleano</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">if !ds_map_exists(inventory, "potions"){
-     ds_map_add(inventory, "potions", 1);
-}</pre>El código anterior comprueba la mapa indexado en la variable "inventory", buscando la llave "potions" si esta no existe entonces la añade.</div></div>
+﻿<div id="name">ds_map_exists</div>
+<div id="content">
+	<div id="description">Devuelve si la llave dad existe o no en el mapa(ds_map) dado.</div>
+	<h2>Síntaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">ds_map_exists(id, key);</pre>
+	</div>
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td>El índice de la estructura de datos a comprobar.</td>
+		</tr>
+		<tr>
+			<td>key</td>
+			<td>La llave a comprobar.</td>
+		</tr>
+	</table>
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve <code> true</code> si la llave especificada existe en el mapa (previamente creado), y <code>false</code> si este no existe.</div>
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">if !ds_map_exists(inventory, "potions"){
+    ds_map_add(inventory, "potions", 1);
+}</pre>
+		El código anterior comprueba la mapa indexado en la variable "inventory", buscando la llave "potions" si esta no existe entonces la añade.
+	</div>
+</div>
+

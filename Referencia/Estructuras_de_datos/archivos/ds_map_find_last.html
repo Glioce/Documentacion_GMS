@@ -1,8 +1,36 @@
-﻿<div id="name">ds_map_find_last</div><div id="content"><div id="description">Busca y devuelve la ultima llave, según el orden de almaceniento del PC, del mapa dado.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_find_last(id);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El id del mapa a usar.</td></tr></table><h2>Descripción</h2><div id="longdescription">Esta función devuelve la ultima llave almacenada en el mapa. <b>¡Este orden no es el mismo en que has agregado las llaves!</b> Los mapas(ds_map) no almacenan la información de forma lineal, para ello usa listas(ds_list). Esto es útil cuando quieres buscar en todo el mapa por un dato especifico, aunque debe evitarse en lo posible por ser potencialmente lento.</div><h2>Devuelve</h2><div id="returns">Número real o Cadena de texto</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">var size = ds_map_size(inventory) ;
+﻿<div id="name">ds_map_find_last</div>
+<div id="content">
+	<div id="description">Busca y devuelve la ultima llave, según el orden de almaceniento del PC, del mapa dado.</div>
+	<h2>Síntaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">ds_map_find_last(id);</pre>
+	</div>
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td>El id del mapa a usar.</td>
+		</tr>
+	</table>
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve la ultima llave almacenada en el mapa. <b>¡Este orden no es el mismo en que has agregado las llaves!</b> Los mapas(ds_map) no almacenan la información de forma lineal, para ello usa listas(ds_list). Esto es útil cuando quieres buscar en todo el mapa por un dato especifico, aunque debe evitarse en lo posible por ser potencialmente lento.</div>
+	<h2>Devuelve</h2>
+	<div id="returns">Número real o Cadena de texto</div>
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">var size = ds_map_size(inventory) ;
 var last = ds_map_find_first(inventory);
-for (var i = size; i > 0; size; i--;){
-     if last != "gold"{
-          last = ds_map_find_next(inventory, last);
-     }
-     else break;
-}</pre>El código anterior crea variables temporales para guardar el tamaño y la ultima llave almacenada por la computadora en el mapa dado. Luego usa un <code>for</code> para ver cada elemento (desde el ultimo al primero) hasta encontrar la llave "gold"; al hacerlo sale del <code>for</code>.</div></div>
+for (var i = size; i > 0; i--;){
+    if last != "gold"{
+        last = ds_map_find_next(inventory, last);
+    }
+    else break;
+}</pre>
+		El código anterior crea variables temporales para guardar el tamaño y la ultima llave almacenada por la computadora en el mapa dado. Luego usa un <code>for</code> para ver cada elemento (desde el ultimo al primero) hasta encontrar la llave "gold"; al hacerlo sale del <code>for</code>.
+	</div>
+</div>
+

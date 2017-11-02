@@ -1,3 +1,36 @@
-﻿<div id="name">ds_map_empty</div><div id="content"><div id="description">Devuelve si el mapa dado esta vacío o no.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_empty(id);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El id del mapa a comprobar.</td></tr></table><h2>Descripción</h2><div id="longdescription">Esta función devuelve <code>false</code> si el mapa dado contiene algún par de llave-valor, devuelve <code>true</code> en caso contrario.</div><h2>Devuelve</h2><div id="returns">Boleano</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">if ds_map_empty(inventory){
-     weight = 0;
-}</pre>El código anterior comprueba si el mapa indexado en la variable "inventory" contiene algún par de llave-valor y si este no contiene ninguno, "weight" será 0.</div></div>
+﻿<div id="name">ds_map_empty</div>
+<div id="content">
+
+	<div id="description">Devuelve si el mapa dado esta vacío o no.</div>
+	<h2>Síntaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">ds_map_empty(id);</pre>
+	</div>
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td>El id del mapa a comprobar.</td>
+		</tr>
+	</table>
+	<h2>Descripción</h2>
+	<div id="longdescription">Esta función devuelve <code>false</code> si el mapa dado contiene algún par de llave-valor, devuelve <code>true</code> en caso contrario.</div>
+	
+	<h2>Devuelve</h2>
+	<div id="returns">Boleano</div>
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">
+if ds_map_empty(inventory){
+	weight = 0;
+}</pre>
+		El código anterior comprueba si el mapa indexado en la variable "inventory" contiene algún par de llave-valor y si este no contiene ninguno, "weight" será 0.
+	</div>
+
+</div>
+	
+	

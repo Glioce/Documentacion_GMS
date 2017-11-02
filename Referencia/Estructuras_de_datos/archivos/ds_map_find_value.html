@@ -1,7 +1,38 @@
-﻿<div id="name">ds_map_find_value</div><div id="content"><div id="description">Busca la llave dada y devuelve su valor asignado.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_find_value(id, key);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El id del mapa a usar.</td></tr><tr><td>key</td><td>La llave a buscar.</td></tr></table><h2>Descripción</h2><div id="longdescription">Con esta función puede buscar el valor de una llave especificada. Para ello debes de indicar el id del mapa a usar y la llave.
+﻿<div id="name">ds_map_find_value</div>
+<div id="content">
+	<div id="description">Busca la llave dada y devuelve su valor asignado.</div>
+	<h2>Síntaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">ds_map_find_value(id, key);</pre>
+	</div>
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>id</td>
+			<td>El id del mapa a usar.</td>
+		</tr>
+		<tr>
+			<td>key</td>
+			<td>La llave a buscar.</td>
+		</tr>
+	</table>
+	<h2>Descripción</h2>
+	<div id="longdescription">Con esta función puede buscar el valor de una llave especificada. Para ello debes de indicar el id del mapa a usar y la llave.
+		<i><b>Nota:</b> Si no existe la llave especificada la función devolverá <code>undefined</code>, por lo que debes de comprobar el valor devuelto con la función <code>is_undefined()</code>.</i>
+	</div>
+	<h2>Devuelve</h2>
+	<div id="returns">Número real, Cadena de texto o Indefinido</div>
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">amount = ds_map_find_value(inventory, "food");
 
-<i><b>Nota:</b> Si no existe la llave especificada la función devolverá <code>undefined</code>, por lo que debes de comprobar el valor devuelto con la función <code>is_undefined()</code>.</i></div><h2>Devuelve</h2><div id="returns">Número real, Cadena de texto o Indefinido</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">amount = ds_map_find_value(inventory, "food");
+//O usando el accesor de mapas "?":
+amount = inventory[? "food"];</pre>
+		El código anterior obtiene el valor de la llave "food" y la almacena en la variable "amount".
+	</div>
+</div>
 
-//O, usando el accesor de mapas "?":
-
-amount = inventory[? "food"];</pre>El código anterior obtiene el valor de la llave "food" y la almacena en la variable "amount".</div></div>
