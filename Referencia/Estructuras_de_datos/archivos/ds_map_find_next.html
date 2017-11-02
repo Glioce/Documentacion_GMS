@@ -1,0 +1,9 @@
+﻿<div id="name">ds_map_find_next</div><div id="content"><div id="description">Busca y devuelve la siguiente llave del mapa dado, relativa a una llave dada.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_find_next(id, key);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El id del mapa a usar.</td></tr><tr><td>key</td><td>La llave de la cual se buscará la siguiente.</td></tr></table><h2>Descripción</h2><div id="longdescription">Esta función devuelve la siguiente llave almacenada en el mapa, la cual se encuentra después de la llave especificada en la función. Esto es útil cuando quieres buscar en el mapa por un dato especifico, aunque debe evitarse en lo posible por ser potencialmente lento. Si no existe una llave siguiente la función devolverá <code>undefined</code>, por lo que debes de comprobar el valor devuelto con la función <code>is_undefined()</code>.</div><h2>Devuelve</h2><div id="returns">Número real, Cadena de texto o Indefinido</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">var size, key;
+size = ds_map_size(inventory);
+key = ds_map_find_first(inventory);
+for (var i = 0; i &lt; size; i++;){
+     if key!= "gold"{
+          key= ds_map_find_next(inventory, key);
+     }
+     else{ break; }
+}</pre>El código anterior crea variables temporales para guardar el tamaño y la primera llave almacenada por la computadora en el mapa dado. Luego usa un <code>for</code> para ver cada elemento, si el elemento actual no coincide con el buscado usa la función <code>ds_map_find_next()</code> para tomar la siguiente llave. Así hasta encontrar la llave "gold"; al hacerlo sale del <code>for</code>.</div></div>

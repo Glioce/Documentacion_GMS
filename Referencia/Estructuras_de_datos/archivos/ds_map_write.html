@@ -1,0 +1,7 @@
+﻿<div id="name">ds_map_write</div><div id="content"><div id="description">Esta función escribe los datos de un mapa dentro de una cadena de texto.</div><h2>Síntaxis</h2><div id="syntax"><pre class="gml-syntax">ds_map_write(id);</pre></div><h2>Argumentos</h2><table id="arguments"><tr><th>Argumento</th><th>Descripción</th></tr><tr><td>id</td><td>El id del mapa</td></tr></table><h2>Descripción</h2><div id="longdescription">Esta función convierte los datos de un mapa especificado a una cadena de texto que puede ser escrita en un archivo *.ini o un archivo de texto *.txt para facilitar su almacenamiento. Esta cadena de texto puede leerse después con la función <a href="./ds_map_read.html">ds_map_read()</a>.
+<i><b>NOTA:</b> La cadena de texto generada no es legible para personas, es un volcado de memoria con los datos que contiene.</i>
+</div><h2>Devuelve</h2><div id="returns">Cadena de texto</div><h2>Ejemplo</h2><div id="example"><pre class="gml-syntax">ini_open("map.ini");
+var t_string;
+t_string = ds_map_write(inventory);
+ini_write_string("Saved", "0", t_string);
+ini_close();</pre>El código anterior apertura un archivo ini, luego inicia una variable temporal, en la cual se guarda la cadena de texto generada con la función <code>ds_map_write()</code>; luego se escribe la cadena de texto en el archivo y se cierra.</div></div>

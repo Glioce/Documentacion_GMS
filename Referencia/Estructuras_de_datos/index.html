@@ -1,16 +1,23 @@
-<div class="main-text">
-<h2>Estructuras de datos</h2>
-En muchas ocasiones, es necesario almacenar información de forma precisa y ordenada. Es posible utilizar arreglos, pero si necesitas realizar operaciones más complicadas con los datos, como buscar determinados elementos o grupos de ellos, tendrías que programar grandes piezas de código que podría llegar a ser ineficiente, difícil y realmente doloroso de escribir.<br />
-<br />
-Para solucionar esto, GameMaker: Studio posee una serie de estructuras de datos que pueden ser manejadas con funciones especializadas. Existen seis tipos de estructuras de datos disponibles (actualmente sólo una traducida), cada una teniendo sus propias utilidades dependiendo del tipo de información que se desee almacenar y la manera en la que se necesite manupular: Pilas, colas, listas, mapas, colas de prioridad y cuadrículas.<br />
-<br />
-En escencia, todas las estructuras de datos trabajan de la misma forma: Se crea la estructura y se almacena su identificador en una variable. Este identificador se utilizará para referenciar la estructura con la que se desean realizar operaciones. Finalmente, después de haberla utilizado por completo, se debe eliminar de la memoria. Puedes utilizar cuantas estructuras de datos necesites al tiempo, y todas las estructuras pueden almacenar tanto números como cadenas de texto.<br />
-<br />
-<i><b>NOTA: </b>Como con todos los recursos dinámicos, las estructuras de datos consumen memoria y deben ser destruídas siempre cuando dejan de ser necesarias, con el fin de prevenir fugas de memoria y posterior ralentización e incluso posible fallo general del juego.</i><br />
-<ol>
-<li>
-    <h2>Listas</h2>
-	Una lista es una estructura de datos que almacena información secuencialmente, en el orden en el que es añadida; de forma similar a un arreglo unidimensional. Las listas son estructuras de datos muy flexibles que permiten añadir valores en cualquier posición, teniendo también la posibilidad de ordenar o desordenar los elementos.<br /><br />Cuando se accede a una lista, es necesario utilizar <b>valores enteros</b> como posiciones (índices) de la lista. Todos los índices no enteros se aproximarán al menor entero más cercano automáticamente.<br />
+﻿<div class="main-text">
+	<h1>Estructuras de datos</h1>
+	En muchas ocasiones, es necesario almacenar información de forma precisa y ordenada. Es posible utilizar arreglos, pero si necesitas realizar operaciones más complicadas con los datos, como buscar determinados elementos o grupos de ellos, tendrías que programar grandes piezas de código que podría llegar a ser ineficiente, difícil y realmente doloroso de escribir.
+	<br />
+	<br />
+	Para solucionar esto, GameMaker: Studio posee una serie de estructuras de datos que pueden ser manejadas con funciones especializadas. Existen seis tipos de estructuras de datos disponibles (actualmente sólo una traducida), cada una teniendo sus propias utilidades dependiendo del tipo de información que se desee almacenar y la manera en la que se necesite manupular: Pilas, colas, listas, mapas, colas de prioridad y cuadrículas.
+	<br />
+	<br />
+	En escencia, todas las estructuras de datos trabajan de la misma forma: Se crea la estructura y se almacena su identificador en una variable. Este identificador se utilizará para referenciar la estructura con la que se desean realizar operaciones. Finalmente, después de haberla utilizado por completo, se debe eliminar de la memoria. Puedes utilizar cuantas estructuras de datos necesites al tiempo, y todas las estructuras pueden almacenar tanto números como cadenas de texto.
+	<br />
+	<br />
+	<b>NOTA:</b> Como con todos los recursos dinámicos, las estructuras de datos consumen memoria y deben ser destruídas siempre cuando dejan de ser necesarias, con el fin de prevenir fugas de memoria y posterior ralentización e incluso posible fallo general del juego.
+	<br />
+
+	<h2>Listas</h2>
+	Una lista es una estructura de datos que almacena información secuencialmente, en el orden en el que es añadida; de forma similar a un arreglo unidimensional. Las listas son estructuras de datos muy flexibles que permiten añadir valores en cualquier posición, teniendo también la posibilidad de ordenar o desordenar los elementos.
+	<br />
+	<br />
+	Cuando se accede a una lista, es necesario utilizar <b>valores enteros</b> como posiciones (índices) de la lista. Todos los índices no enteros se aproximarán al menor entero más cercano automáticamente.
+
 	<h3>Relacionados</h3>
 	<ul>
 		<li><code>ds_list_create()</code></li>
@@ -30,11 +37,11 @@ En escencia, todas las estructuras de datos trabajan de la misma forma: Se crea 
 		<li><code>ds_list_read()</code></li>
 		<li><code>ds_list_write()</code></li>
 	</ul>
-</li>
-<li>
-   	<h2>Pilas</h2>
+
+	<h2>Pilas</h2>
 	Una pila es una estructura de datos de la forma <i>Ultimo en entrar Primero en salir</i>. Puedes <i>apilar </i>valores en la estructura y tomarlos. El valor añadido más recientemente es el primero en la pila (justo como una pila de monedas, para conseguir las monedas que están abajo, primero debes tomar las que están encima una a una). Las pilas son usadas cuando hay interrupciones en el manejo, o para funciones recursivas, también para la realización de IA rudimentaria en sus juegos.
-	   <h3>Relacionados</h3>
+
+	<h3>Relacionados</h3>
 	<ul>
 		<li><code>ds_stack_create()</code></li>
 		<li><code>ds_stack_destroy()</code></li>
@@ -48,7 +55,40 @@ En escencia, todas las estructuras de datos trabajan de la misma forma: Se crea 
 		<li><code>ds_stack_read()</code></li>
 		<li><code>ds_stack_write()</code></li>
 	</ul>
-</li>
-</ol>
-Para saber si una estructura de datos existe. Puede utilizarse la función <code>ds_exists()</code>.
+
+
+	<h2>Mapas</h2>
+	Un mapa (ds_map) es una estructura de datos que almacena información en forma de pares de llaves con su respectivo valor.
+
+	La estructura de datos de tipo mapa es muy útil, pues permite almacenar un valor con una clave relacionada. Por ejemplo, un personaje tieene una cantidad de elementos diferentes (claves) y de cada elemento tiene cierta cantidad (valores), 10 pociones, 100 de oro, 1 espada, etc. Los mapas mantienen toda esta información en un solo lugar, y se pueden agregar valores o buscar valores con su clave correspondiente.
+	<br>
+	<br>
+	Sin embargo, hay dos puntos que debe de recordar: los mapas no almacenan la información en un orden (reconocible y manejable), por lo que, para buscar una clave es necesario recorrer el mapa buscando de una en una (lo cual es muy lento). Tampoco es posible mantener claves iguales o asignarle a una clave dos valores diferentes.
+	<br>
+	<br>
+
+	<b>NOTA:</b> las funciones han cambiado desde versiones anteriores de GameMaker, por lo que juegos importados pueden no funcionar o comportarse como espera.
+
+	<h3>Relacionados</h3>
+	<ul>
+		<li><a href="ds_map/ds_map_exists.html"><code>ds_map_exists()</code></a></li>
+		<li><a href="ds_map/ds_map_create.html"><code>ds_map_create()</code></a></li>
+		<li><a href="ds_map/ds_map_add.html"><code>ds_map_add()</code></a></li>
+		<li><a href="ds_map/ds_map_clear.html"><code>ds_map_clear()</code></a></li>
+		<li><a href="ds_map/ds_map_copy.html"><code>ds_map_copy()</code></a></li>
+		<li><a href="ds_map/ds_map_replace.html"><code>ds_map_replace()</code></a></li>
+		<li><a href="ds_map/ds_map_delete.html"><code>ds_map_delete()</code></a></li>
+		<li><a href="ds_map/ds_map_empty.html"><code>ds_map_empty()</code></a></li>
+		<li><a href="ds_map/ds_map_size.html"><code>ds_map_size()</code></a></li>
+		<li><a href="ds_map/ds_map_find_first.html"><code>ds_map_find_first()</code></a></li>
+		<li><a href="ds_map/ds_map_find_last.html"><code>ds_map_find_last()</code></a></li>
+		<li><a href="ds_map/ds_map_find_next.html"><code>ds_map_find_next()</code></a></li>
+		<li><a href="ds_map/ds_map_find_previous.html"><code>ds_map_find_previous()</code></a></li>
+		<li><a href="ds_map/ds_map_find_value.html"><code>ds_map_find_value()</code></a></li>
+		<li><a href="ds_map/ds_map_read.html"><code>ds_map_read()</code></a></li>
+		<li><a href="ds_map/ds_map_write.html"><code>ds_map_write()</code></a></li>
+		<li><a href="ds_map/ds_map_destroy.html"><code>ds_map_destroy()</code></a></li>
+	</ul>
+
+	Para saber si una estructura de datos existe. Puede utilizarse la función <code>ds_exists()</code>
 </div>
