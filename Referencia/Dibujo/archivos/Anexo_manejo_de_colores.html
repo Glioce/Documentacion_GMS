@@ -1,0 +1,310 @@
+<div class="main-text">
+	
+	<h1 style="text-align: center">Anexo: Manejo de colores</h1>
+
+	<!--*******************************-->
+
+	En <em>GameMaker: Studio</em>, los colores de dibujo se representan a partir de números reales de 3 bytes
+	que forman los componentes azul, verde y rojo respectivamente gracias a cada uno de dichos bytes. Cada uno
+	de los componentes de color mencionados anteriormente (BGR) puede poseer un valor que va desde 0 a 255.
+	<br>
+	<br>
+	Por ejemplo, el color rojo (rojo: 255, verde: 0, azul: 0) se representa con el número <b>255</b>, pues éste en 
+	binario se escribe como:
+	<br><br>
+
+	<div class="center-content">
+		<table class="all-courier table-no-background center-td no-padding">
+			<tr>
+				<td>00000000</td>
+				<td>00000000</td>
+				<td>11111111</td>
+			</tr>
+			<tr>
+				<td>Azul</td>
+				<td>Verde</td>
+				<td>Rojo</td>
+			</tr>
+			<tr>
+				<td>
+					0
+				</td>
+				<td>
+					0
+				</td>
+				<td>
+					255
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<br>
+	<br>
+	El color azul (rojo: 0, verde: 0, azul: 255), por otra parte, se representa con el número real <b>16711680</b>,
+	pues éste en binario se escribe de la siguiente manera:
+	<br><br>
+
+	<div class="center-content">
+		<table class="all-courier table-no-background center-td no-padding">
+			<tr>
+				<td>11111111</td>
+				<td>00000000</td>
+				<td>00000000</td>
+			</tr>
+			<tr>
+				<td>Azul</td>
+				<td>Verde</td>
+				<td>Rojo</td>
+			</tr>
+			<tr>
+				<td>
+					255
+				</td>
+				<td>
+					0
+				</td>
+				<td>
+					0
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<br>
+	<br>
+
+	De esta manera, se pueden combinar los componentes de color para llegar al número real que lo representa, 
+	significando esto que en <em>GameMaker: Studio</em> es soportado un rango de colores que va desde <b>0</b> hasta
+	<b>16777215</b> (color blanco), que en binario se representa así:
+	<br><br>
+
+	<div class="center-content">
+		<table class="all-courier table-no-background center-td no-padding">
+			<tr>
+				<td>11111111</td>
+				<td>11111111</td>
+				<td>11111111</td>
+			</tr>
+			<tr>
+				<td>Azul</td>
+				<td>Verde</td>
+				<td>Rojo</td>
+			</tr>
+			<tr>
+				<td>
+					255
+				</td>
+				<td>
+					255
+				</td>
+				<td>
+					255
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<!--*******************************-->
+	<h1>Creación de colores</h1>
+	Teniendo en cuenta lo anterior, existen tres formas principales de crear un color a partir de sus componentes:
+
+	<h2>1. Notación hexadecimal</h2>
+	La primera forma es utilizando la notación hexadecimal admitida por <em>GameMaker: Studio</em>, que consta de
+	usar el signo <code>$</code> para escribir un número como valor hexadecimal.
+	<br>
+	<br>
+	Gracias a esta notación, la manera más simple de crear un color a partir de sus componentes RGB es ésta:
+	<pre>
+color = $BBGGRR;</pre>
+	Donde <code>BB</code> es el componente azul, <code>GG</code> es el componente verde, y <code>RR</code> es el rojo.
+	<br>
+	<br>
+	Estos tres componentes deben escribirse como números hexadecimales. Por ejemplo:
+	<pre class="gml-syntax">
+color = $FF00FF;</pre>
+	Este código crearía un color con los siguientes componentes:
+	<br><br>
+
+	<div class="center-content">
+		<table class="all-courier table-no-background center-td no-padding">
+			<tr>
+				<td style="text-align: right;"><a>Hexadecimal:</a></td>
+				<td>FF</td>
+				<td>00</td>
+				<td>FF</td>
+			</tr>
+			<tr>
+				<td style="text-align: right;"><a>Binario:</a></td>
+				<td>11111111</td>
+				<td>00000000</td>
+				<td>11111111</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Azul</td>
+				<td>Verde</td>
+				<td>Rojo</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					255
+				</td>
+				<td>
+					0
+				</td>
+				<td>
+					255
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<br>
+	En este caso, este color vale <b>16711935</b>, siendo equivalente a la constante de color <code>c_fuchsia</code>.
+	<br><br>
+	<div class="center-content">
+		<img src="imagenes/c_fuchsia.png">
+	</div>
+
+	<h2>2. Operaciones a nivel de bits</h2>
+	La segunda forma de obtener un color a partir de sus componentes RGB es utilizando los operadores <em>bitwise</em>
+	que provee <em>GameMaker: Studio</em>. Estos operadores permiten modificar los números reales tratándolos como 
+	binarios.
+	<br>
+	<br>
+	Para crear colores de esta forma, necesitaremos sólo dos operadores: El <em>left shift</em> y el OR binario.
+	<br>
+	<br>
+	El primer operador añade un número determinado de ceros a la derecha del valor binario del número dado. 
+	Por ejemplo:
+	<pre class="gml-syntax">
+valor = 8 << 2;</pre>
+
+	En este ejemplo, la variable <code>valor</code> resultará con el valor de 32 por la siguiente razón:
+	<br>
+	<br>
+	El número 8 en binario se representa como:
+	<div class="center-content all-courier">1000</div>
+	Y si realizamos la operación <code>8 << 2</code>, estaremos añadiendo dos ceros a la derecha de este valor binario,
+	resultando en:
+	<div class="center-content all-courier">1000<b style="color:#FF5555">00</b></div>
+	Este valor binario equivale al número real 32.
+	<br>
+	<br>
+
+	Ahora bien, el operador OR a nivel de bits (<code>|</code>) compara las cifras de dos números (en binario) y 
+	efectúa la operación OR (<code>1 or 1 = 1</code>, <code>1 or 0 = 1</code>, <code>0 or 0 = 0</code>) con cada
+	cifra correspondiente. Por ejemplo:
+	<pre class="gml-syntax">
+numero = 14 | 24;</pre>
+
+	El número 14 en binario es <span class="all-courier">1110</span>, y el número 24 es 
+	<span class="all-courier">10100</span>. Esta operación, en binario, podría representarse así:
+	<br><br>
+	<div class="center-content">
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>01110</td><td><a>or</a></td>
+			</tr>
+			<tr>
+				<td>10100</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white">
+					11110
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<br>
+	<br>
+	Veamos cómo se pueden aplicar estas dos operaciones para obtener el valor de un color a partir de sus componentes RGB.
+
+	<pre class="gml-syntax">
+rojo  = 30; //En binario es 11110
+verde = 128; //En binario es ‭10000000‬
+azul  = 255; //En binario es 11111111
+
+color = (azul << 16) | (verde << 8) | rojo; //El resultado es 16744478</pre>
+
+	Esta operación se puede representar así:
+	<br><br>
+	<div class="center-content">
+		<table class="table-no-background center-td all-courier no-padding">
+			<tr>
+				<td>11111111</td>
+				<td style="color:#ff5555">00000000</td>
+				<td style="color:#ff5555">00000000</td>
+				<td style="text-align: left"><a>or</a></td>
+			</tr>
+			<tr>
+				<td>00000000</td>
+				<td>‭10000000‬</td>
+				<td style="color:#ff5555">00000000</td>
+				<td style="text-align: left"><a>or</a></td>
+			</tr>
+			<tr>
+				<td>00000000</td>
+				<td>00000000</td>
+				<td>00011110</td>
+			</tr>
+			<tr>
+				<td colspan="3" style="border-top:1px solid white"></td>
+			</tr>
+			<tr>
+				<td>
+					11111111
+				</td>
+				<td>
+					‭10000000‬
+				</td>
+				<td>
+					00011110
+				</td>
+				<td style="font-family: Helvetica; font-size:13pt; font-style: italic;">
+					(En decimal: 16744478)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Azul
+				</td>
+				<td>
+					Verde
+				</td>
+				<td>
+					Rojo
+				</td>
+			</tr>
+			<tr>
+				<td>
+					255
+				</td>
+				<td>
+					128
+				</td>
+				<td>30</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<br>
+	El resultado en decimal es <b>16744478</b>.
+
+	<h2>3. Funciones especializadas</h2>
+	También es posible obtener un color a partir de sus componentes utilizando las siguientes funciones:
+	<ul>
+		<li><code>make_colour_rgb()</code></li>
+		<li><code>make_colour_hsv()</code></li>
+	</ul>
+
+	<h1>Descompocisión de colores</h1>
+	En ocasiones es necesario realizar el proceso inverso a la creación de un color: Obtener los valores que
+	lo componen.
+
+</div>
