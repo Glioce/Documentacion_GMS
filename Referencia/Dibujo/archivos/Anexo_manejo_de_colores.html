@@ -307,4 +307,209 @@ color = (azul << 16) | (verde << 8) | rojo; //El resultado es 16744478</pre>
 	En ocasiones es necesario realizar el proceso inverso a la creación de un color: Obtener los valores que
 	lo componen.
 
+	<h2>1. Operaciones a nivel de bits</h2>
+	Este método nos permite obtener los valores rojo, verde y azul de un color a partir de las operaciones 
+	binarias AND y <em>right shift</em>.
+	<br><br>
+	El operador AND a nivel de bits es idéntico al AND convencional, sólo que compara las cifras correspondientes
+	de dos números binarios. Por ejemplo:
+	<pre class="gml-syntax">
+numero = 13 &amp; 22; //13 en binario es 1101. 22 en binario es 10110.
+//numero = 4</pre>
+	Esta operación se puede apreciar gráficamente de la siguiente manera:
+	<br><br>
+
+	<div class="center-content">
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>01101</td><td><a>and</a></td>
+			</tr>
+			<tr>
+				<td>10110</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white">
+					00100
+				</td>
+			</tr>
+		</table>
+	</div>
+	El número <span class="all-courier">100</span> <sub>base 2</sub> en decimal es 4.
+	<br>
+	<br>
+	Veamos el segundo operador: <em>Shift right</em> (<code>&gt;&gt;</code>). Éste remueve una cantidad determinada de cifras de
+	un número binario. Por ejemplo:
+	<pre class="gml-syntax">
+numero = 102 >> 5; //102 en binario es 1100110.
+//numero = 3</pre>
+Veamos gráficamente esta operación:
+	<br><br>
+
+	<div class="center-content">
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>1100110</td><td style="color:#ff5555">>></td><td>5</td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white">
+					11<span style="color:#ff5555">-----</span>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white">
+					0000011
+				</td>
+			</tr>
+		</table>
+	</div>
+	El resultado es 3. Pues <span class="all-courier">11</span> <sub>base 2</sub> es 3 en decimal.
+	<br>
+	<br>
+	Ahora bien, ¿cómo aplicamos estos operadores para decomponer un color?
+	Requeriremos de dos pasos:
+	<br><br>
+	El primer paso es "limpiar" el número usando el operador AND, para obtener sólo la parte deseada del color
+	(rojo, verde o azul).
+	<pre class="gml-syntax">
+color = ‭13515239‬; //‭13515239‬ en binario es
+rojo_parte1  = color &amp; 255; //255 en binario es 110011100011100111100111
+//rojo_parte1 = 231
+verde_parte1 = color &amp; 65280; //65535 en binario es 1111111100000000
+//verde_parte1 = 14592
+azul_parte1  = color &amp; ‭16711680‬; //‭16711680‬ en binario es 111111110000000000000000
+//azul_parte1 = ‭13500416‬</pre>
+Estas operaciones se pueden ver gráficamente así:
+	<br><br>
+
+	<div class="center-content">
+		<h3 class="all-courier">rojo_parte1</h3>
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>11001110</td><td>00111001</td><td>11100111</td><td><a>and</a></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>00000000</td><td>00000000</td><td>11111111</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="border-top:1px solid white">
+					11100111
+				</td>
+				<td style="font-family: Helvetica; font-size:13pt; font-style: italic;">
+					(En decimal: 231)
+				</td>
+			</tr>
+			<tr>
+				<td></td><td></td>
+				<td style="text-align: center;">(Rojo)</td>
+			</tr>
+		</table>
+		<h3 class="all-courier">verde_parte1</h3>
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>11001110</td><td>00111001</td><td>11100111</td><td><a>and</a></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>00000000</td><td>11111111</td><td>00000000</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="border-top:1px solid white">
+					00111001
+				</td>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="font-family: Helvetica; font-size:13pt; font-style: italic;">
+					(En decimal: 14592)
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="text-align: center;">(Verde)</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3 class="all-courier">azul_parte1</h3>
+		<table class="table-no-background all-courier no-padding">
+			<tr>
+				<td>11001110</td><td>00111001</td><td>11100111</td><td><a>and</a></td>
+			</tr>
+			<tr>
+			</tr>
+			<tr>
+				<td>11111111</td><td>00000000</td><td>00000000</td>
+			</tr>
+			<tr>
+				<td style="border-top:1px solid white">
+					11001110
+				</td>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="border-top:1px solid white; color:#ff5555">
+					00000000
+				</td>
+				<td style="font-family: Helvetica; font-size:13pt; font-style: italic;">
+					(En decimal: ‭13500416‬)
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align: center;">(Azul)</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	Los números en rojo son los bytes que equivalen a 0... El valor rojo tiene dos bytes a la izquierda,
+	lo cual no afecta en nada su valor real (231 = 00231). Sin embargo, los valores verde y azul tienen uno
+	y dos bytes a la <strong>derecha</strong> respectivamente, haciendo que el valor real de éstos aumente.
+	<br>
+	<br>
+	Debido a esto, llegamos al paso dos: Eliminar 8 y 16 ceros a la derecha de los valores verde y azul 
+	respectivamente, utilizando el operador <em>shift right</em>.
+	<pre class="gml-syntax">
+color = ‭13515239‬; //‭13515239‬ en binario es
+rojo_parte2  = color &amp; 255;
+//rojo_parte2 = 231
+verde_parte2 = (color &amp; 65280) >> 8;
+//verde_parte2 = 57
+azul_parte2  = (color &amp; ‭16711680‬) >> 16;
+//azul_parte2 = 206</pre>
+Algo interesante, es que podemos ahorrarnos el operador AND para obtener el valor azul, utilizando sólo
+el <em>shift right</em>, pues este número no tiene bytes diferentes de 0 a la izquierda.
+
+	<pre class="gml-syntax">
+color = ‭13515239‬; //‭13515239‬ en binario es
+rojo  = color &amp; 255;
+//rojo = 231
+verde = (color &amp; 65280) >> 8;
+//verde = 57
+azul = color >> 16;
+//azul = 206</pre>
+<h2>2. Funciones especializadas</h2>
+Para facilitar este trabajo, <em>GameMaker: Studio</em> incluye una serie de funciones que permiten obtener
+los componentes RGB y HSV de cualquier color.
+<ul>
+	<li><code>colour_get_red()</code></li>
+	<li><code>colour_get_green()</code></li>
+	<li><code>colour_get_blue()</code></li>
+	<li><code>colour_get_hue()</code></li>
+	<li><code>colour_get_saturation()</code></li>
+	<li><code>colour_get_value()</code></li>
+</ul>
 </div>
