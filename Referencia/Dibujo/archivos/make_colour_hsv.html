@@ -1,0 +1,61 @@
+<div id="name">make_colour_hsv</div>
+<div id="content">
+    <div id="description">
+        Devuelve un color basándose en los valores de matiz,
+        saturación y valor.
+    </div>
+
+    <h2>Sintaxis</h2>
+    <div id="sintax">
+       <pre class="gml-syntax">make_colour_hsv(hue, sat, val);</pre>
+    </div>
+
+    <h2>Argumentos</h2>
+    <table id="arguments">
+        <tr><th>Argumento</th><th>Descripción</th></tr>
+
+        <tr>
+            <td>hue</td>
+            <td>La matiz del color.</td>
+        </tr>
+        <tr>
+            <td>y1</td>
+            <td>La saturación del color.</td>
+        </tr>
+        <tr>
+            <td>val</td>
+            <td>¿Qué tan oscuro es el color?.</td>
+        </tr>
+    </table>
+
+
+    <h2>Descripción</h2>
+    <div id="longdescription">
+        Esta función permite crear un color a partir de tres
+        componentes: La matiz, la saturación y el <em>valor</em>,
+        (similar a la "luminosidad"). Estos tres valores son
+        números del 0 al 255 (más información: 
+        <a href="Anexo_manejo_de_colores.html">
+            <strong>Anexo: Manejo de colores</strong></a>). A 
+        continuación una imagen ilustrativa:
+        <br>
+        <br>
+        <div class="center-content">
+            <img src="imagenes/hsv.png">
+        </div>
+        <br>
+        El esquema de la izquierda representa el papel que cumple cada uno de los
+        componentes individuales, y las imágenes de la derecha son ejemplos que
+        muestran cómo varía el resultado final a partir de variar cada componente.
+    </div>
+
+    <h2>Devuelve</h2>
+    <div id="returns">Número real (entero).</div>
+
+    <h2>Ejemplo</h2>
+    <div id="example">
+        
+        <pre class="gml-syntax">var color = make_colour_hsv(100, 141, 330)</pre>
+        Se crea un color con las componentes HSV dadas y se almacena en la variable local <code>color</code>.
+    </div>
+</div>
