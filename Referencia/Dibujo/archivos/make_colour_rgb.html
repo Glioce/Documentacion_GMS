@@ -1,13 +1,13 @@
-<div id="name">make_colour_hsv</div>
+<div id="name">make_colour_rgb</div>
 <div id="content">
     <div id="description">
-        Devuelve un color basándose en los valores de matiz,
-        saturación y valor.
+        Devuelve un color basándose en los valores de rojo,
+        verde y azul
     </div>
 
     <h2>Sintaxis</h2>
     <div id="sintax">
-       <pre class="gml-syntax">make_colour_hsv(hue, sat, val);</pre>
+       <pre class="gml-syntax">make_colour_rgb(r, g, b);</pre>
     </div>
 
     <h2>Argumentos</h2>
@@ -15,16 +15,16 @@
         <tr><th>Argumento</th><th>Descripción</th></tr>
 
         <tr>
-            <td>hue</td>
-            <td>La matiz del color.</td>
+            <td>r</td>
+            <td>El componente rojo del color.</td>
         </tr>
         <tr>
-            <td>sat</td>
-            <td>La saturación del color.</td>
+            <td>g</td>
+            <td>El componente verde del color.</td>
         </tr>
         <tr>
-            <td>val</td>
-            <td>¿Qué tan oscuro es el color?.</td>
+            <td>b</td>
+            <td>El componente azul del color.</td>
         </tr>
     </table>
 
@@ -32,8 +32,7 @@
     <h2>Descripción</h2>
     <div id="longdescription">
         Esta función permite crear un color a partir de tres
-        componentes: La matiz, la saturación y el <em>valor</em>,
-        (similar a la "luminosidad"). Estos tres valores son
+        componentes: El rojo, verde y azul del color. Estos tres valores son
         números del 0 al 255 (más información: 
         <a href="Anexo_manejo_de_colores.html">
             <strong>Anexo: Manejo de colores</strong></a>). A 
@@ -41,7 +40,7 @@
         <br>
         <br>
         <div class="center-content">
-            <img src="imagenes/hsv.png">
+            <img src="imagenes/rgb.png">
         </div>
         <br>
         El esquema de la izquierda representa el papel que cumple cada uno de los
