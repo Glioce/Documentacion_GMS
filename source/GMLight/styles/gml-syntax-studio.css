@@ -1,0 +1,62 @@
+pre, code
+{
+	overflow: auto;
+	margin:0;
+	padding: 0.5em;
+	background-color: #222;
+	border:1px solid #111;
+	font-family: Consolas;
+	color: rgb(192, 192, 192);
+}
+pre
+{
+	margin: 1em 0;
+}
+code
+{
+	padding:0.1em 0.2em;
+}
+.code-function,
+.code-keyword,
+.code-script
+{
+	color:rgb(255, 182, 113);
+}
+
+.code-keyword
+{
+	font-weight: bold;
+}
+
+.linked:hover
+{
+	cursor: pointer;
+}
+.no-link:hover
+{
+	text-decoration:line-through dotted #CCC;
+	cursor: not-allowed;
+}
+
+.code-number, 
+.code-variable, 
+.code-constant,
+.code-text,
+.code-text *,
+.code-text .code-comment
+{
+	color: rgb(255, 128, 128);
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.code-comment,
+.code-comment *,
+.code-comment .code-text
+{
+	font-weight: normal;
+	font-style: italic;
+	color:rgb(143, 239, 143);
+	text-decoration: none;
+}
