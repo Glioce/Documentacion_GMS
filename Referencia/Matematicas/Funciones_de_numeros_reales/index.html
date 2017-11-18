@@ -8,7 +8,7 @@ Los números reales, en <i>GameMaker: Studio</i>, se consideran números de dobl
     //Hacer algo...
 }
 </pre>
-En teoría, <b>esto funciona</b>. Pero debido a la forma en la que los puntos flotantes trabajan, es posible que el valor <b>real </b>de <code>image_index</code> sea de 1.00000000001 y no 1, caso en el que la comparasión nunca será verdadera. Este tipo de errores pueden ser un tanto difíciles de depurar, por lo que es bueno ser consciente de estas posibilidades y tomar medidas de aproximación adecuadas para realizar las comparaciones, utilizando funciones de aproximación. Por ejemplo, el anterior código podría escribirse así:
+En teoría, <b>esto funciona</b>. Pero debido a la forma en la que los puntos flotantes trabajan, es posible que el valor <b>real </b>de <code>image_index</code> sea de 1.00000000001 y no 1, caso en el que la comparación nunca será verdadera. Este tipo de errores pueden ser un tanto difíciles de depurar, por lo que es bueno ser consciente de estas posibilidades y tomar medidas de aproximación adecuadas para realizar las comparaciones, utilizando funciones de aproximación. Por ejemplo, el anterior código podría escribirse así:
 <br />
 <pre class="gml-syntax">if(floor(image_index) == 1)
 {
