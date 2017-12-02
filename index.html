@@ -13,6 +13,7 @@
 			<li>Clamud</li>
 		</ul>
 	</div>
+	<h2><a href="https://github.com/Glioce/Documentacion_GMS">Ver en Github</a></h2>
 </div>
 
 <div style="padding:2em; text-align: justify;">
@@ -39,3 +40,117 @@
     de códigos sobre cómo puedes usarlos. También hay una lista con todas las constantes 
 	y variables que GML tiene disponible para controlar todos los aspectos del juego.
 </div>
+
+<div class="popup-alert" style="display: none">
+	<div class="popup-box">	
+		<h1>¿Deseas ayudar en la traducción?</h1>
+		<div style="text-align: justify;">
+
+			Este proyecto de traducción del manual oficial de <em>GameMaker: Studio</em>
+			está siendo traducido al español por un grupo pequeño de personas voluntarias
+			que desean compartir un aporte significativo a la comunidad de GameMaker de
+			habla hispana. Sin embargo, el material original es <strong>realmente enorme</strong>,
+			lo que hace que dicho proyecto avance muy lentamente.
+			<br>
+			<br>
+			Es por eso que pedimos tu ayuda: Si tienes conocimientos técnicos* de GameMaker: Studio,
+			y deseas compartir lo que sabes a las personas que necesiten de una guía, puedes colaborar
+			con nosotros en la traducción de <strong>cualquiera</strong> de las secciones del manual
+			oficial.
+			<br>
+			<br>
+			*¡No necesitas ser un experto programador! La documentación trae <strong>un montón</strong>
+			de artículos y guías referentes al manejo básico de la interfaz de usuario y otros elementos
+			de GameMaker, documentos que, al igual que el resto, necesitan ser traducidos.
+			<br>
+			<br>
+			Si estás dispuesto a colaborar, envía un mensaje al correo electrónico
+			<a><script type="text/javascript" id="mail">
+				window.addEventListener("load", function() {
+					var mail = document.querySelector("#mail");
+					mail.style.display="inline";
+					mail.innerText = window.atob("Z21kb2NzLmVzQGdtYWlsLmNvbQ==");
+				});
+			</script></a> para hacer parte del equipo y traducir secciones completas del manual.
+			Puedes, además, compartir aportes pequeños (o grandes, tú decides) de traducción publicándolos 
+			directamente al 
+			<a href="http://github.com/Glioce/Documentacion_GMS">Github del proyecto</a>.
+			No tardaremos mucho en revisar tus aportes y adjuntarlos al manual en línea.
+
+		</div>
+	</div>
+	<button class="close-alert">Cerrar</button>
+
+</div>
+<script type="text/javascript">
+	window.addEventListener("load", function() {
+
+		var close = document.querySelector(".close-alert");
+		var popup = document.querySelector(".popup-alert");
+		if(!close || !popup)
+			return;
+
+		if(!window.localStorage['alert_close'] || window.parseInt(window.localStorage['alert_close']) <= 0) {
+			console.log(popup);
+			window.localStorage['alert_close'] = 1;
+			popup.style.display = "";
+		}
+		else {
+			window.localStorage['alert_close']++;
+
+			if(window.localStorage['alert_close'] > 4) {
+				window.localStorage['alert_close'] = 0;
+			}
+		}
+		close.addEventListener("click", function() {
+			popup.parentNode.removeChild(popup);
+		});
+
+	});
+</script>
+<style type="text/css">
+	
+	.popup-alert {
+		z-index: 100000000000000;
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+
+		background-color: rgba(0, 0, 0, 0.8);
+
+		-webkit-display: flex;
+		-moz-display: flex;
+		-o-display: flex;
+		display: flex;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		-o-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-moz-justify-content: center;
+		-o-justify-content: center;
+		justify-content: center;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+
+		overflow:auto;
+	}
+	.popup-box {
+		box-sizing: border-box;
+		background-color: #333;
+		padding: 1em;
+
+		-webkit-box-shadow: 0 0 4px black;
+		-moz-box-shadow: 0 0 4px black;
+		-o-box-shadow: 0 0 4px black;
+		box-shadow: 0 0 4px black;
+
+		max-width: 720px;
+		overflow-y: auto;
+	}
+
+</style>

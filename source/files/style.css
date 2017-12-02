@@ -1,7 +1,8 @@
 body, html
 {
 	min-height: 100%;
-	position: relative;
+	position: absolute;
+	width: 100%;
 }
 body
 {
@@ -12,6 +13,8 @@ body
 	background-color: #333;
 
 	line-height: 20pt;
+	margin:0;
+	padding-bottom: 5em;
 }
 
 img
@@ -47,7 +50,7 @@ img
 	width:100%;
 	height: 100%;
 
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.8);
 	overflow: auto;
 }
 #image-gallery img
@@ -66,8 +69,16 @@ img
 }
 #page-url
 {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	box-sizing: border-box;
+	margin:0.25em;
 	padding: 0.5em;
 	background-color:#33601C;
+
+	border:1px solid black;
 
 	-webkit-border-radius: 16px;
 	-moz-border-radius: 16px;
@@ -115,6 +126,16 @@ img
 {
 	margin:0 2em;
 }
+footer
+{
+	background-color: #222;
+	padding: 0.6em;
+	position: absolute;
+	width: 100%;
+	bottom:0;
+
+	box-sizing: border-box;
+}
 .main-text
 {
 	text-align: justify;
@@ -150,6 +171,7 @@ pre, code
 ul li, ol li
 {
 	margin-bottom: 0.5em;
+	text-align: left;
 }
 
 pre
@@ -224,6 +246,9 @@ ul, ol {
 }
 h1, h2 {
 	color:#5CB73D;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align: left;
 }
 input, button {
 	font-size: inherit;
