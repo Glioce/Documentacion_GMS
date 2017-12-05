@@ -1,0 +1,53 @@
+<div id="name">colour_get_red</div>
+<div id="content">
+	
+	<div id="description">
+		Obtiene el componente rojo de un color dado
+	</div>
+
+	<h2>Sintaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">colour_get_red(col);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>col</td>
+			<td>El color al cual obtener el componente rojo</td>
+		</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">
+		
+		Esta función devuelve la <em>"cantidad de rojo"</em> que
+		determinado color. Este componente es un número entero de
+		0 a 255, donde 0 significa <em>"sin rojo"</em> y 255 
+		<em>"con todo el rojo"</em>. La siguiente imagen ilustra
+		esto:
+		<br>
+		<div class="center-content">
+			<img src="imagenes/get_red.png">
+		</div>
+
+	</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">color = c_teal;
+comp_rojo = colour_get_red(color);</pre>
+
+		El código anterior obtendrá el componente rojo de 
+		la constante de color <code>c_teal</code> y lo 
+		almacenará en la variable <code>comp_rojo</code>.
+	</div>
+
+</div>
