@@ -1,0 +1,53 @@
+<div id="name">colour_get_value</div>
+<div id="content">
+	
+	<div id="description">
+		Obtiene el valor HSV de un color dado
+	</div>
+
+	<h2>Sintaxis</h2>
+	<div id="syntax">
+		<pre class="gml-syntax">colour_get_value(col);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>col</td>
+			<td>El color al cual obtener el valor.</td>
+		</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">
+		
+		Esta función devuelve el <em>valor</em> de un color, el cual representa
+		la "luminosidad" de dicho color, siendo que 0 significa <em>"sin nada de luz"</em>
+		(haciéndose color negro), y 255 significa <em>"totalmente iluminado"</em>.
+		Este valor hace parte del 
+		modelo HSV de colores.La siguiente imagen contiene una explicación ilustrada:
+		<br>
+		<div class="center-content">
+			<img src="imagenes/get_val.png">
+		</div>
+
+	</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">color = c_teal;
+sat = colour_get_value(color);</pre>
+
+		El código anterior obtendrá el valor de 
+		la constante de color <code>c_teal</code> y lo 
+		almacenará en la variable <code>sat</code>.
+	</div>
+
+</div>
