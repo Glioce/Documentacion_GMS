@@ -1,0 +1,58 @@
+<div id="name">draw_getpixel_ext</div>
+<div id="content">
+	
+	<div id="description">Devuelve el valor completo de color del pixel mostrado en un punto de la pantalla</div>
+
+	<h2>Síntaxis</h2>
+	<div id="syntax">
+		draw_getpixel_ext(x, y);
+	</div>
+
+	<h2>Aargumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>x</td>
+			<td>La coordenada horizontal del punto a revisar</td>
+		</tr>
+		<tr>
+			<td>y</td>
+			<td>La coordenada vertical del punto a revisar</td>
+		</tr>
+	</table>
+
+	<h2>Descripción</h2>
+	<div id="longdescription">
+
+		Esta función permite obtener el valor de color (ver <a href="Anexo_manejo_de_colores.html">Anexo: Manejo de colores</a>)
+		de cualquier pixel que se esté dibujando en la actual superficie objetivo de renderizado (por defecto es
+		<code>application_surface</code>). Esto significa que los resultados dependen del evento en el que esta función sea llamada,
+		al igual que la superficie que se esté usando actualmente como objetivo de renderizado.
+		<br>
+		<br>
+		Cabe mencionar que esta función no obtiene valores de opacidad, para eso debes usar <code>draw_getpixel_ext()</code>.
+		<br>
+		<br>
+		<strong>NOTA:</strong> Esta función es extremadamente lenta, y debería ser usada SOLO cuando sea absolutamente necesario.
+
+	</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example">
+		<pre class="gml-syntax">var col = draw_getpixel(32, 128);
+alpha = (col >> 24) &amp; 255
+blue = (col >> 16) &amp; 255
+green = (col >> 8) &amp; 255
+red = col &amp; 255</pre>
+		
+		Se obtiene el color actualen una posición determinada de la pantalla,
+		y se obtienen sus componentes, incluyendo la opacidad.
+
+	</div>
+</div>

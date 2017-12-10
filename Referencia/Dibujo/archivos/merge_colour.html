@@ -1,0 +1,56 @@
+<div id="name">merge_colour</div>
+<div id="content">
+	<div id="description">Mezcla dos colores con una cantidad dada.</div>
+
+	<h2>Sintaxis</h2>
+	<div id="sintax">
+		<pre class="gml-syntax">draw_clear(col1, col2, amount);</pre>
+	</div>
+
+	<h2>Argumentos</h2>
+	<table id="arguments">
+		<tr>
+			<th>Argumento</th>
+			<th>Descripción</th>
+		</tr>
+		<tr>
+			<td>col1</td>
+			<td>El primer color a mezclar.</td>
+		</tr>
+		<tr>
+			<td>col2</td>
+			<td>El primer color a mezclar.</td>
+		</tr>
+		<tr>
+			<td>amount</td>
+			<td>La "cantidad" de cada color que deberá mezclarse.</td>
+		</tr>
+	</table>
+
+	<h2>Descripción</h2>
+
+	<div id="longdescription">
+With this function you can take two colours and then merge them together to make a new colour. The amount of each of the component colours can be defined by changing the "amount" argument, where a value of 0 will return the first colour (col1), a value of 1 will return the second colour (col2) and a value in between will return the corresponding mix. For example, a value of 0.5 will mix the two colours equally. The following image illustrates how this works by merging the colours red and blue together: 
+
+		Esta función toma dos colores y los mezcla para obtener así un nuevo color. La cantidad a mezclar de cada 
+		color es definida por el parámetro "amount", donde &ndash;por ejemplo&ndash; un valor de 0 devolverá 
+		exactamente el primer color (<tt>col1</tt>), un valor de 1 devolvería exactamente el segundo (<tt>col2</tt>), 
+		y un valor entre 0 y 1 devolvería la mezcla correspondiente (por ejemplo, un valor de 0.5 mezclaría ambos
+		colores con la misma cantidad).
+		<br><br>
+		La siguiente imagen ilustra la relación entre los valores de cantidad y la mezcla realizada:
+		<br>
+		<div class="center-content">
+			<img src="imagenes/merge_colour.png">
+		</div>
+	</div>
+
+	<h2>Devuelve</h2>
+	<div id="returns">Entero</div>
+
+	<h2>Ejemplo</h2>
+	<div id="example"><pre class="gml-syntax">		
+var col = merge_colour(c_lime, c_orange, 0.5)</pre>
+	El código anterior mezclaría el color <code>c_lime</code> con <code>c_orange</code>, ambos con la misma
+	cantidad, y almacenaría el color resultante en la variable <code>col</code>.</div>
+</div>
