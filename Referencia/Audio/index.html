@@ -1,0 +1,104 @@
+<!-- Usar esta si la categoría no tiene subcategorías -->
+<div class="main-text">
+	<h1>Audio</h1>
+    <p>
+        El motor de audio de GMS está basado en el formato .ogg.
+        Se deben cargar los sonidos en el IDE como .wav o .mp3, pero se puede 
+        seleccionar <b>compressed audio</b> desde la ventana de propiedades de 
+        audio y GMS convertirá los sonidos a .ogg (Ogg Vorbis) cuando se compile el juego.
+        De esta forma se puede mantener el tamaño del juego al mínimo asegurando la máxima calidad.
+        Otro beneficio del motor de audio de GMS es que se tiene acceso a audio 
+        streaming así como sonido 3D con la posibilidad de colocar "oyentes" 
+        (listeners) para todos los sonidos, así como diferentes "emisores" (emitters)
+        para crear efectos de sonido espectaculares.
+    </p>
+    <p>
+      Para tener compatibilidad con proyectos antiguos, GMS puede utilizar el motor de audio de legado. 
+      Sin embargo no se pueden utilizar ambos motores de auido a la vez. Se puede eliegir el motor de audio desde 
+      <b>Global Game Settings - Pestaña General</b>.
+    </p>
+    <ol>
+        <li>
+            <h2>Funciones de Audio Básicas</h2>
+            <p>
+              Las siguientes funciones se usan para utilizar audio de la forma más directa posible, 
+              evitando el uso de emisores y permitiendo al usuario tocar sonidos y música fácilmente
+              (los sonidos siempre se generan en la posición del "oyente" y por lo tanto no son afectados por cambios en el "oyente").
+            </p>
+            <!-- <h3>Relacionado</h3> -->
+            <ul>
+                <li><a href="javascript:void(0)">audio_exists</a></li>
+                <li><a href="javascript:void(0)">audio_get_name</a></li>
+                <li><a href="javascript:void(0)">audio_get_type</a></li>
+                <li><a href="javascript:void(0)">audio_play_sound</a></li>
+                <li><a href="javascript:void(0)">audio_play_sound_at</a></li>
+                <li><a href="javascript:void(0)">audio_pause_sound</a></li>
+                <li><a href="javascript:void(0)">audio_pause_all</a></li>
+                <li><a href="javascript:void(0)">audio_resume_sound</a></li>
+                <li><a href="javascript:void(0)">audio_resume_all</a></li>
+                <li><a href="javascript:void(0)">audio_stop_sound</a></li>
+                <li><a href="javascript:void(0)">audio_stop_all</a></li>
+                <li><a href="javascript:void(0)">audio_is_playing</a></li>
+                <li><a href="javascript:void(0)">audio_is_paused</a></li>
+                <li><a href="javascript:void(0)">audio_create_stream</a></li>
+                <li><a href="javascript:void(0)">sudio_destroy_stream</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2>Funciones de Audio Avanzadas</h2>
+            <p>
+              Las siguientes funciones se han diseñado para tener mayour control del motor de audio. 
+              Es recomendable tener un buen conocimiento de cómo funciona el motor de audio antes de usar estas funciones.
+            </p>
+            <ul>
+                <li><a href="javascript:void(0)">audio_sound_set_track_position</a></li>
+                <li><a href="javascript:void(0)">audio_sound_get_track_position</a></li>
+                <li><a href="javascript:void(0)">audio_sound_length</a></li>
+                <li><a href="javascript:void(0)">audio_sound_pitch</a></li>
+                <li><a href="javascript:void(0)">audio_sound_get_pitch</a></li>
+                <li><a href="javascript:void(0)">audio_falloff_set_model</a></li>
+                <li><a href="javascript:void(0)">audio_sound_set_gain</a></li>
+                <li><a href="javascript:void(0)">audio_master_gain</a></li>
+                <li><a href="javascript:void(0)">audio_set_master_gain</a></li>
+                <li><a href="javascript:void(0)">audio_get_master_gain</a></li>
+                <li><a href="javascript:void(0)">audio_channel_num</a></li>
+                <li><a href="javascript:void(0)">audio_debug</a></li>
+            </ul>
+            <p>
+              Temas más avanzados, como establecer oyentes, grabar audio, o sincronizar 
+              múltiples piestas de audio, se pueden encontrar en las siguientes sub-secciones
+            </p>
+            <ul>
+                <li><a href="javascript:void(0)">Emisores de Audio</a></li>
+                <li><a href="javascript:void(0)">Oyentes</a></li>
+                <li><a href="javascript:void(0)">Grupos de audio</a></li>
+                <li><a href="javascript:void(0)">Buffers de Audio</a></li>
+                <li><a href="javascript:void(0)">Sincronización de Audio</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2>Funciones de Legado</h2>
+            <p>
+              La siguientes sección contiene información sobre el sistema de audio de legado, que 
+              permite compatibilidad con proyectos antiguos, y tiene utilidad en juegos HTML5.
+            </p>
+            <ul>
+                <li><a href="javascript:void(0)">Legado</a></li>
+            </ul>
+        </li>
+        <li>
+            <h2>Funciones Obsoletas</h2>
+            <p>
+               Algunas funciones obsoletas se diseñaron específicamente para música.
+            </p>
+            <ul>
+                <li><a href="javascript:void(0)">audio_play_music</a></li>
+                <li><a href="javascript:void(0)">audio_pause_music</a></li>
+                <li><a href="javascript:void(0)">audio_resume_music</a></li>
+                <li><a href="javascript:void(0)">audio_stop_music</a></li>
+                <li><a href="javascript:void(0)">audio_music_is_playing</a></li>
+                <li><a href="javascript:void(0)">audio_music_gain</a></li>
+            </ul>
+        </li>
+    </ol>
+</div>
